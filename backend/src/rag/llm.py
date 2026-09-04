@@ -1,10 +1,10 @@
-from langchain_mistralai import ChatMistralAI
+from langchain_google_genai import ChatGoogleGenerativeAI
 from src.rag.prompt import title_prompt
 from src.utils.settings import settings
 
-llm = ChatMistralAI(
-    model=settings.LLM_MODEL,
-    api_key=settings.MISTRAL_API_KEY
+llm = ChatGoogleGenerativeAI(
+    model="gemini-3.5-flash-lite",
+    google_api_key=settings.GEMINI_API_KEY
 )
 
 
