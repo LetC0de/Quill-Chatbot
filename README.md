@@ -33,40 +33,40 @@ Quill is an AI-powered Enterprise Knowledge Assistant that transforms your docum
 ## Project Architecture
 
 ```
-┌─────────────────────────────────────────────────────────┐
-│                      FRONTEND                           │
-│   React 19 + TypeScript + Vite + Motion (Framer)        │
-│                                                         │
-│   Landing → Auth → Sidebar + ChatArea + UploadModal     │
-│              │            │                              │
-│              ▼            ▼                              │
-│         JWT Token   SSE Stream (/chat/query)            │
-└──────────────┬──────────────┬───────────────────────────┘
-               │ REST API     │ Server-Sent Events
-               ▼              ▼
-┌─────────────────────────────────────────────────────────┐
-│                    BACKEND (FastAPI)                     │
-│                                                         │
-│  ┌──────────┐  ┌──────────┐  ┌───────────────────────┐ │
-│  │  Auth     │  │ Document │  │   LangGraph Pipeline  │ │
-│  │  Module   │  │ Module   │  │                       │ │
-│  └──────────┘  └──────────┘  │  retrieve_documents   │ │
-│       │              │        │        ↓              │ │
-│       ▼              ▼        │  build_context        │ │
-│  ┌──────────┐  ┌──────────┐  │        ↓              │ │
-│  │ User     │  │ Upload   │  │  generate_answer      │ │
-│  │ (Postgres)│  │ (PyPDF → │  │        ↓              │ │
-│  └──────────┘  │  chunks) │  │  checkpoint memory    │ │
-│                └──────────┘  └───────────────────────┘ │
-│                                      │                  │
-│                    ┌─────────────────┼──────────┐      │
-│                    ▼                 ▼          ▼      │
-│              ┌──────────┐    ┌──────────┐ ┌────────┐  │
-│              │ PostgreSQL│    │  Qdrant  │ │ Gemini │  │
-│              │ (metadata │    │ (vectors)│ │ 2.5    │  │
-│              │  + memory)│    │          │ │ Flash  │  │
-│              └──────────┘    └──────────┘ └────────┘  │
-└─────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────┐
+│                        FRONTEND                             │
+│           React 19 + TypeScript + Vite + Motion             │
+│                                                             │
+│    Landing -> Auth -> Sidebar + ChatArea + UploadModal      │
+│              |             |                                │
+│              v             v                                │
+│         JWT Token      SSE Stream (/chat/query)             │
+└───────────────┬───────────────┬─────────────────────────────┘
+                │ REST API       │ Server-Sent Events
+                v                v
+┌─────────────────────────────────────────────────────────────┐
+│                    BACKEND (FastAPI)                        │
+│                                                             │
+│  ┌──────────┐  ┌───────────┐  ┌────────────────────────┐    │
+│  │  Auth    │  │ Document  │  │   LangGraph Pipeline   │    │
+│  │  Module  │  │ Module    │  │                        │    │
+│  └──────────┘  └───────────┘  │  retrieve_documents    │    │
+│       │             │          │         v               │   │
+│       v             v          │   build_context         │   │
+│  ┌──────────┐  ┌───────────┐  │         v               │   │
+│  │ User     │  │ Upload    │  │  generate_answer        │   │
+│  │(Postgres)│  │ (PyPDF -> │  │         v               │   │
+│  └──────────┘  │  chunks)  │  │  checkpoint memory     │    │
+│                └───────────┘  └────────────────────────┘    │
+│                                       │                     │
+│                  ┌────────────────────┼──────────┐          │
+│                  v                    v          v          │
+│            ┌───────────┐      ┌───────────┐ ┌────────┐      │
+│            │ PostgreSQL │      │   Qdrant  │ │ Gemini │     │
+│            │ (metadata  │      │ (vectors) │ │ 2.5    │     │
+│            │  + memory) │      │           │ │ Flash  │     │
+│            └───────────┘      └───────────┘ └────────┘     │
+└─────────────────────────────────────────────────────────────┘
 ```
 
 **Request Flow:**
