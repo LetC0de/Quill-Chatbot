@@ -21,10 +21,139 @@ Quill is an AI-powered Enterprise Knowledge Assistant that transforms your docum
 
 | Layer | Technology |
 |-------|-----------|
-| Frontend | React 19, TypeScript, Vite, Motion |
-| Backend | FastAPI, SQLAlchemy, PostgreSQL |
-| AI / RAG | LangGraph, LangChain, Mistral LLM, Qdrant (vector DB) |
+| Frontend | React 19, TypeScript, Vite 8, Motion (Framer Motion) |
+| Backend | Python 3.13, FastAPI, SQLAlchemy, Alembic |
+| Database | PostgreSQL (metadata + conversation history) |
+| AI / RAG | LangChain, LangGraph, Gemini 2.5 Flash (LLM), Mistral (embeddings) |
+| Vector Store | Qdrant Cloud (semantic document search) |
+| Authentication | JWT (PyJWT + Argon2 password hashing) |
 | Infrastructure | Docker, Docker Compose |
+| Document Processing | PyPDF, LangChain Text Splitters |
+
+## Project Architecture
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                      FRONTEND                           │
+│   React 19 + TypeScript + Vite + Motion (Framer)        │
+│                                                         │
+│   Landing → Auth → Sidebar + ChatArea + UploadModal     │
+│              │            │                              │
+│              ▼            ▼                              │
+│         JWT Token   SSE Stream (/chat/query)            │
+└──────────────┬──────────────┬───────────────────────────┘
+               │ REST API     │ Server-Sent Events
+               ▼              ▼
+┌─────────────────────────────────────────────────────────┐
+│                    BACKEND (FastAPI)                     │
+│                                                         │
+│  ┌──────────┐  ┌──────────┐  ┌───────────────────────┐ │
+│  │  Auth     │  │ Document │  │   LangGraph Pipeline  │ │
+│  │  Module   │  │ Module   │  │                       │ │
+│  └──────────┘  └──────────┘  │  retrieve_documents   │ │
+│       │              │        │        ↓              │ │
+│       ▼              ▼        │  build_context        │ │
+│  ┌──────────┐  ┌──────────┐  │        ↓              │ │
+│  │ User     │  │ Upload   │  │  generate_answer      │ │
+│  │ (Postgres)│  │ (PyPDF → │  │        ↓              │ │
+│  └──────────┘  │  chunks) │  │  checkpoint memory    │ │
+│                └──────────┘  └───────────────────────┘ │
+│                                      │                  │
+│                    ┌─────────────────┼──────────┐      │
+│                    ▼                 ▼          ▼      │
+│              ┌──────────┐    ┌──────────┐ ┌────────┐  │
+│              │ PostgreSQL│    │  Qdrant  │ │ Gemini │  │
+│              │ (metadata │    │ (vectors)│ │ 2.5    │  │
+│              │  + memory)│    │          │ │ Flash  │  │
+│              └──────────┘    └──────────┘ └────────┘  │
+└─────────────────────────────────────────────────────────┘
+```
+
+**Request Flow:**
+1. User uploads a PDF → PyPDF extracts text → LangChain splits into chunks → Mistral embeddings → stored in Qdrant
+2. User asks a question → Qdrant retrieves relevant chunks → LangGraph builds context → Gemini generates an answer
+3. Response streams token-by-token via SSE → PostgresSaver checkpoints conversation for memory
+4. On the next turn, LangGraph loads prior history from checkpoint, giving the model conversational context
+
+## Project Structure
+
+```
+rag-project/
+├── backend/
+│   ├── app.py                          # FastAPI application entry point + lifespan
+│   ├── requirements.txt
+│   ├── Dockerfile
+│   ├── .env.example
+│   ├── migrations/                     # Alembic database migrations
+│   │   └── versions/
+│   └── src/
+│       ├── rag/                        # Core RAG pipeline
+│       │   ├── llm.py                  # Gemini LLM instance + title generation
+│       │   ├── embeddings.py           # Mistral embedding model
+│       │   ├── vector_store.py         # Qdrant vector store init
+│       │   ├── retriever.py            # Semantic retriever (filtered by document)
+│       │   ├── loader.py              # PDF loader + text splitter
+│       │   └── prompt.py              # System/human prompts (RAG + concierge)
+│       ├── graph/                      # LangGraph orchestration
+│       │   ├── graph.py               # Compiled StateGraph (retrieve → context → generate)
+│       │   ├── nodes.py               # Graph node functions
+│       │   ├── state.py               # RAGState TypedDict
+│       │   ├── streaming.py           # SSE streaming orchestrator
+│       │   └── checkpointer.py        # PostgresSaver singleton
+│       ├── user/                       # User auth module
+│       │   ├── model.py               # SQLAlchemy User model
+│       │   ├── schema.py              # Pydantic request/response schemas
+│       │   ├── controller.py          # Register/login logic
+│       │   └── router.py             # FastAPI routes (/auth/*)
+│       ├── document/                   # Document management
+│       │   ├── model.py               # SQLAlchemy Document model
+│       │   ├── schema.py
+│       │   └── router.py             # CRUD routes (/documents/*)
+│       ├── upload/                     # PDF upload + ingestion
+│       │   ├── controller.py          # Extract → chunk → embed → store
+│       │   ├── schema.py
+│       │   └── router.py             # Upload route
+│       ├── conversation/               # Conversation history
+│       │   ├── model.py               # SQLAlchemy Conversation model
+│       │   ├── schema.py
+│       │   └── router.py             # CRUD routes (/conversations/*)
+│       ├── query/                      # Chat query endpoint
+│       │   ├── schema.py              # QueryRequestSchema
+│       │   └── router.py             # SSE /chat/query endpoint
+│       ├── admin/                      # Admin module
+│       ├── qdrant/                     # Qdrant setup
+│       │   ├── client.py              # Async Qdrant client
+│       │   └── collection.py          # Collection creation/validation
+│       └── utils/
+│           ├── settings.py            # Pydantic Settings (env config)
+│           ├── db.py                  # SQLAlchemy engine + session
+│           └── helpers.py
+├── frontend/
+│   ├── package.json
+│   ├── Dockerfile
+│   ├── index.html
+│   └── src/
+│       ├── App.tsx                     # Root app with auth routing
+│       ├── main.tsx                    # Entry point
+│       ├── index.css / App.css
+│       ├── components/
+│       │   ├── Landing.tsx            # Marketing landing page
+│       │   ├── AuthScreen.tsx         # Login / Register form
+│       │   ├── Sidebar.tsx            # Conversation list + new chat
+│       │   ├── ChatArea.tsx           # Main chat view + SSE handling
+│       │   ├── ChatMessage.tsx        # Message bubble (markdown render)
+│       │   ├── Composer.tsx           # Input field + send button
+│       │   ├── DocumentPicker.tsx     # PDF selector sidebar
+│       │   ├── UploadModal.tsx        # File upload dialog
+│       │   └── Icons.tsx             # SVG icon components
+│       └── lib/
+│           ├── api.ts                # API client + SSE helpers
+│           ├── auth.tsx              # Auth context + token management
+│           ├── types.ts              # TypeScript interfaces
+│           ├── palette.ts            # Theme color palette
+│           └── markdown.tsx          # Markdown-to-JSX renderer
+└── docker-compose.yml                 # Backend + Frontend services
+```
 
 ## Demo / Live Link
 
