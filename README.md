@@ -51,21 +51,21 @@ Quill is an AI-powered Enterprise Knowledge Assistant that transforms your docum
 │  │  Auth    │  │ Document  │  │   LangGraph Pipeline   │    │
 │  │  Module  │  │ Module    │  │                        │    │
 │  └──────────┘  └───────────┘  │  retrieve_documents    │    │
-│       │             │          │         v               │   │
-│       v             v          │   build_context         │   │
-│  ┌──────────┐  ┌───────────┐  │         v               │   │
-│  │ User     │  │ Upload    │  │  generate_answer        │   │
-│  │(Postgres)│  │ (PyPDF -> │  │         v               │   │
+│       │             │         │         v              │    │
+│       v             v         │   build_context        │    │
+│  ┌──────────┐  ┌───────────┐  │         v              │    │
+│  │ User     │  │ Upload    │  │  generate_answer       │    │
+│  │(Postgres)│  │ (PyPDF -> │  │         v              │    │
 │  └──────────┘  │  chunks)  │  │  checkpoint memory     │    │
 │                └───────────┘  └────────────────────────┘    │
 │                                       │                     │
 │                  ┌────────────────────┼──────────┐          │
 │                  v                    v          v          │
 │            ┌───────────┐      ┌───────────┐ ┌────────┐      │
-│            │ PostgreSQL │      │   Qdrant  │ │ Gemini │     │
-│            │ (metadata  │      │ (vectors) │ │ 2.5    │     │
-│            │  + memory) │      │           │ │ Flash  │     │
-│            └───────────┘      └───────────┘ └────────┘     │
+│            │ PostgreSQL│      │   Qdrant  │ │ Gemini │      │
+│            │ (metadata │      │ (vectors) │ │ 2.5    │      │
+│            │  + memory)│      │           │ │ Flash  │      │
+│            └───────────┘      └───────────┘ └────────┘      │
 └─────────────────────────────────────────────────────────────┘
 ```
 
