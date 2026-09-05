@@ -181,3 +181,147 @@ A minimal and secure JWT-based authentication screen. Users can register or log 
 </p>
 
 The heart of Quill — an intuitive chat UI where users upload PDFs and ask questions in natural language. Responses stream in real-time with inline page citations, and conversations are automatically named and saved for future reference.
+
+---
+
+## Installation / Setup
+
+### Prerequisites
+
+Before you begin, make sure you have these installed and ready:
+
+| Tool | Version | Purpose |
+|------|---------|---------|
+| **Python** | 3.13+ | Backend runtime |
+| **Node.js** | 20+ | Frontend runtime |
+| **PostgreSQL** | 14+ | User data, conversations, LangGraph checkpoints |
+| **Qdrant Cloud** | — | Vector database for document embeddings |
+| **Gemini API Key** | — | LLM for chat responses and title generation |
+| **Mistral API Key** | — | Embedding model for document vectors |
+---
+
+### Step 1 — Clone the Repository
+
+```bash
+git clone https://github.com/your-username/rag-project.git
+cd rag-project
+```
+
+---
+
+### Step 2 — Backend Setup
+
+```bash
+cd backend
+
+# Create virtual environment
+python -m venv venv
+
+# Activate it
+# Windows (PowerShell)
+venv\Scripts\activate
+# macOS / Linux
+source venv/bin/activate
+
+# Install all Python dependencies
+pip install -r requirements.txt
+```
+
+---
+
+### Step 3 — Configure Environment Variables
+
+
+Now open `.env` and fill in your actual API keys and database URL:
+
+```env
+# LLM — Gemini (chat responses + title generation)
+GEMINI_API_KEY=your_gemini_api_key
+
+# Embeddings — Mistral (document vectorisation)
+MISTRAL_API_KEY=your_mistral_api_key
+MISTRAL_MODEL=mistral-embed-2312
+
+# Vector Store — Qdrant Cloud
+QDRANT_URL=https://your-cluster.cloud.qdrant.io
+QDRANT_API_KEY=your_qdrant_api_key
+
+# PostgreSQL — metadata, users, conversations, LangGraph checkpoints
+DB_CONNECTION=postgresql://user:pass@host/dbname?sslmode=require
+
+# CORS — allowed frontend origins
+CORS_ORIGINS=["http://localhost:5173","http://127.0.0.1:5173"]
+
+# Primary frontend URL
+FRONTEND_URL=http://localhost:5173
+
+# JWT Authentication
+SECRET_KEY=your_jwt_secret_key
+ALGORITHM=HS256
+EXP_TIME=60
+```
+---
+
+### Step 4 — Run Database Migrations
+
+Quill uses **Alembic** to manage PostgreSQL schema. Run this to create all tables (users, documents, conversations):
+
+```bash
+alembic upgrade head
+```
+
+This creates the following tables in your database:
+- `users` — registered accounts
+- `documents` — uploaded PDF records
+- `conversations` — chat session metadata
+- LangGraph checkpoint tables (auto-created at first boot)
+
+---
+
+### Step 5 — Frontend Setup
+
+Open a **new terminal** (keep the backend terminal running):
+
+```bash
+cd frontend
+
+# Install Node.js dependencies
+npm install
+```
+
+---
+
+### Step 6 — Start the Servers
+
+You need **two terminals** running side by side:
+
+**Terminal 1 — Backend:**
+
+```bash
+cd backend
+venv\Scripts\activate        # Windows
+# source venv/bin/activate   # macOS / Linux
+
+uvicorn app:app --reload --port 8000
+```
+
+Backend runs at → **http://localhost:8000**
+Interactive API docs → **http://localhost:8000/docs**
+
+**Terminal 2 — Frontend:**
+
+```bash
+cd frontend
+npm run dev
+```
+
+Frontend runs at → **http://localhost:5173**
+
+---
+
+### Step 7 — Use the App
+
+1. Open **http://localhost:5173** in your browser
+2. **Register** a new account (first screen)
+3. **Upload a PDF** using the upload button
+4. **Ask questions** about the document — answers stream in real-time with page citations
