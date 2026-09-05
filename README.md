@@ -203,8 +203,8 @@ Before you begin, make sure you have these installed and ready:
 ### Step 1 — Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/rag-project.git
-cd rag-project
+git clone https://github.com/LetC0de/Quill-Chatbot.git
+cd project
 ```
 
 ---
