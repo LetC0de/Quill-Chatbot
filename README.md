@@ -384,7 +384,7 @@ services:
 **Abhishek** — Full-Stack Ai Engineer
 
 - GitHub: [@LetC0de](https://github.com/LetC0de)
-- LinkedIn: [Your LinkedIn](https://www.linkedin.com/in/abhishek8at/)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/abhishek8at/)
 - Docker Hub: [abhishekdevdocker392](https://hub.docker.com/u/abhishekdevdocker392)
 
 ---
