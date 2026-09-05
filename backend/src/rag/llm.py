@@ -1,10 +1,11 @@
-from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_openai import ChatOpenAI
 from src.rag.prompt import title_prompt
 from src.utils.settings import settings
 
-llm = ChatGoogleGenerativeAI(
-    model="gemini-3.5-flash-lite",
-    google_api_key=settings.GEMINI_API_KEY
+llm = ChatOpenAI(
+    model="openrouter/free",
+    api_key=settings.OPENROUTER_API_KEY,
+    base_url="https://openrouter.ai/api/v1"
 )
 
 
