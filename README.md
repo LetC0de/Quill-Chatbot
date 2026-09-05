@@ -325,3 +325,68 @@ Frontend runs at → **http://localhost:5173**
 2. **Register** a new account (first screen)
 3. **Upload a PDF** using the upload button
 4. **Ask questions** about the document — answers stream in real-time with page citations
+
+---
+
+## Docker Setup
+
+No need to install Python, Node.js, or manage virtual environments. Just **Docker Desktop** and one command.
+
+### Prerequisites
+
+- **Docker Desktop** installed and running — [Install Docker](https://www.docker.com/products/docker-desktop/)
+
+### Quick Start
+
+```bash
+# Make sure your backend/.env file exists and is filled with API keys
+# Then from the project root:
+docker compose up
+```
+
+That's it. Both backend and frontend start automatically.
+
+### docker-compose.yml
+
+```yaml
+services:
+
+  backend:
+    image: abhishekdevdocker392/quill-backend:latest
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./backend/.env
+
+  frontend:
+    image: abhishekdevdocker392/quill-frontend:latest
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+```
+
+### Services
+
+| Service | Image | Port | URL |
+|---------|-------|------|-----|
+| Frontend | `quill-frontend:latest` | 3000 → 80 | http://localhost:3000 |
+| Backend | `quill-backend:latest` | 8000 | http://localhost:8000 |
+| API Docs | (built into backend) | — | http://localhost:8000/docs |
+
+
+> **Note:** The `.env` file must be present at `backend/.env` before running Docker Compose. The backend container reads environment variables from this file at startup.
+
+---
+
+## Author
+
+**Abhishek** — Full-Stack Ai Engineer
+
+- GitHub: [@LetC0de](https://github.com/LetC0de)
+- LinkedIn: [Your LinkedIn](https://www.linkedin.com/in/abhishek8at/)
+- Docker Hub: [abhishekdevdocker392](https://hub.docker.com/u/abhishekdevdocker392)
+
+---
+
+<p align="center">Made with ❤️ </p>
