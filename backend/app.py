@@ -14,8 +14,7 @@ from src.utils.db import base, engine
 from src.utils.settings import settings
 
 
-# Create application tables at startup (idempotent — Alembic owns schema
-# versioning, this is a safety net for fresh deployments).
+
 base.metadata.create_all(bind=engine)
 
 
