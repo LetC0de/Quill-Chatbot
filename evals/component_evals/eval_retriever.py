@@ -3,12 +3,12 @@ import os
 import sys
 
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "backend"))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", "backend"))
 
 
 from dotenv import load_dotenv
 
-load_dotenv(os.path.join(os.path.dirname(__file__), "backend", ".env"))
+load_dotenv(os.path.join(os.path.dirname(__file__), "..", "..", "backend", ".env"))
 load_dotenv() 
 
 from deepeval import evaluate
@@ -18,9 +18,9 @@ from deepeval.models.llms.openai_model import OpenAIModel
 from deepeval.evaluate.configs import CacheConfig, ErrorConfig
 
 
-from src.rag.retriever import get_retriever
+from src.rag.retriever import get_retriever # type: ignore
 
-GOLDEN_PATH = "golden_dataset.json"
+GOLDEN_PATH = os.path.join(os.path.dirname(__file__), "..", "..", "eval_golden_datasets", "golden_dataset.json")
 JUDGE_MODEL_NAME = "nvidia/nemotron-3-super-120b-a12b:free"
 JUDGE_MODEL = OpenAIModel(
     model=JUDGE_MODEL_NAME,
