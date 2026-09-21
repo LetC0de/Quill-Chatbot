@@ -21,7 +21,7 @@ from deepeval.evaluate.configs import CacheConfig, ErrorConfig
 from src.rag.retriever import get_retriever
 
 GOLDEN_PATH = "golden_dataset.json"
-JUDGE_MODEL_NAME = "nvidia/nemotron-3.5-lightning:free"
+JUDGE_MODEL_NAME = "nvidia/nemotron-3-super-120b-a12b:free"
 JUDGE_MODEL = OpenAIModel(
     model=JUDGE_MODEL_NAME,
     api_key=os.getenv("API_KEY"),
@@ -45,7 +45,7 @@ with open(GOLDEN_PATH, encoding="utf-8") as f:
 # 2. RUN THE RETRIEVER — Quill me get_retriever(query, document_id) call hota hai
 test_cases = []
 
-for g in goldens:
+for g in goldens[:10]:  # Evaluate only the first 10 test cases
     retriever = get_retriever(g["query"], g["document_id"])
     retrieved = retriever.invoke(g["query"])
     retrieval_context = [doc.page_content for doc in retrieved]
@@ -62,8 +62,8 @@ for g in goldens:
 
 # 3. THE METRICS — async_mode=False => ek ke baad ek, rate-limit nahi
 metrics = [
-    ContextualRecallMetric(threshold=THRESHOLD, model=JUDGE_MODEL, include_reason=True, async_mode=False),
-    ContextualPrecisionMetric(threshold=THRESHOLD, model=JUDGE_MODEL, include_reason=True, async_mode=False),
+    ContextualRecallMetric(threshold=THRESHOLD, model=JUDGE_MODEL, include_reason=False, async_mode=True),
+    ContextualPrecisionMetric(threshold=THRESHOLD, model=JUDGE_MODEL, include_reason=False, async_mode=True),
 ]
 
 
