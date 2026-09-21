@@ -50,7 +50,7 @@ THRESHOLD = 0.7
 
 
 
-with open(GOLDEN_PATH) as f:
+with open(GOLDEN_PATH, encoding="utf-8") as f:
     goldens = json.load(f)
 
 
