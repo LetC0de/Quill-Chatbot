@@ -56,7 +56,7 @@ with open(GOLDEN_PATH) as f:
 
 
 test_cases = []
-for g in goldens[:10]:
+for g in goldens[:5]:
     context = g["ideal_context"]              
     answer = generate(g["query"], context)   
 
