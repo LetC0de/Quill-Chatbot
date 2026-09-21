@@ -24,3 +24,11 @@ frontend/dist/
 
 # Screenshots (local verification)
 .screenshots/
+
+
+.deepeval/
+.coverage
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
