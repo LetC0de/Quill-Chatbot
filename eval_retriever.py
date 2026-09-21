@@ -2,14 +2,14 @@ import json
 import os
 import sys
 
-# Quill ka backend `backend/` me hai — sys.path pehle add karo
+
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "backend"))
 
-# .env sabse pehle load karo — warna Settings() ko keys nahi milenge
+
 from dotenv import load_dotenv
 
 load_dotenv(os.path.join(os.path.dirname(__file__), "backend", ".env"))
-load_dotenv()  # root .env fallback
+load_dotenv() 
 
 from deepeval import evaluate
 from deepeval.test_case import LLMTestCase
@@ -17,7 +17,7 @@ from deepeval.metrics import ContextualRecallMetric, ContextualPrecisionMetric
 from deepeval.models.llms.openai_model import OpenAIModel
 from deepeval.evaluate.configs import CacheConfig, ErrorConfig
 
-# Quill ka actual retriever (document_id filtering wala) — .env ke BAAD import
+
 from src.rag.retriever import get_retriever
 
 GOLDEN_PATH = "golden_dataset.json"
@@ -37,7 +37,7 @@ JUDGE_MODEL.model_data.supports_structured_outputs = False
 THRESHOLD = 0.7
 
 
-# 1. LOAD the golden set
+
 with open(GOLDEN_PATH, encoding="utf-8") as f:
     goldens = json.load(f)
 
@@ -45,7 +45,7 @@ with open(GOLDEN_PATH, encoding="utf-8") as f:
 # 2. RUN THE RETRIEVER — Quill me get_retriever(query, document_id) call hota hai
 test_cases = []
 
-for g in goldens[:10]:  # Evaluate only the first 10 test cases
+for g in goldens[:10]:
     retriever = get_retriever(g["query"], g["document_id"])
     retrieved = retriever.invoke(g["query"])
     retrieval_context = [doc.page_content for doc in retrieved]
@@ -60,14 +60,14 @@ for g in goldens[:10]:  # Evaluate only the first 10 test cases
     )
 
 
-# 3. THE METRICS — async_mode=False => ek ke baad ek, rate-limit nahi
+
 metrics = [
     ContextualRecallMetric(threshold=THRESHOLD, model=JUDGE_MODEL, include_reason=False, async_mode=True),
     ContextualPrecisionMetric(threshold=THRESHOLD, model=JUDGE_MODEL, include_reason=False, async_mode=True),
 ]
 
 
-# 4. EVALUATE
+
 evaluate(
     test_cases=test_cases,
     metrics=metrics,
