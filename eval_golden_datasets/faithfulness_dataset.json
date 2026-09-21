@@ -1,0 +1,982 @@
+[
+  {
+    "id": "q001",
+    "query": "Why are psychiatric disorders classified syndromally rather than by aetiology?",
+    "ideal_answer": "Ideally any classification of psychiatric disorders, like that of medical illnesses, should be based on aetiology. However, for a large majority of psychiatric disorders no distinct aetiology is known at present, so one of the most rational ways to classify them at present is syndromal, where a syndrome is a group of symptoms and signs that often occur together and delineate a recognisable clinical condition.",
+    "ideal_context": [
+      "1\nDiagnosis and Classification \nin  Psychiatry\n Classiﬁ cation is a process by which phenomena are \norganized into categories so as to bring together those \nphenomena that most resemble each other and to sepa-\nrate those that differ. Any classiﬁ cation of psychiatric \ndisorders, like that of medical illnesses, should ideally \nbe based on aetiology. For a large majority of psychiat-\nric disorders, no distinct aetiology is known at present, \nalthough there are many attractive probabilities for \nseveral of them. Therefore, one of the most rational \nways to classify psychiatric disorders at present is \nprobably syndromal. A syndrome is deﬁ ned as a group \nof symptoms and signs that often occur together, and \ndelineate a recognisable clinical condition.\n The syndromal approach of classifying psychiat-\nric disorders, on the basis of their clinical signs and \nsymptoms, is very similar to the historical approach \nof classiﬁ cation of medical illnesses, when aetiology"
+    ],
+    "source": "A Short Textbook of Psychiatry, 7th Edition ( PDFDrive ).pdf",
+    "document_id": 21,
+    "pages": [
+      12
+    ],
+    "page_labels": [
+      "1"
+    ],
+    "chunk_ids": [
+      "5fb8f3ba-a4e1-440d-a370-98a544f762f1"
+    ],
+    "context_type": "single_chunk"
+  },
+  {
+    "id": "q002",
+    "query": "What is a hallucination, and which symptoms are called Schneiderian first rank symptoms?",
+    "ideal_answer": "A hallucination is a perception experienced in the absence of an external stimulus; hallucinations can be auditory, visual, olfactory, gustatory or tactile. Delusions of control, thought insertion, thought withdrawal and thought broadcasting are the Schneiderian first rank symptoms (SFRS).",
+    "ideal_context": [
+      "Psychiatric History and Examination 13\nContents of phobias (irrational fears);\nDelusions (false, unshakable beliefs) or Over-valued \nideas;\nExplore for delusions/ideas of persecution, reference, \ngrandeur, love, jealousy (in ﬁ  de lity), guilt, nihilism, \npoverty, somatic (hypochon driacal) symptoms, hope-\nless ness, helpless ness, worthlessness, and suicidal \nideation.\nDelusions of control, thought insertion, thought with-\ndrawal, and thought broad casting are Schneiderian \nﬁ rst rank symptoms (SFRS). The presence of neolo-\ngisms should be recorded here.\nPerception\nPerception is the process of being aware of a sensory \nexperience and being able to recognize it by compar-\ning it with previous experiences.\n Perception is assessed under the following headings:\nHallucinations\nThe presence of hallucinations should be noted. \nA hallucination is a perception experienced in the \nabsence of an external stimulus. The hallucinations \ncan be in the auditory, visual, olfactory, gustatory or"
+    ],
+    "source": "A Short Textbook of Psychiatry, 7th Edition ( PDFDrive ).pdf",
+    "document_id": 21,
+    "pages": [
+      24
+    ],
+    "page_labels": [
+      "13"
+    ],
+    "chunk_ids": [
+      "10df1af8-837d-4eed-aa89-22ba8ee0791c"
+    ],
+    "context_type": "single_chunk"
+  },
+  {
+    "id": "q003",
+    "query": "What are the typical clinical features of multi-infarct dementia and how common is it?",
+    "ideal_answer": "Multi-infarct dementia is the second commonest cause of dementia, seen in 10-15% of all cases, and is one of the important treatable causes of dementia. Its most typical form is characterised by an abrupt onset, acute exacerbations due to repeated infarctions, stepwise clinical deterioration (step-ladder pattern), a fluctuating course, and the presence of hypertension (most commonly) or other significant cardiovascular disease.",
+    "ideal_context": [
+      "treatment of moderately severe to severe Alzheimer’s \ndisease. There are several other drugs (such as ginkgo \nbiloba, piracetam, and vitamin C and E) used for treat-\nment, though their value remains uncertain.\n Multi-infarct Dementia\nMulti-infarct dementia is the second commonest cause \nof dementia, seen in 10-15% of all cases, though some \nstudies indicate that multi-infarct dementia is prob-\nably far more common in India. It is also one of the \nimportant  treatable causes of dementia.\n Occurrence of multiple cerebral infarctions can \nlead to a progressive disruption of brain function, lead-\ning to dementia. The most typical form of multi-infarct \ndementia is characterised by the following features:\n1. An abrupt onset,\n2. Acute exacerbations (due to repeated infarc tions),\n3. Stepwise clinical deterioration ( step-ladder pat-\ntern),\n4. Fluctuating course,\n5. Presence of hypertension (most com monly) or any \nother signiﬁ cant cardiovascular disease, and"
+    ],
+    "source": "A Short Textbook of Psychiatry, 7th Edition ( PDFDrive ).pdf",
+    "document_id": 21,
+    "pages": [
+      36
+    ],
+    "page_labels": [
+      "25"
+    ],
+    "chunk_ids": [
+      "09ad89ba-6185-4343-adee-549c6b0c93df"
+    ],
+    "context_type": "single_chunk"
+  },
+  {
+    "id": "q004",
+    "query": "At what blood alcohol levels do signs of intoxication, coma and death occur?",
+    "ideal_answer": "Signs of intoxication are usually obvious at blood alcohol levels of 150-200 mg%. With blood alcohol levels of 300-450 mg%, increasing drowsiness followed by coma and respiratory depression develops, and death occurs with blood alcohol levels between 400 and 800 mg%. Occasionally a small dose of alcohol may produce acute intoxication in some persons, which is known as pathological intoxication.",
+    "ideal_context": [
+      "tion can occur. There is progressive loss of self-control \nwith frank disinhibited behaviour.\n The duration of intoxication depends on the \namount and the rapidity of ingestion of alcohol. Usu-\nally the signs of intoxication are obvious with blood \nlevels of 150-200 mg%. With blood alcohol levels \nof 300-450 mg%, increasing drowsiness followed \nby coma and respiratory depression develop. Death \noccurs with blood alcohol levels between 400 to 800 \nmg% (Table 4.6).\n Occasionally a small dose of alcohol may produce \nacute intoxication in some persons. This is known as \n pathological intoxication. Another feature, sometimes \nseen in acute intoxication, is the development of  \namnesia or  blackouts.\n  Withdrawal Syndrome\nThe most common withdrawal syndrome is a hangover \non the next morning. Mild tremors, nausea, vomiting, \nTable 4.3: Classiﬁ cation of Alcoholism\nFactors Type I Type II\nSynonym Milieu-limited Male-limited\nGender Both sexes Mostly in males\nAge of onset > 25 years < 25 years"
+    ],
+    "source": "A Short Textbook of Psychiatry, 7th Edition ( PDFDrive ).pdf",
+    "document_id": 21,
+    "pages": [
+      48
+    ],
+    "page_labels": [
+      "37"
+    ],
+    "chunk_ids": [
+      "63fc2fbe-4417-4ace-bbda-4f278b613537"
+    ],
+    "context_type": "single_chunk"
+  },
+  {
+    "id": "q005",
+    "query": "What is the CAGE questionnaire, and what score identifies a problem drinker?",
+    "ideal_answer": "The CAGE questionnaire consists of four questions: whether the person has ever had to Cut down on the amount of alcohol; whether they have ever been Annoyed by people's criticism of alcoholism; whether they have ever felt Guilty about drinking; and whether they have ever needed an Eye opener drink (an early morning drink). A score of 2 or more identifies problem drinkers.",
+    "ideal_context": [
+      "Vehicle Act, 1988)\nTable 4.5:   CAGE Questionnaire\nThe CAGE questionnaire basically consists of four \nquestions:\ni. Have you ever had to Cut down on alcohol (amount)?\nii. Have you ever been Annoyed by people’s criticism \nof alcoholism?\niii. Have you ever felt Guilty about drinking?\niv. Have you ever needed an Eye opener drink (early \nmorning drink)?\nA score of 2 or more identiﬁ es problem drinkers.\n Clinically, Korsakoff’s psychosis presents as an \norganic  amnestic syndrome, characterised by gross \n memory disturbances, with  confabulation.  Insight \nis often impaired. The neuropathological lesion is \nusually wide-spread, but the most consistent changes \nare seen in bilateral dorsomedial nuclei of  thalamus"
+    ],
+    "source": "A Short Textbook of Psychiatry, 7th Edition ( PDFDrive ).pdf",
+    "document_id": 21,
+    "pages": [
+      50
+    ],
+    "page_labels": [
+      "39"
+    ],
+    "chunk_ids": [
+      "368b28ba-89cf-4982-a0a3-45ee7bd50cbe"
+    ],
+    "context_type": "single_chunk"
+  },
+  {
+    "id": "q006",
+    "query": "How is acute amphetamine intoxication treated, and what is used to speed up amphetamine elimination?",
+    "ideal_answer": "Acute amphetamine intoxication is treated by symptomatic measures: hyperpyrexia with cold sponging and parenteral antipyretics, seizures with parenteral diazepam, psychotic symptoms with antipsychotics, and hypertension with antihypertensives. Acidification of urine with oral NH4Cl, 500 mg every 4 hours, facilitates the elimination of amphetamines.",
+    "ideal_context": [
+      "intoxication.\n Withdrawal Syndrome\nThe withdrawal syndrome is typically seen on an \nabrupt discontinuation of amphetamines after a period \nof chronic use. The syndrome is charac terised by \ndepression (may present with suicidal ideation), \nmarked asthenia, apathy, fatigue, hyper somnia alterna-\nting with insomnia, agitation and hyperphagia.\n Tre at ment\nTreatment of Intoxication\nAcute intoxication is treated by symptomatic meas-\nures, e.g. hyperpyrexia (cold sponging, parenteral \nantipyretics), seizures (parenteral  diazepam), psy-\nchotic symptoms (antipsy chotics), and  hypertension \n(antihypertensives). Acidiﬁ  cation of urine (with oral \nNH\n4Cl; 500 mg every 4 hours) facilitates the elimina-\ntion of ampheta mines.\nTreatment of Withdrawal Symptoms\nThe presence of severe suicidal depression may necessitate \nhospitalisation. The treat ment includes symptomatic \nmanagement, use of antidepressants and supportive \npsycho therapy. The management of withdrawal syndrome"
+    ],
+    "source": "A Short Textbook of Psychiatry, 7th Edition ( PDFDrive ).pdf",
+    "document_id": 21,
+    "pages": [
+      60
+    ],
+    "page_labels": [
+      "49"
+    ],
+    "chunk_ids": [
+      "5cdfd4a3-ec35-46fc-996d-1fb56ad74fe9"
+    ],
+    "context_type": "single_chunk"
+  },
+  {
+    "id": "q007",
+    "query": "What is late paraphrenia, who described it, and where is it currently classified?",
+    "ideal_answer": "Late paraphrenia was described by Sir Martin Roth. It occurs late in life, usually in the sixth decade, and is more common in women, especially unmarried or widowed women. Delusions of persecution with bizarre and fantastic content are seen, and hallucinations of all kinds (visual, auditory, tactile, gustatory and olfactory) can be present, while intelligence and social judgement outside the arena of persecutory delusions are usually normal. Approximately 25-40% of patients have some defect of sight or hearing. At present the syndrome is placed under paranoid schizophrenia, late onset type.",
+    "ideal_context": [
+      "Schizophrenia 61\nname of the famous painter Vincent Van Gogh who \nhad cut his ear during the active phase of illness.\nLate  Paraphrenia\nDescribed by Sir Martin Roth, this is a disorder which \noccurs late in life, usually in the sixth decade. It is \nmore common in women, especially unmarried or \nwidowed women.  Delusions of persecution are seen, \nwith bizarre and fantastic content (for example, being \nraped or gassed or strangers entering their rooms and \ninterfering with them).\n  Hallucinations of all kinds (visual, audi tory, tactile, \ngustatory and olfactory) can be present. Intelligence \nand social judgement outside the arena of persecutory \ndelusions are usually normal. Approximately 25-40% \nof the patients have some defect of sight or hearing.\n At present, this syndrome is placed under paranoid \n schizophrenia, late onset type.\nPfropf Schizophrenia\nThis is a syndrome of schizophrenia occurring in the \npresence of  mental retardation. It differs from schizo-"
+    ],
+    "source": "A Short Textbook of Psychiatry, 7th Edition ( PDFDrive ).pdf",
+    "document_id": 21,
+    "pages": [
+      72
+    ],
+    "page_labels": [
+      "61"
+    ],
+    "chunk_ids": [
+      "6c544954-1b83-45a4-9313-5b071974f393"
+    ],
+    "context_type": "single_chunk"
+  },
+  {
+    "id": "q008",
+    "query": "How long does an average manic episode last compared with a depressive episode?",
+    "ideal_answer": "An average manic episode lasts for 3-4 months, while a depressive episode lasts from 4-6 months. Unipolar depression usually lasts longer than bipolar depression, and bipolar mood disorder has an earlier age of onset (third decade) than recurrent depressive (unipolar) disorder.",
+    "ideal_context": [
+      "sion, the dis order is called as  dysthymia; and if symp-\ntoms consist of persistent instability of mood between \nmild depression and mild  elation, the disorder is called \nas  cyclothymia.\nOther  Mood Disorders\nThis category includes the diagnosis of  mixed affec-\ntive episode. This is a frequently missed diagnosis \nclinically. In this type, the full clinical picture of \n depression and  mania is present either at the same time \nintermixed (Fig. 6.1), or alter nates rapidly with each \nother (rapid cycling ), without a normal intervening \nperiod of euthymia.\nCOURSE AND PROGNOSIS\nBipolar      mood disorder has an earlier age of onset \n(third decade) than  recurrent depres sive (uni polar) \ndisorder. Unipolar  depression, on the other hand, is \ncommon in two age groups: late third decade and ﬁ fth \nto sixth decades.\n An average  manic episode lasts for 3-4 months \nwhile a  depressive episode lasts from 4-6 months. \nUnipolar depression usually lasts longer than bipolar"
+    ],
+    "source": "A Short Textbook of Psychiatry, 7th Edition ( PDFDrive ).pdf",
+    "document_id": 21,
+    "pages": [
+      84
+    ],
+    "page_labels": [
+      "73"
+    ],
+    "chunk_ids": [
+      "4fe60128-d875-4db1-886c-ca60723acead"
+    ],
+    "context_type": "single_chunk"
+  },
+  {
+    "id": "q009",
+    "query": "What did the 1989 ICMR study on acute psychoses find?",
+    "ideal_answer": "In the Indian Council of Medical Research (ICMR) study on acute psychoses (1989), 85% of patients exhibited full recovery, recovery occurred in several cases even in the absence of treatment, 50% of patients had a psychological stressor and 20% had a somatic stressor before onset of illness, and the onset occurred in less than 48 hours in 50% of cases.",
+    "ideal_context": [
+      "disorder that neither fol lowed the classical course \nof schizophrenia nor resembled mood disorders in \nclinical picture, and usually had a better prognosis \nthan schizophrenia.\n In a study conducted by the Indian Council of \nMedical Research (ICMR) on acute psychoses (1989), \nthe following ﬁ ndings were apparent:\n1. 85% of these patients exhibited full recovery.\n2. Recovery occurred in several cases even in the \nabsence of treatment.\n3. 50% of patients had a psychological stressor and \n20% of patients had a somatic stressor before the \nonset of illness.\n4. The onset occurred in less than 48 hours in 50% \nof cases.\n ICD-10 has included a new category of ‘ acute and \ntransient  psychotic disorders’ (ATPD) in the section on \n‘schizophrenia, schizotypal and delusional disorders’.\n According to ICD-10, these disor ders have an \nabrupt (less than 48 hours) or acute (less than 2 weeks) \nonset. The onset is often asso ciated with an easily iden-"
+    ],
+    "source": "A Short Textbook of Psychiatry, 7th Edition ( PDFDrive ).pdf",
+    "document_id": 21,
+    "pages": [
+      96
+    ],
+    "page_labels": [
+      "85"
+    ],
+    "chunk_ids": [
+      "39903ef8-2f00-403e-b17f-d61658402fc8"
+    ],
+    "context_type": "single_chunk"
+  },
+  {
+    "id": "q010",
+    "query": "What biological evidence supports a biological basis for obsessive compulsive disorder?",
+    "ideal_answer": "Several biological findings support OCD: obsessive compulsive symptoms can occur secondary to illnesses such as von Economo's encephalitis, basal ganglia lesions, Gilles de la Tourette syndrome, and hypothalamic and third ventricle lesions; OCD is found in 5-7% of first degree relatives of patients with OCD; psychosurgery has been used successfully in treatment; and biochemically the central 5-HT system seems to be involved, as SSRIs are useful in treating OCD.",
+    "ideal_context": [
+      "sions have been described as learned behaviour which \ndecrease the anxiety associated with obsessions. \nThis decrease in anxiety  positively reinforces the \ncompulsive acts and they become ‘stable’, learned \nbehaviours.\n Behavioural or  learning theory is not able to \nexplain the causation of OCD adequately but is very \nuseful in its    treatment.\nBiological Theories\n 1. Obsessive compulsive symptoms can occur \nsecondary to many illnesses such as von Econ-\nomo’s  encephalitis, basal ganglia lesions, Gilles \nde la Tourette syndrome, and hypo thalamic and \nthird ventricle lesions.\n 2.   Obsessive compulsive disorder is found in 5-7% \nof ﬁ rst degree relatives of the patients with \nOCD.\n 3.  Psychosurgery has been successfully used for \ntreat ment of OCD.\n 4. Biochemically, the central  5-HT system seems \nto be involved in OCD, as SSRIs are useful in \nthe treatment of OCD.\n Some authors pointed at  cingulum (gyrus) as the \nprobable site of lesion, while others have found EEG"
+    ],
+    "source": "A Short Textbook of Psychiatry, 7th Edition ( PDFDrive ).pdf",
+    "document_id": 21,
+    "pages": [
+      108
+    ],
+    "page_labels": [
+      "97"
+    ],
+    "chunk_ids": [
+      "16bced40-2502-43eb-b9aa-9cb23677abda"
+    ],
+    "context_type": "single_chunk"
+  },
+  {
+    "id": "q011",
+    "query": "How does ICD-10 characterise neurasthenia, and what must be ruled out before diagnosing it?",
+    "ideal_answer": "According to ICD-10, neurasthenia is characterised by persisting or distressing complaints of increased fatigue after mental effort, or weakness/exhaustion after minimal effort, with two or more of: muscular aches or pains, dizziness, tension headaches, sleep disturbances, inability to relax, irritability and dyspepsia. Other mental disorders that may fully explain the symptoms must be ruled out, and a differential diagnosis with chronic fatigue syndrome (CFS) and other medical and psychiatric disorders presenting with fatigue is important before diagnosing neurasthenia.",
+    "ideal_context": [
+      "Neurasthenia\nAccording to ICD-10, this disorder is characterised \nby:\n Persisting/distressing complaints of increased \nfatigue after mental effort, or of weakness/exhaustion \nafter minimal effort; with two or more of the follow-\ning: feelings of muscular aches/pains, dizziness, ten-\nsion headaches, sleep disturbances, inability to relax, \nirritability and dyspepsia. It is important to rule out \nother mental disorders which may fully explain the \nsymptoms.\n This is clearly a poorly de ﬁ ned syndrome and its \nindepen dence as a diagnosis is doubtful. A diffe ren tial \ndiagnosis with CFS (chronic fatigue synd rome), and \nother medical and psychiatric disorders pre senting \nwith fatigue, is important before diag nosing neuras-\nthenia.\n CFS is characterised by profound fatigue (present \nat rest, and made worse by physical and mental effort), \nmuscle pains, headache, sore throat, functional impair-\nment and nonspeciﬁ c ‘soft’ physical signs, e.g. mild"
+    ],
+    "source": "A Short Textbook of Psychiatry, 7th Edition ( PDFDrive ).pdf",
+    "document_id": 21,
+    "pages": [
+      120
+    ],
+    "page_labels": [
+      "109"
+    ],
+    "chunk_ids": [
+      "8b837469-3dcc-4385-b36c-287d7af43c5c"
+    ],
+    "context_type": "single_chunk"
+  },
+  {
+    "id": "q012",
+    "query": "What are the four main types of sexual disorders, and which gender identity disorders are included?",
+    "ideal_answer": "Sexual disorders are classified into four main types: gender identity disorders; psychological and behavioural disorders associated with sexual development and maturation; paraphilias (disorders of sexual preference); and sexual dysfunctions. The gender identity disorders group includes transexualism (male and female; primary and secondary), gender identity disorder of childhood, dual-role transvestism, and intersexuality.",
+    "ideal_context": [
+      "10 Sexual Disorders\nThe  sexual disorders can be classiﬁ ed into four main \ntypes:\n1.  Gender identity disorders.\n2. Psychological and behavioural disorders asso-\nciated with sexual development and matura tion.\n3.  Paraphilias (disorders of sexual prefe rence).\n4.  Sexual dysfunctions.\n In ICD-10, gender identity disorders, dis orders of \nsexual preference, and sexual development and orien-\ntation disorders are listed under the disorders of adult \npersona lity and behaviour, while sexual dysfunctions \n(not caused by organic disorder or disease) are listed \nunder the behavioural syndromes associated with \nphysiolo gical disturbances and physical factors.\nGENDER IDENTITY DISORDERS\nThese disorders are characterised by distur bance in \n gender identity, i.e. the sense of one’s masculinity or \nfemininity is disturbed. This group includes:\n1. Transexualism: Male and female; primary and \nsecondary.\n2. Gender identity disorder of childhood.\n3. Dual-role  transvestism.\n4.  Intersexuality."
+    ],
+    "source": "A Short Textbook of Psychiatry, 7th Edition ( PDFDrive ).pdf",
+    "document_id": 21,
+    "pages": [
+      132
+    ],
+    "page_labels": [
+      "121"
+    ],
+    "chunk_ids": [
+      "0a91ebbd-8b77-4aea-bb5e-621e17baadc1"
+    ],
+    "context_type": "single_chunk"
+  },
+  {
+    "id": "q013",
+    "query": "What are the characteristic features of REM sleep, and when does the first REM period occur?",
+    "ideal_answer": "REM sleep is a light phase of sleep whose EEG shows a return of alpha-waves, with other changes similar to stage 1 NREM sleep. Its most characteristic feature is the presence of rapid (conjugate) eye movements; other features include generalised muscular atony, penile erection, autonomic hyperactivity (increased pulse rate, respiratory rate and blood pressure), and intermittent movements of small muscle groups. Although it is a light stage, arousal is difficult. The first REM period typically occurs after 90 minutes of sleep onset, although it can start as early as 7 minutes after going off to sleep, for example in narcolepsy, major depression and after sleep deprivation.",
+    "ideal_context": [
+      "is a light phase of sleep. The EEG is characterised \nby a return of α-waves (α-wave sleep); other changes \nare similar to stage 1 NREM-sleep. One of the most \ncharacteristic features of the REM-sleep is presence \nof REM or rapid (conjugate) eye move ments. The \nother features include generalised mus cular atony, \npenile erection, autonomic hyperac tivity (increase in \npulse rate, respiratory rate and blood pressure), and \nmovements of small muscle groups, occurring intermi-\nttently. Although it is a light stage of sleep, arousal is \ndifﬁ cult.\n These stages occur regularly throughout the whole \nduration of sleep. The ﬁ rst REM period occurs typi-\ncally after 90 minutes of the onset of sleep, although it \ncan start as early as 7 minutes after going-off to sleep, \ne.g. in  narcolepsy, in major depression, and after  sleep \ndeprivation.\n The important time periods of the various sleep \nstages are summarised below:\n1. In an 8 hour sleep, usually 6-6½ hours are spent"
+    ],
+    "source": "A Short Textbook of Psychiatry, 7th Edition ( PDFDrive ).pdf",
+    "document_id": 21,
+    "pages": [
+      144
+    ],
+    "page_labels": [
+      "133"
+    ],
+    "chunk_ids": [
+      "5c692214-bca8-4ddd-a16f-9863db89a296"
+    ],
+    "context_type": "single_chunk"
+  },
+  {
+    "id": "q014",
+    "query": "Which two laboratory tests are used to diagnose phenylketonuria, and what does treatment consist of?",
+    "ideal_answer": "Phenylketonuria is diagnosed using the ferric chloride test, in which addition of FeCl3 to urine gives a green colour due to the presence of phenylpyruvic acid (this may also be positive in other aminoacidurias), and Guthrie's test, a bacteriological procedure for measuring phenylalanine levels in blood; chromatography is also used. Early diagnosis is of paramount importance because the mental retardation of phenylketonuria is preventable, and treatment consists of a low phenylalanine diet, best started before the age of 6 months and usually continued up to 5-6 years of age.",
+    "ideal_context": [
+      "eczematous dermatitis, epilepsy, hyperactivity, poor \ncommunication skills and poor motor coordination. \nEEG may be abnormal in up to 80% of cases.\n However, the physical appearance may be normal \nand diagnosis made only after investi gations, which \ninclude:\n1.  Ferric chloride test: Addition of FeCl\n3 to urine \ngives a green colour in patients with phenylke ton-\nuria. This results from the presence of phenylpy-\nruvic acid in urine. This test may be positive in \nother aminoacidurias as well.\n2.  Guthrie’ s test: This involves a bacteriological pro-\ncedure for measurement of phenylala nine levels \nin blood.\n3.  Chromatography: An early diagnosis is clearly of \nparamount importance, since mental retar dation \nof phenylketonuria is preventable, if diagnosis is \nmade early in life. The treatment consists of a low \nphenyl ala nine diet, best started before the age of \n6 months and usually continued up to 5-6 years \nof age. The diet should not be completely devoid"
+    ],
+    "source": "A Short Textbook of Psychiatry, 7th Edition ( PDFDrive ).pdf",
+    "document_id": 21,
+    "pages": [
+      168
+    ],
+    "page_labels": [
+      "157"
+    ],
+    "chunk_ids": [
+      "6848c51d-66ce-4d9d-83a6-a7a1202bbe98"
+    ],
+    "context_type": "single_chunk"
+  },
+  {
+    "id": "q015",
+    "query": "How common are organic causes in enuresis, and what non-drug measures are used to manage it?",
+    "ideal_answer": "Organic causes are present in about 5% of cases of enuresis and include worm infestation, spina bifida, neurogenic bladder, urinary tract infection, diabetes mellitus and seizure disorder; an organic cause must particularly be looked for in children with diurnal enuresis (15% of all cases of diurnal enuresis) and in adolescents with enuresis. Management measures include restriction of fluid intake after 8 PM in nocturnal enuresis, bladder training during the daytime to increase the holding-time of the bladder (carried out step-by-step using positive reinforcements), and interruption of sleep before the expected time of bed wetting, with the child fully woken up and made aware of passing urine. Enuresis tends to remit spontaneously and only 1% of children with enuresis continue to have the disorder in adulthood.",
+    "ideal_context": [
+      "cause must be looked for in children with diurnal \nenuresis (15% of all cases of diurnal enu resis) and \nadolescents with enuresis. The organic causes are \npresent in about 5% of cases and include worm infes-\ntation, spina biﬁ da, neurogenic bladder, urinary tract \ninfection, diabetes mellitus, and seizure disorder.\n In secondary enuresis, the age of onset is usually \n5-8 years. Enuresis tends to remit spontaneously and \nonly 1% of children with enuresis continue to have \nthe disorder in adulthood.\nTreatment\nThe management consists of one or more of the fol-\nlowing measures:\n1. Restriction of ﬂ uid intake after 8 PM, in nocturnal \nenuresis.\n2.  Bladder training during daytime, aimed at increas-\ning the holding-time of bladder. This is carried out \nin a step-by-step manner using positive reinforce-\nments.\n3. Interruption of sleep before the expected time of \nbed wetting. The child should be fully woken up \nand made aware of passing of urine."
+    ],
+    "source": "A Short Textbook of Psychiatry, 7th Edition ( PDFDrive ).pdf",
+    "document_id": 21,
+    "pages": [
+      180
+    ],
+    "page_labels": [
+      "169"
+    ],
+    "chunk_ids": [
+      "147852c2-b473-4510-a8a0-82e6ef66b99c"
+    ],
+    "context_type": "single_chunk"
+  },
+  {
+    "id": "q016",
+    "query": "What general principles govern the routine clinical use of antipsychotics?",
+    "ideal_answer": "General principles include: although atypical antipsychotics are usually preferred, the choice of antipsychotic medication should be individualised for the particular patient, since recent evidence shows more differences in adverse effect profiles but not in efficacy between older and newer antipsychotics; the lowest effective dose should be used whenever possible; and routinely only one antipsychotic should be used at a time. Because discontinuation of antipsychotic medication often leads to relapse, long-acting preparations are valuable and may be given in depot form, either intramuscularly or administered orally.",
+    "ideal_context": [
+      "Psychopharmacology 181\n Since discontinuation of antipsy chotic medi cation \noften leads to relapse, long-acting pre para tions of \n antipsychotics are valu able in the treatment. They \nmay be given in a depot form, either intramuscularly \nor adminis tered orally. There are several different \npreparations available in the international market but \nthe preparations summarised in Table 15.5 are used \nmost often.\nClinical Use\nSome general principles regarding routine clinical use \nof antipsychotics include:\n1. Although atypical antipsychotics are usually \npreferred, the choice of antipsy chotic medication \nshould be individualised in a particular patient. \nThe recent evidence shows more differences in \nadverse effect proﬁ les but not in efﬁ cacy between \nolder and newer antipsychotics.\n2. Whenever possible the lowest effective dose \nshould be used.\n3. Routinely only one antipsychotic should be used \nat one time. Rational polypharmacy should be"
+    ],
+    "source": "A Short Textbook of Psychiatry, 7th Edition ( PDFDrive ).pdf",
+    "document_id": 21,
+    "pages": [
+      192
+    ],
+    "page_labels": [
+      "181"
+    ],
+    "chunk_ids": [
+      "560de4ce-c32d-40d9-a586-0ab39f59ad0a"
+    ],
+    "context_type": "single_chunk"
+  },
+  {
+    "id": "q017",
+    "query": "What are the most dangerous side effects of carbamazepine?",
+    "ideal_answer": "The most dangerous side effects of carbamazepine are bone marrow depression (causing aplastic anaemia), agranulocytosis and cardiovascular collapse. Its major side effects include diplopia, drowsiness, dizziness, nausea, vomiting, ataxia, skin rash, Steven-Johnson syndrome (erythema multiforme major), photosensitivity, cholestatic jaundice, acute oliguria with hypertension, leucopenia and thrombocytopenic purpura.",
+    "ideal_context": [
+      "Psychopharmacology 193\nintolerant patients; for prophy laxis in some \npatients; for treatment of acute  mania, especially \nsevere and dys phoric mania)\n ii.  Impulse control disorder and  aggres sion (in \nsome cases)\n iii.  Psychosis (especially mania) with  epilepsy\n iv.  Borderline  personality disorder (for treatment \nof mood swings)\n v.  Cocaine withdrawal syndrome\n3. Paroxysmal pain syndromes\n i. Trigeminal neuralgia\n ii. Phantom limb pain\n iii. Other paroxysmal pain syndromes (neu ral gias).\nSide Effects\nThe major side effects include diplopia, drow si-\nness, dizziness, nausea, vomiting, ataxia, skin rash, \n Steven-Johnson syndrome ( ery thema multi forme \nmajor), photosensitivity, cholestatic jaun dice, acute \noliguria with hypertension, leucopenia and thrombo-\ncytopenic purpura. The most dangerous side effects \ninclude bone marrow depression (causing  aplas-\ntic anaemia), agranulocytosis and cardiovascular \ncollapse.\n Therefore, it is essential to monitor cardiac, renal,"
+    ],
+    "source": "A Short Textbook of Psychiatry, 7th Edition ( PDFDrive ).pdf",
+    "document_id": 21,
+    "pages": [
+      204
+    ],
+    "page_labels": [
+      "193"
+    ],
+    "chunk_ids": [
+      "113c000d-95c4-4571-af55-02e6e395acfb"
+    ],
+    "context_type": "single_chunk"
+  },
+  {
+    "id": "q018",
+    "query": "In which year and in which book did Freud advance the topographic theory of mind, and what are its three divisions?",
+    "ideal_answer": "Freud advanced the topographic theory of mind in 1900, in the book The Interpretation of Dreams. Its tripartite division of the mind included the unconscious, the preconscious and the conscious. Although this theory was later almost replaced by the structural theory, it is still useful in understanding mental mechanisms.",
+    "ideal_context": [
+      "others.\n Although there were several changes in psycho-\nanalysis, some of them even fundamental, as Freud’s \nthinking evolved over the years, an attempt is made \nhere to illustrate the basic concepts of psychoanalysis \nas it existed near the end of Freud’s career.\nBASIC CONCEPTS\n T opographic Theory of Mind\nThis theory was advanced by Freud in the year 1900, \nin the book called The Interpretation of Dreams.  \nAlthough it was later almost replaced by the  structural \ntheory, it is still useful in understanding the mental \nmechanisms.\n The tripartite division of mind included the  un-\nconscious, the  preconscious and the  conscious.\nThe Unconscious\nMuch of the mental activity lies outside the sphere \nof consciousness. However, this uncon s  cious mental \nactivity inﬂ uences the conscious thought and behav-\niour even if it is not available to voluntary recall.\n The unconscious contains those ideas and affects \nwhich have been repressed (by the censor, as  repres-"
+    ],
+    "source": "A Short Textbook of Psychiatry, 7th Edition ( PDFDrive ).pdf",
+    "document_id": 21,
+    "pages": [
+      216
+    ],
+    "page_labels": [
+      "205"
+    ],
+    "chunk_ids": [
+      "25907a64-0b2d-4cd1-8ae9-9deaadded8df"
+    ],
+    "context_type": "single_chunk"
+  },
+  {
+    "id": "q019",
+    "query": "Who first used group therapy and when, and what benefit does it offer patients?",
+    "ideal_answer": "Group therapy (group psychotherapy) was first used by Joseph Pratt, an internist, in 1905, for patients suffering from tuberculosis. It is a less time-consuming procedure in which usually 8-10 people can be treated at one time, and it offers patients and their relatives an opportunity to realise that many others have and share problems very similar to their own and that they are not alone.",
+    "ideal_context": [
+      "behavioural or systemic principles. Whenever there \nare relational problems within a family or marital unit \n(either primarily or secondary to a psy chiatric disor-\nder), family and/or marital therapy is indicated. For \nexample, in a behavioural marital therapy, components \nof therapy may include problem solving, training in \ncom munication skills, writing a behavioural marital \ncontract, and home-work assignments.\nGroup Therapy\nGroup therapy (or group psychotherapy) is a \nless time-consuming procedure, in which usually \n8-10 people can be treated at one time. This was ﬁ rst \nused by Joseph Pratt (an internist) in 1905, for patients \nsuffering from tuberculosis.\n Now, it is known that group therapy is not only \ntime-saving but also especially beneﬁ cial for certain \ngroup of patients. Group therapy offers patients (and \ntheir relatives) an opport unity to realise that many \nothers have and share problems which are very similar \nto their own problems, and that they are not alone in"
+    ],
+    "source": "A Short Textbook of Psychiatry, 7th Edition ( PDFDrive ).pdf",
+    "document_id": 21,
+    "pages": [
+      228
+    ],
+    "page_labels": [
+      "217"
+    ],
+    "chunk_ids": [
+      "03bc19d0-5cb9-470f-ba7c-c0fea1f70fd2"
+    ],
+    "context_type": "single_chunk"
+  },
+  {
+    "id": "q020",
+    "query": "What does Section 84 of the Indian Penal Code say about criminal responsibility in mental illness?",
+    "ideal_answer": "Section 84 of the Indian Penal Code (Act 45 of 1860) states that nothing is an offence which is done by a person who, at the time of doing it, by reason of unsoundness of mind, is incapable of knowing the nature of the act or that he is doing what is either wrong or contrary to law. A mentally ill person is therefore not protected ipso facto; he must satisfy this rule. A mentally retarded person (called an 'idiot' in law) is not considered liable under Indian criminal law. This derives from the McNaughten Rule(s), the answers given by 15 prominent judges invited by the House of Lords to respond to questions on criminal responsibility, which is still used in slightly modified form in many countries.",
+    "ideal_context": [
+      "Queen Victoria, Sir Robert Peel and other prominent \npersons were outraged. Following this, 15 prominent \njudges were invited by the House of Lords. They were \nasked to respond to a series of questions on criminal \nresponsibility. The answers, which are immor talised \nin the history of forensic psychiatry, have now come \nto be known as McNaughten Rule(s).\n  The McNaughten Rule is used in a slightly modi-\nﬁ ed form in many countries even now. In India, Sec-\ntion 84 of the Indian Penal Code (Act 45 of 1860) \nstates that ‘nothing is an offense, which is done by a \nperson, who at the time of doing it, by reason of un-\nsoundness of mind, is incapable of knowing the nature \nof the act or that he is doing what is either wrong or \ncontrary to law’.\n So a mentally ill person is not protected ipso facto. \nHe must satisfy the above mentioned rule. A mentally \nretarded person (called ‘ idiot’ in law) is not considered \nliable under Indian criminal law."
+    ],
+    "source": "A Short Textbook of Psychiatry, 7th Edition ( PDFDrive ).pdf",
+    "document_id": 21,
+    "pages": [
+      240
+    ],
+    "page_labels": [
+      "229"
+    ],
+    "chunk_ids": [
+      "60d04bf6-7908-49d1-8217-11e7cccc823a"
+    ],
+    "context_type": "single_chunk"
+  },
+  {
+    "id": "q021",
+    "query": "Which treatments were started in 1917, 1938 and 1949, and by whom?",
+    "ideal_answer": "According to the brief early history of biological treatments in psychiatry: malarial treatment of GPI was started in 1917 by Julius Wagner von Jauregg; electroshock (electroconvulsive therapy) was started in 1938 by Ugo Cerletti and Lucio Bini; and lithium (for mania) was started in 1949 by John F Cade.",
+    "ideal_context": [
+      "give consent, consideration must be given to the \nmost recent legal guidelines and local procedures \nwhich can include the best interest decision with \nconsent of guardian/family and additional opinion \nfrom another professional.\n2. Detailed medical and psychiatric history taking, \nwhich includes the current and past treatment his-\ntory.\nTable 16.1: A Brief Early History of Biological Treatments in Psychiatry\nYear Treatment Started by\n1785 Camphor-induced seizures W Oliver\n1917 Malarial treatment of GPI Julius Wagner von Jauregg\n1922   Barbiturate coma therapy Jacob Klaesi\n1931  Reserpine (1st drug treatment in psychosis) Ganesh Sen, Kartik Bose\n1933 Insulin coma therapy Manfred Sakel\n1934 Cardiazol (metrazol) induced seizures LLJ von Meduna\n1936 Psychosurgery (prefrontal leucotomy) Egas Moniz, Almenda Lima\n1938 Electroshock (electroconvulsive therapy) Ugo Cerletti, Lucio Bini\n1949  Lithium (for mania) John F Cade\n1952  Chlorpromazine (1st antipsychotic) Jean PL Delay, Pierre Deniker"
+    ],
+    "source": "A Short Textbook of Psychiatry, 7th Edition ( PDFDrive ).pdf",
+    "document_id": 21,
+    "pages": [
+      211
+    ],
+    "page_labels": [
+      "200"
+    ],
+    "chunk_ids": [
+      "99c819af-38e7-41ec-aba6-90b026238934"
+    ],
+    "context_type": "single_chunk"
+  },
+  {
+    "id": "q022",
+    "query": "Who was the first psychiatrist to win a Nobel Prize and for what work, and which Nobel award went to psychosurgery?",
+    "ideal_answer": "Julius Wagner von Jauregg (1857-1940; Austria) was the first psychiatrist to receive a Nobel Prize in Physiology or Medicine, awarded in 1927 for malarial treatment for GPI, described as the first successful treatment of a major psychosis. The 1949 award went to Antonio Caetano de Abreu Freire Egas Moniz (1874-1955; Portugal) for psychosurgery (prefrontal leucotomy), shared with Walter Rudolf Hess (1881-1973; Switzerland) for cerebral angiography.",
+    "ideal_context": [
+      "Appendices\nAppendix I: Nobel Prizes in Psychiatry and Allied Disciplines\nNobel Laureates Major Contributions Year of Award\n1. Ivan Petrovich Pavlov (1849-1936; Russia) Classical conditioning\nPhysiology of digestion\n1904\n2. Camillo Golgi (1843-1926; Italy)\nSantiago Ramon y Cajal (1852-1934; Spain)\nStructure of CNS 1906\n3. Julius Wagner von Jauregg (1857-1940; Austria)\n(First psychiatrist to receive a Nobel Prize in Physiol-\nogy or Medicine)\nMalarial treatment for GPI (First \nsuccessful treatment of a major \npsychosis)\n1927\n4. Antonio Caetano de Abreu Freire Egas Moniz \n(Egas Moniz) (1874-1955; Portugal)\nWalter Rudolf Hess (1881-1973; Switzerland)\nPsychosurgery (prefrontal leu-\ncotomy)\nCerebral angiography\n1949\n5. Konrad Lorenz (1903-1989; Austria)\nKarl Von Frisch (1886-1982; Germany)\nNikolaas Tinbergen (1907-1988; UK)\nEthology 1973\n6. Sir Godfrey Newbold Hounsﬁ eld (1919-2004; UK)\nAllan Macleod Cormack (1924-1998; US)\nComputerised Tomography Scan 1979"
+    ],
+    "source": "A Short Textbook of Psychiatry, 7th Edition ( PDFDrive ).pdf",
+    "document_id": 21,
+    "pages": [
+      252
+    ],
+    "page_labels": [
+      "241"
+    ],
+    "chunk_ids": [
+      "ae628bf1-7ce5-480f-aed6-9459adb97c3b"
+    ],
+    "context_type": "single_chunk"
+  },
+  {
+    "id": "q023",
+    "query": "What are the suggestive indications for ECT defined by the 1990 APA Task Force, and what does pre-treatment evaluation involve?",
+    "ideal_answer": "The 1990 APA Task Force on ECT defined as suggestive indications (for occasional use) organic mental disorders such as organic mood syndrome, organic hallucinosis, organic delusional disorder and delirium, and medical disorders such as organic catatonia, neuroleptic malignant syndrome and parkinsonism. Pre-treatment evaluation consists of taking informed consent from the patient (if the patient lacks capacity or competence, consideration must be given to the most recent legal guidelines and local procedures, which can include a best interest decision with consent of guardian or family and an additional opinion from another professional), and detailed medical and psychiatric history taking including current and past treatment history. ECT in mania and schizophrenia is not a treatment of first choice and is employed only in the specified conditions; a history of good response with ECT and patient preference also determine its use.",
+    "ideal_context": [
+      "schizo-affective disorder).\n The use of ECT in mania and schizophrenia is \nnot a treatment of ﬁ rst choice and is employed only \nin the above-mentioned condi tions. A history of good \nresponse with ECT and patient preference for ECT \nalso determine the use of ECT.\n The 1990 APA Task Force on ECT also de ﬁ ned \nas suggestive indications (for occasional use) the fol-\nlowing disorders:\n1. Organic mental disorders (e.g. organic mood syn-\ndrome, organic hallucinosis, organic delusional \ndisorder, and  delirium).\n2. Medical disorders (e.g. organic  catatonia,  neuro-\nleptic malignant syndrome and  parkin sonism).\nPre-treatment Evaluation\nThe pre-treatment evaluation consists of the follow-\ning steps:\n1. An  informed consent, taken from the patient. If the \npatient does not have capacity or competence to \ngive consent, consideration must be given to the \nmost recent legal guidelines and local procedures \nwhich can include the best interest decision with",
+      "give consent, consideration must be given to the \nmost recent legal guidelines and local procedures \nwhich can include the best interest decision with \nconsent of guardian/family and additional opinion \nfrom another professional.\n2. Detailed medical and psychiatric history taking, \nwhich includes the current and past treatment his-\ntory.\nTable 16.1: A Brief Early History of Biological Treatments in Psychiatry\nYear Treatment Started by\n1785 Camphor-induced seizures W Oliver\n1917 Malarial treatment of GPI Julius Wagner von Jauregg\n1922   Barbiturate coma therapy Jacob Klaesi\n1931  Reserpine (1st drug treatment in psychosis) Ganesh Sen, Kartik Bose\n1933 Insulin coma therapy Manfred Sakel\n1934 Cardiazol (metrazol) induced seizures LLJ von Meduna\n1936 Psychosurgery (prefrontal leucotomy) Egas Moniz, Almenda Lima\n1938 Electroshock (electroconvulsive therapy) Ugo Cerletti, Lucio Bini\n1949  Lithium (for mania) John F Cade\n1952  Chlorpromazine (1st antipsychotic) Jean PL Delay, Pierre Deniker"
+    ],
+    "source": "A Short Textbook of Psychiatry, 7th Edition ( PDFDrive ).pdf",
+    "document_id": 21,
+    "pages": [
+      211
+    ],
+    "page_labels": [
+      "200",
+      "200"
+    ],
+    "chunk_ids": [
+      "228c20a9-b5e3-46a4-b932-70706249cea3",
+      "99c819af-38e7-41ec-aba6-90b026238934"
+    ],
+    "context_type": "multi_chunk"
+  },
+  {
+    "id": "q024",
+    "query": "What are the key features of Korsakoff's psychosis and where is the neuropathological lesion?",
+    "ideal_answer": "Clinically, Korsakoff's psychosis presents as an organic amnestic syndrome characterised by gross memory disturbances with confabulation, and insight is often impaired. The neuropathological lesion is usually widespread, but the most consistent changes are seen in the bilateral dorsomedial nuclei of the thalamus.",
+    "ideal_context": [
+      "Vehicle Act, 1988)\nTable 4.5:   CAGE Questionnaire\nThe CAGE questionnaire basically consists of four \nquestions:\ni. Have you ever had to Cut down on alcohol (amount)?\nii. Have you ever been Annoyed by people’s criticism \nof alcoholism?\niii. Have you ever felt Guilty about drinking?\niv. Have you ever needed an Eye opener drink (early \nmorning drink)?\nA score of 2 or more identiﬁ es problem drinkers.\n Clinically, Korsakoff’s psychosis presents as an \norganic  amnestic syndrome, characterised by gross \n memory disturbances, with  confabulation.  Insight \nis often impaired. The neuropathological lesion is \nusually wide-spread, but the most consistent changes \nare seen in bilateral dorsomedial nuclei of  thalamus"
+    ],
+    "source": "A Short Textbook of Psychiatry, 7th Edition ( PDFDrive ).pdf",
+    "document_id": 21,
+    "pages": [
+      50
+    ],
+    "page_labels": [
+      "39"
+    ],
+    "chunk_ids": [
+      "368b28ba-89cf-4982-a0a3-45ee7bd50cbe"
+    ],
+    "context_type": "single_chunk"
+  },
+  {
+    "id": "q025",
+    "query": "How can matrix-vector multiplication be reformulated in terms of the columns of the matrix?",
+    "ideal_answer": "Besides the dot product interpretation, the product of a matrix A and a vector v can be formulated as Av = the sum over j of v_j times the j-th column of A, where each v_j is a constant to be multiplied with its corresponding column of A.",
+    "ideal_context": [
+      "Matrix-Vector Multiplication\nWhen multiplying a matrix A and a vector v, we can again do this via the dot\nproduct interpretation of matrix multiplication, as described previously. However, if\nwe instead manipulate the expression slightly, we’ll see that another way to formulate\nthis product is:\nAv = ∑ j vjA · , j\nWhere each vj  is a constant to be multiplied with its corresponding column of A. Fig‐\nure 1-9 is an example of this method in action.\nFigure 1-9. Matrix-vector multiplication\nThis section introduced matrix and vector operations, which are fundamental to\nunderstanding the inner workings of a neural network. In the next section, we will\nuse our knowledge of matrix and vector operations to concretely define some matrix\nproperties, which serve as the basis for important data science and deep learning\ntechniques.\nThe Fundamental Spaces\nIn this section, we will formally discuss some important matrix properties and"
+    ],
+    "source": "deeplearning.pdf",
+    "document_id": 27,
+    "pages": [
+      22
+    ],
+    "page_labels": [
+      "23"
+    ],
+    "chunk_ids": [
+      "87519039-3752-4fb2-9332-f7aeb350fc72"
+    ],
+    "context_type": "single_chunk"
+  },
+  {
+    "id": "q026",
+    "query": "What is a prefix code and why does it guarantee that an encoded string can be decoded uniquely?",
+    "ideal_answer": "A prefix code is an encoding that disallows the binary string representations of different outcomes from being prefixes of each other. It guarantees unique translation because, when decoding the remaining suffix of a string, once a prefix of that suffix translates to an outcome we already know by definition that there is no smaller prefix that translates to a valid outcome; this logic is then applied recursively until the end of the string is reached.",
+    "ideal_context": [
+      "To prevent this situation from ever occurring again, we decide to enforce some limi‐\ntations on the binary strings you can use to represent outcomes. We use what is called\na prefix code , which disallows binary string representations of different outcomes\nfrom being prefixes of each other. It’s not too difficult to see why this would result\nin a unique translation of string to outcomes. Let’s say we have a binary string, some\nprefix of which we have been able to successfully decode into a series of outcomes. To\ndecode the rest of the string, or the suffix, we must first find the next outcome in the\nseries. When we find a prefix of this suffix that translates to an outcome, we already\nknow that, by definition, there is no smaller prefix that translates to a valid outcome.\nWe now have a larger prefix of the binary string that has been successfully translated\nto a series of outcomes. We then recursively use this logic until we have reached the\nend of the string."
+    ],
+    "source": "deeplearning.pdf",
+    "document_id": 27,
+    "pages": [
+      45
+    ],
+    "page_labels": [
+      "46"
+    ],
+    "chunk_ids": [
+      "1a7805e9-10ae-431e-b03c-2607f54ad084"
+    ],
+    "context_type": "single_chunk"
+  },
+  {
+    "id": "q027",
+    "query": "With a fair six-sided dice, how many characters per trial does the unary-style encoding need, and what is the best achievable with a fixed-length code?",
+    "ideal_answer": "With one encoded as '0', two as '10', three as '110', four as '1110', five as '11110' and six as '111110', and assuming each outcome shows up with probability 1/6, the expected number of letters to write per trial is 3.5. This could be reduced to 3 by setting one as '000', two as '001', three as '010', four as '011', five as '100' and six as '101'.",
+    "ideal_context": [
+      "We now have a larger prefix of the binary string that has been successfully translated\nto a series of outcomes. We then recursively use this logic until we have reached the\nend of the string.\nNow that we have some guidelines on string representations for outcomes, we redo\nthe original experiment with one as “0, ” two as “10, ” three as “110, ” four as “1110, ” five\nas “11110, ” and six as “111110. ” However, as noted earlier, I may carry out hundreds\nof trials, and as the scribe you probably want to limit the amount of writing you have\nto do. With no information about the dice, we can’t do too much better than this.\nAssuming each outcome shows up with probability 1\n6 , the expected number of letters\nyou’ d need to write down per trial is 3.5. We could get down to 3 if we set one as\n“000, ” two as “001, ” three as “010, ” four as “011, ” five as “100, ” and six as “101, ” for\nexample.\nBut what if we knew information about the dice? For example, what if it were a"
+    ],
+    "source": "deeplearning.pdf",
+    "document_id": 27,
+    "pages": [
+      45
+    ],
+    "page_labels": [
+      "46"
+    ],
+    "chunk_ids": [
+      "d1423e60-6b93-4ccc-922d-a1ee615369e6"
+    ],
+    "context_type": "single_chunk"
+  },
+  {
+    "id": "q028",
+    "query": "Why are linear neurons insufficient for building deep networks?",
+    "ideal_answer": "Most neuron types are defined by the function f they apply to their logit z; a linear neuron uses f(z) = az + b. Although linear neurons are easy to compute with, they run into serious limitations: it can be shown that any feed-forward neural network consisting of only linear neurons can be expressed as a network with no hidden layers.",
+    "ideal_context": [
+      "element-wise. This reformulation will become all the more critical as we begin to\nimplement these networks in software.\nLinear Neurons and Their Limitations\nMost neuron types are defined by the function f  they apply to their logit z . Let’s first\nconsider layers of neurons that use a linear function in the form of f z = az + b. For\nexample, a neuron that attempts to estimate a cost of a meal in a fast-food restaurant\nwould use a linear neuron where a = 1  and b = 0 . Using f z = z and weights equal\nto the price of each item, the linear neuron in Figure 3-10  would take in some\nordered triple of servings of burgers, fries, and sodas, and output the price of the\ncombination.\nFigure 3-10. An example of a linear neuron\nLinear neurons are easy to compute with, but they run into serious limitations. In\nfact, it can be shown that any feed-forward neural network consisting of only linear\nneurons can be expressed as a network with no hidden layers. This is problematic"
+    ],
+    "source": "deeplearning.pdf",
+    "document_id": 27,
+    "pages": [
+      66
+    ],
+    "page_labels": [
+      "67"
+    ],
+    "chunk_ids": [
+      "405cd568-b703-4c1e-b282-582668b81acf"
+    ],
+    "context_type": "single_chunk"
+  },
+  {
+    "id": "q029",
+    "query": "What are max norm constraints and how are they enforced?",
+    "ideal_answer": "Max norm constraints aim to restrict the parameters from becoming too large, but do so more directly than regularization penalties. They enforce an absolute upper bound on the magnitude of the incoming weight vector for every neuron and use projected gradient descent to enforce the constraint: any time a gradient descent step moves the incoming weight vector such that its norm exceeds c, the vector is projected back onto the ball centered at the origin with radius c.",
+    "ideal_context": [
+      "5 Srebro, Nathan, Jason DM Rennie, and Tommi S. Jaakkola. “Maximum-Margin Matrix Factorization. ” NIPS,\nVol. 17, 2004.\n6 Srivastava, Nitish, et al. “Dropout: A Simple Way to Prevent Neural Networks from Overfitting. ” Journal of\nMachine Learning Research 15.1 (2014): 1929-1958.\nwhich features are contributing to a decision. If this level of feature analysis isn’t\nnecessary, we prefer to use L2 regularization because it empirically performs better.\nMax norm constraints have a similar goal of attempting to restrict θ  from becoming\ntoo large, but they do this more directly. 5 Max norm constraints enforce an absolute\nupper bound on the magnitude of the incoming weight vector for every neuron\nand use projected gradient descent to enforce the constraint. So any time a gradient\ndescent step moves the incoming weight vector such that w 2 > c, we project the\nvector back onto the ball (centered at the origin) with radius c . Typical values of c  are"
+    ],
+    "source": "deeplearning.pdf",
+    "document_id": 27,
+    "pages": [
+      88
+    ],
+    "page_labels": [
+      "89"
+    ],
+    "chunk_ids": [
+      "2740511d-0f68-4970-9ed7-841c3bd265c9"
+    ],
+    "context_type": "single_chunk"
+  },
+  {
+    "id": "q030",
+    "query": "Why did researchers historically use layer-wise greedy pretraining, and what changed?",
+    "ideal_answer": "For several years researchers resorted to layer-wise greedy pretraining to grapple with the complex error surfaces presented by deep learning models. These time-intensive strategies tried to find more accurate initializations for the model's parameters one layer at a time before using minibatch gradient descent to converge to the optimal parameter settings. More recently, breakthroughs in optimization methods have enabled training models directly in an end-to-end fashion. Other enabling factors included massive labeled datasets such as ImageNet and CIFAR-10, better hardware in the form of GPU acceleration, and several algorithmic discoveries.",
+    "ideal_context": [
+      "including massive labeled datasets (ImageNet, CIFAR-10, etc.), better hardware in the\nform of GPU acceleration, and several algorithmic discoveries.\nFor several years, researchers resorted to layer-wise greedy pretraining to grapple\nwith the complex error surfaces presented by deep learning models. 1 These time-\nintensive strategies would try to find more accurate initializations for the model’s\nparameters one layer at a time before using minibatch gradient descent to converge\nto the optimal parameter settings. More recently, however, breakthroughs in optimi‐\nzation methods have enabled us to train models directly in an end-to-end fashion.\nIn this chapter, we will discuss several of these breakthroughs. The next couple of\nsections will focus primarily on local minima and whether they pose hurdles for\nsuccessfully training deep models. Then we will further explore the nonconvex error\nsurfaces induced by deep models, why vanilla minibatch gradient descent falls short,"
+    ],
+    "source": "deeplearning.pdf",
+    "document_id": 27,
+    "pages": [
+      110
+    ],
+    "page_labels": [
+      "111"
+    ],
+    "chunk_ids": [
+      "de7f197d-2063-4e42-9a28-26328dbae125"
+    ],
+    "context_type": "single_chunk"
+  },
+  {
+    "id": "q031",
+    "query": "What problem does learning rate adaptation solve, and how does AdaGrad adapt the learning rate?",
+    "ideal_answer": "Choosing the correct learning rate is one of the most troublesome aspects of training deep networks: a learning rate that is too small does not learn quickly enough, while one that is too large may have difficulty converging near a local minimum or an ill-conditioned region. Learning rate adaptation modifies the optimal learning rate over the span of learning to achieve good convergence. AdaGrad, first proposed by Duchi et al. in 2011, keeps track of a learning rate for each parameter which is inversely scaled with respect to the square root of the sum of the squares (root mean square) of all that parameter's historical gradients. It initializes a gradient accumulation vector r0 = 0, accumulates the element-wise square of the gradients at each step, and divides the global learning rate by the square root of that accumulation vector, adding a tiny number delta (~10^-7) to the denominator to prevent division by zero.",
+    "ideal_context": [
+      "advent of learning rate adaption. The basic concept behind learning rate adaptation\nis that the optimal learning rate is appropriately modified over the span of learning\nto achieve good convergence properties. Over the next several sections, we’ll discuss\nAdaGrad, RMSProp, and Adam, three of the most popular adaptive learning rate\nalgorithms.\nAdaGrad—Accumulating Historical Gradients\nThe first algorithm we’ll discuss is AdaGrad, which attempts to adapt the global\nlearning rate over time using an accumulation of the historical gradients, first pro‐\nposed by Duchi et al. in 2011. 9 Specifically, we keep track of a learning rate for each\nparameter. This learning rate is inversely scaled with respect to the square root of the\nsum of the squares (root mean square) of all the parameter’s historical gradients.\nWe can express this mathematically. We initialize a gradient accumulation vec‐\ntor r0 = 0. At every step, we accumulate the square of all the gradient parameters",
+      "We can express this mathematically. We initialize a gradient accumulation vec‐\ntor r0 = 0. At every step, we accumulate the square of all the gradient parameters\nas follows (where the ⊙ operation is element-wise tensor multiplication):\n ri = ri − 1 + gi ⊙ gi\nThen we compute the update as usual, except our global learning rate ϵ is divided by\nthe square root of the gradient accumulation vector:\nθi = θi − 1 − ϵ\nδ ⊕ ri\n⊙ g\nNote that we add a tiny number δ  (~10−7 ) to the denominator to prevent division\nby zero. Also, the division and addition operations are broadcast to the size of\nthe gradient accumulation vector and applied element-wise. In PyTorch, a built-in\noptimizer allows for easily utilizing AdaGrad as a learning algorithm:\nLearning Rate Adaptation | 111"
+    ],
+    "source": "deeplearning.pdf",
+    "document_id": 27,
+    "pages": [
+      126
+    ],
+    "page_labels": [
+      "127",
+      "127"
+    ],
+    "chunk_ids": [
+      "8a242d37-8ab0-4c75-aba4-fbb908241027",
+      "79f0b8ca-04e0-4d0c-ae96-121b16e1e934"
+    ],
+    "context_type": "multi_chunk"
+  },
+  {
+    "id": "q032",
+    "query": "What benefits does batch normalization provide beyond speeding up training?",
+    "ideal_answer": "In addition to speeding up training by preventing significant shifts in the distribution of inputs to each layer, batch normalization allows the learning rate to be significantly increased. It also acts as a regularizer and removes the need for dropout and, when used, L2 regularization. The authors additionally claim that batch regularization largely removes the need for photometric distortions, allowing the network to be exposed to more 'real' images during training.",
+    "ideal_context": [
+      "In addition to speeding up training by preventing significant shifts in the distribution\nof inputs to each layer, batch normalization also allows us to significantly increase\nthe learning rate. Moreover, batch normalization acts as a regularizer and removes\nthe need for dropout and (when used) L2 regularization. Although we don’t leverage\nit here, the authors also claim that batch regularization largely removes the need\nfor photometric distortions, and we can expose the network to more “real” images\nduring the training process. In the next section, we will motivate and discuss a variant\nof normalization across the feature axis, rather than the batch.\nGroup Normalization for Memory Constrained\nLearning Tasks\nVarious forms of normalization in image processing have been studied and utilized in\nthe last decade. The most famous of these is batch normalization. Just to recap from\nthe previous section, this technique computes the channel-wise mean and variance of"
+    ],
+    "source": "deeplearning.pdf",
+    "document_id": 27,
+    "pages": [
+      154
+    ],
+    "page_labels": [
+      "155"
+    ],
+    "chunk_ids": [
+      "2e78d63c-1365-4b26-a928-29b84eb13ac9"
+    ],
+    "context_type": "single_chunk"
+  },
+  {
+    "id": "q033",
+    "query": "Who wrote the seminal autoencoder paper and what was their hypothesis?",
+    "ideal_answer": "The seminal paper 'Reducing the Dimensionality of Data with Neural Networks', which describes the autoencoder, was written by Hinton and Salakhutdinov in 2006. Their hypothesis was that the nonlinear complexities afforded by a neural model would allow them to capture structure that linear methods such as PCA would miss. To demonstrate this, they ran an experiment on MNIST using both an autoencoder and PCA to reduce the dataset into 2D data points. Because the decoder essentially applies an inverse operation, the decoder network is architected so that the autoencoder has the shape of an hourglass.",
+    "ideal_context": [
+      "The seminal paper “Reducing the Dimensionality of Data with Neural Networks, ”\nwhich describes the autoencoder, was written by Hinton and Salakhutdinov in 2006. 1\nTheir hypothesis was that the nonlinear complexities afforded by a neural model\nwould allow them to capture structure that linear methods, such as PCA, would\nmiss. To demonstrate this point, they ran an experiment on MNIST using both an\nautoencoder and PCA to reduce the dataset into 2D data points. In this section, we\nwill recreate their experimental setup to validate this hypothesis and further explore\nthe architecture and properties of feed-forward autoencoders.\nThe setup shown in Figure 8-5 is built with the same principle, but the 2D embedding\nis now treated as the input, and the network attempts to reconstruct the original\nimage. Because we are essentially applying an inverse operation, we architect the\ndecoder network so that the autoencoder has the shape of an hourglass. The output"
+    ],
+    "source": "deeplearning.pdf",
+    "document_id": 27,
+    "pages": [
+      176
+    ],
+    "page_labels": [
+      "177"
+    ],
+    "chunk_ids": [
+      "3f18ea06-e66a-42de-85d5-6a7e5550eb25"
+    ],
+    "context_type": "single_chunk"
+  },
+  {
+    "id": "q034",
+    "query": "In the Skip-Gram implementation, how many validation words are selected and from what vocabulary?",
+    "ideal_answer": "Twenty validation words are randomly selected out of the 500 most common words in a vocabulary of 10,000 words, and for each of these words the cosine similarity function is used to find the nearest neighbors.",
+    "ideal_context": [
+      "normalized = input_emb/norm\n    score = cosine_similarity(normalized, target_emb)\n    return normalized, score\nPutting all of these components together, we’re finally ready to run the Skip-Gram\nmodel. We skim over this portion of the code because it is very similar to how we\nconstructed models in the past. The only difference is the additional code during the\ninspection step. We randomly select 20 validation words out of the 500 most common\nwords in our vocabulary of 10,000 words. For each of these words, we use the cosine\nsimilarity function we built to find the nearest neighbors:\nn_epochs=1\nfor epoch in range(n_epochs):\n  # Train\n  running_loss = 0.0\n  for inputs, targets in trainloader:\n    loss = train(inputs, targets)\n    running_loss += loss.item()\n  \n  writer.add_scalar('Train Loss',\n                    running_loss/len(trainloader), epoch)\n  #Validate\n  running_score = 0.0\n  for inputs, targets in valloader:\n    _, score = evaluate(inputs, targets)"
+    ],
+    "source": "deeplearning.pdf",
+    "document_id": 27,
+    "pages": [
+      198
+    ],
+    "page_labels": [
+      "199"
+    ],
+    "chunk_ids": [
+      "35047745-6ca9-4a56-aa5e-5f63ff8aa825"
+    ],
+    "context_type": "single_chunk"
+  },
+  {
+    "id": "q035",
+    "query": "Why is a beam search needed instead of summing over all hypothesis sequences in the parsing model?",
+    "ideal_answer": "Computing the sum over all possible hypotheses and applying a softmax layer is intractable because there is an intractably large number of possible hypothesis sequences: even considering an average sentence length of 10 and a conservative total of 15 possible actions (1 shift plus 7 labels for each of the left and right arcs), this corresponds to 1,000,000,000,000,000 possible hypotheses. To make the problem tractable, a beam search with a fixed beam size is applied until either the end of the sentence is reached or the correct sequence of actions is no longer contained on the beam.",
+    "ideal_context": [
+      "way of ensuring that we select the correct hypothesis sequence is by computing this\nsum over all possible hypotheses and then applying a softmax layer to generate a\nprobability distribution. We could theoretically use the same cross-entropy loss func‐\ntion as we used in the locally normalized network. The problem with this strategy,\nhowever, is that there is an intractably large number of possible hypothesis sequences.\nEven considering an average sentence length of 10 and a conservative total number\nof 15 possible actions—1 shift and 7 labels for each of the left and right arcs—this\ncorresponds to 1,000,000,000,000,000 possible hypotheses.\nTo make this problem tractable, as shown in Figure 9-12 , we apply a beam search,\nwith a fixed beam size, until we either (1) reach the end of the sentence, or (2) the\ncorrect sequence of actions is no longer contained on the beam. We then construct\na loss function that tries to push the “gold standard” action sequence (highlighted in"
+    ],
+    "source": "deeplearning.pdf",
+    "document_id": 27,
+    "pages": [
+      220
+    ],
+    "page_labels": [
+      "221"
+    ],
+    "chunk_ids": [
+      "4c12a776-d0b9-4bf3-802b-1bc0e5800a26"
+    ],
+    "context_type": "single_chunk"
+  },
+  {
+    "id": "q036",
+    "query": "What limitation of the basic seq2seq decoder motivates attention?",
+    "ideal_answer": "Currently the sole input to the decoder network at a given time step t is its output at time step t-1. One way to give the decoder some vision into the original sentence is to give it access to all of the outputs from the encoder network, which had previously been completely ignored, since these outputs represent how the encoder's internal state evolves after seeing each new token. However, that attempt falls short because it fails to dynamically select the most relevant parts of the input to focus on.",
+    "ideal_context": [
+      "the first part of the translation process. By using the previous output as its current\ninput, the decoder network achieves the second part of the translation process. This\nphenomenon of attention has yet to be captured by our approach to seq2seq, and this\nis the final building block we’ll need to engineer.\nCurrently, the sole input to the decoder network at a given time step t is its output\nat time step t − 1. One way to give the decoder network some vision into the original\nsentence is by giving the decoder access to all of the outputs from the encoder\nnetwork (which we previously had completely ignored). These outputs are interesting\nto us because they represent how the encoder network’s internal state evolves after\nseeing each new token. A proposed implementation of this strategy is shown in\nFigure 9-26 . This attempt falls short because it fails to dynamically select the most\nrelevant parts of the input to focus on.\nAugmenting Recurrent Networks with Attention | 227"
+    ],
+    "source": "deeplearning.pdf",
+    "document_id": 27,
+    "pages": [
+      242
+    ],
+    "page_labels": [
+      "243"
+    ],
+    "chunk_ids": [
+      "2322f3c4-ecbd-4d1f-8963-dde035db9b54"
+    ],
+    "context_type": "single_chunk"
+  },
+  {
+    "id": "q037",
+    "query": "Who introduced the Variational Autoencoder and in what paper, and what does the VAE assume?",
+    "ideal_answer": "The Variational Autoencoder (VAE) was introduced by Kingma and Welling in their seminal paper 'Auto-Encoding Variational Bayes' from 2014, in parallel to the introduction of GANs. The idea behind the VAE is more strongly rooted in probabilistic modeling than the GAN, and the VAE assumes there exists a set of unobserved latent variables, denoted z, that generate the data.",
+    "ideal_context": [
+      "such as a uniform distribution or a standard multivariate Gaussian distribution,\nwhich are easy to sample from. G, when fully trained and optimal, is a complex,\ndifferentiable function that transforms samples from p(z) into samples from pdata x ,\nwhich approximates p(x). In the next section, we will see the parallels between G(z)\nand the reparametrization trick, which also allows us to sample from a distribution by\ntransforming samples (via a differentiable function) from a distribution that is easier\nto sample from.\nVariational Autoencoders\nIn parallel to the introduction of GANs, Kingma and Welling introduced the Varia‐\ntional Autoencoder, or V AE for short, in their seminal paper, “ Auto-Encoding Var‐\niational Bayes, ” from 2014. 2 The idea behind the V AE is more strongly rooted in\nprobabilistic modeling than the aforementioned GAN. The V AE assumes there exists\na set of unobserved latent variables, which we denote as z, that generate the data"
+    ],
+    "source": "deeplearning.pdf",
+    "document_id": 27,
+    "pages": [
+      264
+    ],
+    "page_labels": [
+      "265"
+    ],
+    "chunk_ids": [
+      "199412bd-bea0-4d20-bb94-88a09b8d50cd"
+    ],
+    "context_type": "single_chunk"
+  },
+  {
+    "id": "q038",
+    "query": "Why is a noise-smoothed distribution used as the reference in explicit score matching, and who proposed it?",
+    "ideal_answer": "Vincent 2011 first proposed explicit score matching using the noise-smoothed distribution p_sigma(x') as the reference. The reasoning is that p_sigma(x') can be viewed as a continuous approximation to the true distribution p(x), whereas the approximation defined by p_data(x) is unbiased but discontinuous everywhere x is not present in the dataset, being a uniform distribution over the images in the dataset with likelihood zero elsewhere. As sigma gets larger, p_sigma(x') is a less and less faithful approximation to p(x), so small sigmas are preferred.",
+    "ideal_context": [
+      "of p x  as we do in explicit score matching. The reasoning for this is that pσ x′\ncan be viewed as a continuous approximation to the true distribution p x . The\napproximation defined by pdata x  is unbiased, but is unfortunately discontinuous\neverywhere x is not present in the dataset due to being a uniform distribution over all\nimages in the dataset, with a likelihood of zero everywhere else. Of course, as σ  gets\nlarger, pσ x′  is seen as a less and less faithful approximation to p x , so we’ d like to\nwork with small σ ’s.\nVincent 2011 first proposed explicit score matching using pσ x′  as the reference:\nJ θ = Epσ x′\n1\n2 ∇x′ log pθ x′ − ∇x′ log pσ x′ 2\n2\nθ* = argminθJ θ\nNote that the same reasoning for why this is a valid optimization procedure for\npθ x  is the same as in the previous section—the only difference here is the reference\ndistribution we are trying to match. Vincent 2011 actually goes an extra step and\nshows that this optimization procedure is equivalent to:"
+    ],
+    "source": "deeplearning.pdf",
+    "document_id": 27,
+    "pages": [
+      286
+    ],
+    "page_labels": [
+      "287"
+    ],
+    "chunk_ids": [
+      "39437a5a-e012-49df-87ef-31a3c324d7db"
+    ],
+    "context_type": "single_chunk"
+  },
+  {
+    "id": "q039",
+    "query": "In the additive feature attribution framework, what is the local accuracy property?",
+    "ideal_answer": "Local accuracy states that the explainer model must match the underlying model exactly at the example being interpreted. This is a desirable property since it is reasonable that at least the example being interpreted should be explained perfectly, though not all interpretability frameworks necessarily follow it. In the additive feature attribution framework there exists a unique solution in this class that has three desirable properties: local accuracy, missingness and consistency. LIME, when using a class of linear explainer models, follows this framework exactly, since each example to be explained is first converted to a binary vector over interpretable components.",
+    "ideal_context": [
+      "Where M is the number of binary variables. For example, LIME, when using a class\nof linear explainer models, follows this framework exactly, since each example to\nbe explained is first converted to a binary vector over interpretable components. It\nturns out that, in the additive feature attribution framework, there exists a unique\nsolution in this class that has three desirable properties: local accuracy, missingness,\nand consistency. Before discussing the unique solution, we will describe the three\nproperties in more detail.\nThe first is local accuracy , which states that the explainer model must match the\nunderlying model exactly at the example being interpreted. This is understandable as\na desirable property, since it is reasonable that at least the example being interpreted\nshould be explained perfectly. It’s important to note that not all interpretability frame‐\nworks necessarily follow this property. For example, the explainer that is generated by"
+    ],
+    "source": "deeplearning.pdf",
+    "document_id": 27,
+    "pages": [
+      308
+    ],
+    "page_labels": [
+      "309"
+    ],
+    "chunk_ids": [
+      "68ff5681-dbcf-4765-a2c8-5df295450c68"
+    ],
+    "context_type": "single_chunk"
+  },
+  {
+    "id": "q040",
+    "query": "In the DNC copy task visualization, how can you tell that a memory location has been freed?",
+    "ideal_answer": "In the visualization the DNC writes each of the vectors in a sequence into a single memory location, and as soon as the end mark is seen the read head starts reading from these locations in the same order they were written. The allocation and free gates alternate in activation between the writing and reading phases of each sequence. From the usage vector chart at the bottom, after a memory location is written to its usage becomes exactly 1, and it drops to 0 just after reading from that location, indicating that the location was freed and can be reused again.",
+    "ideal_context": [
+      "all 20 vectors in the input. A feed-forward controller is used to ensure that nothing\nwould be stored in a recurrent state, and only one read head is used to make the\nvisualization more clear. These constraints should force the DNC to learn how to\ndeallocate and reuse memory to successfully copy the whole input, and indeed it\ndoes.\nWe can see in that visualization how the DNC is writing each vector of the five in a\nsequence into a single memory location. As soon as the end mark is seen, the read\nhead starts reading from these locations in the exact same order of writing. We can\nsee how both the allocation and free gates alternate in activation between writing and\nreading phases of each sequence in the series. From the usage vector chart at the\nbottom, we can also see how after a memory location is written to, its usage becomes\nexactly 1, and how it drops to 0 just after reading from that location, indicating that it\nwas freed and can be reused again."
+    ],
+    "source": "deeplearning.pdf",
+    "document_id": 27,
+    "pages": [
+      330
+    ],
+    "page_labels": [
+      "331"
+    ],
+    "chunk_ids": [
+      "394e23f4-33e0-44e3-9e16-08aeec6a9ae9"
+    ],
+    "context_type": "single_chunk"
+  },
+  {
+    "id": "q041",
+    "query": "What are the three essential components of reinforcement learning, and how does it differ from supervised and unsupervised learning?",
+    "ideal_answer": "Reinforcement learning is learning by interacting with an environment, and the process involves an agent, an environment, and a reward signal. The agent chooses to take an action in the environment, for which it is rewarded accordingly; the way an actor chooses actions is called a policy, and the agent wants to increase the reward it receives and so must learn an optimal policy for interacting with the environment. This differs from traditional supervised learning, where data and labels are given and the task is predicting labels given data, and from unsupervised learning, where just data is given and the task is discovering underlying structure in that data.",
+    "ideal_context": [
+      "2 This image is from the OpenAI Gym DQN agent that we build in this chapter: Brockman, Greg, et al.\n“OpenAI Gym. ” arXiv preprint arXiv:1606.01540 (2016). https://gym.openai.com\nFigure 13-1. A deep reinforcement learning agent playing Breakout2\nWhat Is Reinforcement Learning?\nReinforcement learning, at its essentials, is learning by interacting with an environ‐\nment. This learning process involves an agent, an environment, and a reward signal.\nThe agent chooses to take an action in the environment, for which the agent is\nrewarded accordingly. The way in which an actor chooses actions is called  a policy.\nThe agent wants to increase the reward it receives, and so must learn an optimal\npolicy for interacting with the environment (Figure 13-2).\nReinforcement learning is different from the other types of learning that we have\ncovered thus far. In traditional supervised learning, we are given data and labels,\nand are tasked with predicting labels given data. In unsupervised learning, we are",
+      "covered thus far. In traditional supervised learning, we are given data and labels,\nand are tasked with predicting labels given data. In unsupervised learning, we are\ngiven just data and are tasked with discovering underlying structure in this data. In\n326 | Chapter 13: Deep Reinforcement Learning"
+    ],
+    "source": "deeplearning.pdf",
+    "document_id": 27,
+    "pages": [
+      341
+    ],
+    "page_labels": [
+      "342",
+      "342"
+    ],
+    "chunk_ids": [
+      "2f1ad3b6-c786-46a6-9203-4df2e5e808ac",
+      "c27be3b8-9934-42c6-8778-996ae599f386"
+    ],
+    "context_type": "multi_chunk"
+  },
+  {
+    "id": "q042",
+    "query": "In the policy gradient implementation, what is the model architecture and how is the objective loss expressed?",
+    "ideal_answer": "In build_model() the model architecture is defined as a three-layer neural network, and the model returns a layer of three nodes, each representing the model's action probability distribution. In build_training() the policy gradient optimizer is implemented: the objective loss is expressed by scaling the model's prediction probability for an action with the return received for taking that action and summing these up to form a minibatch, after which torch.optim.AdamOptimizer can be used.",
+    "ideal_context": [
+      "action_distribution,\n                  epsilon_percentage, 0.25, 0.001)\n        return action\n    def predict_action(self, state, epsilon_percentage):\n        action_distribution = self.model(\n                                 torch.from_numpy(state).float())\n        action = self.sample_action_from_distribution(\n            action_distribution, epsilon_percentage)\n        return action\nBuilding the Model and Optimizer\nLet’s break down some important functions. In build_model(), we define our model\narchitecture as a three-layer neural network. The model returns a layer of three\nnodes, each representing the model’s action probability distribution. In build_train\ning(), we implement our policy gradient optimizer. We express our objective loss\nas we talked about, scaling the model’s prediction probability for an action with the\nreturn received for taking that action, and summing these all up to form a minibatch.\nWith our objective defined, we can use torch.optim.AdamOptimizer, which will"
+    ],
+    "source": "deeplearning.pdf",
+    "document_id": 27,
+    "pages": [
+      352
+    ],
+    "page_labels": [
+      "353"
+    ],
+    "chunk_ids": [
+      "8a3a20b3-823d-4f4b-aa4f-f33a97ef8f00"
+    ],
+    "context_type": "single_chunk"
+  },
+  {
+    "id": "q043",
+    "query": "What does the 'asynchronous' part of A3C provide, and how does A3C combine value learning with policy learning?",
+    "ideal_answer": "Asynchronous advantage actor-critic (A3C) was introduced in the 2016 DeepMind paper 'Asynchronous Methods for Deep Reinforcement Learning'. Being asynchronous means the agent can be parallelized across many threads, giving orders of magnitude faster training by speeding up environment simulation, since A3C runs many environments at once to gather experiences; beyond speed, this further decorrelates the experiences in each batch because the batch is filled with the experiences of numerous agents in different scenarios simultaneously. A3C also uses an actor-critic method, learning both a value function V(s_t) (the critic) and a policy pi(s_t) (the actor), combining the strengths of value learning and policy learning by using the critic's value function to improve the actor's policy.",
+    "ideal_context": [
+      "DRQN has shown to be better than DQN at playing first-person shooter (FPS) games\nlike DOOM, as well as improving performance on certain Atari games with long time\ndependencies, like Seaquest.\nAsynchronous Advantage Actor-Critic Agent\nAsynchronous advantage actor-critic (A3C) is a new approach to deep reinforcement\nlearning introduced in the 2016 DeepMind paper, “ Asynchronous Methods for Deep\nReinforcement Learning. ”6 Let’s discuss what it is and why it improves upon DQN.\nA3C is asynchronous, which means we can parallelize our agent across many threads,\nwhich means orders of magnitude faster training by speeding up our environment\nsimulation. A3C runs many environments at once to gather experiences. Beyond the\nspeed increase, this approach presents another significant advantage in that it further\ndecorrelates the experiences in our batches, because the batch is being filled with the\nexperiences of numerous agents in different scenarios simultaneously.",
+      "7 Konda, Vijay R., and John N. Tsitsiklis. “ Actor-Critic Algorithms. ” NIPS. Vol. 13. 1999.\n8 Jaderberg, Max, et al. “Reinforcement Learning with Unsupervised Auxiliary Tasks. ” arXiv preprint\narXiv:1611.05397 (2016).\nA3C uses an actor-critic method.7 Actor-critic methods involve learning both a value\nfunction V st  (the critic) and also a policy π st  (the actor). Early in this chapter,\nwe delineated two different approaches to reinforcement learning: value learning and\npolicy learning. A3C combines the strengths of each, using the critic’s value function\nto improve the actor’s policy.\nA3C uses an advantage function instead of a pure discounted future return. When\ndoing policy learning, we want to penalize the agent when it chooses an action that\nleads to a bad reward. A3C aims to achieve this same goal, but uses advantage instead\nof reward as its criterion. Advantage represents the difference between the model’s"
+    ],
+    "source": "deeplearning.pdf",
+    "document_id": 27,
+    "pages": [
+      374,
+      375
+    ],
+    "page_labels": [
+      "375",
+      "376"
+    ],
+    "chunk_ids": [
+      "c6402013-382a-44b1-bf6b-353ef64f2ac0",
+      "384ca511-bb22-44ea-8f68-93400e91675c"
+    ],
+    "context_type": "multi_chunk"
+  },
+  {
+    "id": "q044",
+    "query": "How does A3C estimate the advantage, and how much faster is it than DQN on Atari Breakout?",
+    "ideal_answer": "A3C uses an advantage function instead of a pure discounted future return, where advantage represents the difference between the model's prediction of the quality of the action taken and the actual quality of the action taken, expressed as A_t = Q*(s_t, a_t) - V(s_t). A3C has a value function V(t) but does not express a Q-function, so it estimates the advantage using the discounted future reward as an approximation for the Q-function: A_t = R_t - V(s_t). A3C agents can learn to play Atari Breakout in less than 12 hours, whereas DQN agents may take 3 to 4 days.",
+    "ideal_context": [
+      "leads to a bad reward. A3C aims to achieve this same goal, but uses advantage instead\nof reward as its criterion. Advantage represents the difference between the model’s\nprediction of the quality of the action taken versus the actual quality of the action\ntaken. We can express advantage as:\nAt = Q* st, at − V st .\nA3C has a value function, V(t), but it does not express a Q-function. Instead, A3C\nestimates the advantage by using the discounted future reward as an approximation\nfor the Q-function:\nAt = Rt − V st\nThese three techniques proved key to A3C’s takeover of most deep reinforcement\nlearning benchmarks. A3C agents can learn to play Atari Breakout in less than 12\nhours, whereas DQN agents may take 3 to 4 days.\nUNsupervised REinforcement and Auxiliary Learning\nUNREAL is an improvement on A3C introduced in “Reinforcement learning with\nunsupervised auxiliary tasks\" by Jaderberg et al., 8 who, you guessed it, are from\nDeepMind."
+    ],
+    "source": "deeplearning.pdf",
+    "document_id": 27,
+    "pages": [
+      375
+    ],
+    "page_labels": [
+      "376"
+    ],
+    "chunk_ids": [
+      "fc432025-9d5e-490f-96ef-80d4d22442da"
+    ],
+    "context_type": "single_chunk"
+  },
+  {
+    "id": "q045",
+    "query": "Why does a more certain experiment need fewer characters per trial, and what is the optimal encoding question this leads to?",
+    "ideal_answer": "In the scenario, a researcher runs an experiment such as flipping a coin or rolling a dice and communicates each result to a scribe, who records it as a binary string. If information about the dice is known, for example that it is weighted and shows six almost all the time, a shorter binary string can be assigned to six to limit the expected amount of writing. As the result of any single trial becomes more and more certain, the expected number of characters needed becomes lower by assigning the shortest binary strings to the most likely outcomes; in the extreme case where a six is known to always show up, the scribe would not need to write anything. This raises the question of what the optimal encoding scheme is for a given probability distribution, where optimal means the fewest expected number of characters per trial, and provides a lens for understanding the uncertainty within a probability distribution, defined as the distribution's entropy.",
+    "ideal_context": [
+      "that is to occur, when running the experiment we are bound to see all sorts of\nevents. In this section, we first consider the problem of defining a single metric that\nencapsulates all of the uncertainty within a probability distribution, which we will\ndefine as the distribution’s entropy.\nLet’s set up the following scenario. I am a researcher who is running an experiment.\nThe experiment could be something as simple as flipping a coin or rolling a dice.\nY ou are recording the results of the experiment. We are both in different rooms,\nbut connected through a phone line. I run the experiment and receive a result, and\ncommunicate that result to you via the phone. Y ou record that result in a notebook,\nwhere you pick some binary string representation of that result as what you write\ndown. As a scribe, you are necessary in this situation—I may run hundreds of trials\nand my memory is limited, so I cannot remember the results of all of my trials.",
+      "“000, ” two as “001, ” three as “010, ” four as “011, ” five as “100, ” and six as “101, ” for\nexample.\nBut what if we knew information about the dice? For example, what if it were a\nweighted dice that showed up six almost all of the time? In that case, you probably\nwant to assign a shorter binary string to six, for example “0” (instead of assigning “0”\nto one) so you can limit the expected amount of writing you have to do. It makes\nintuitive sense that, as the result of any single trial becomes more and more certain,\nthe expected number of characters you’ d need to write becomes lower by assigning\nthe shortest binary strings to the most likely outcomes.\nThis raises the question: given a probability distribution over outcomes, what is the\noptimal encoding scheme, where optimal is defined as the fewest expected number\nof characters you’ d need to write per trial? Although this whole situation may feel\na bit contrived, it provides us with a slightly different lens through which we can"
+    ],
+    "source": "deeplearning.pdf",
+    "document_id": 27,
+    "pages": [
+      44,
+      45
+    ],
+    "page_labels": [
+      "45",
+      "46"
+    ],
+    "chunk_ids": [
+      "78e9970a-0816-4658-ac33-7323cd11ceb6",
+      "5f391546-1fa9-44ab-a3e2-4be694453a2e"
+    ],
+    "context_type": "multi_chunk"
+  },
+  {
+    "id": "q046",
+    "query": "What are the central nervous system complications of alcohol dependence, and what blood alcohol concentration is the legal driving limit in India and the UK?",
+    "ideal_answer": "The central nervous system complications of alcohol dependence include peripheral neuropathy, delirium tremens, rum fits (alcohol withdrawal seizures), alcoholic hallucinosis, alcoholic jealousy, Wernicke-Korsakoff psychosis, Marchiafava-Bignami disease, alcoholic dementia, suicide, cerebellar degeneration, central pontine myelinosis, and head injury and fractures. The legal limit for driving in the UK is a blood alcohol concentration of 80 mg%, while in India it is 30 mg/100 ml under Section 185 of the Motor Vehicle Act, 1988.",
+    "ideal_context": [
+      "Psychoactive Substance Use Disorders 39\nTable 4.4: Some  Complications of Alcohol Dependence\nI. Medical Complications\nA. Gastrointestinal System\n i. Fatty liver, cirrhosis of liver, hepatitis, liver cell \ncarcinoma, liver failure\n ii. Gastritis, reﬂ ux oesophagitis, oesophageal vari ces, \nMallory-Weiss syndrome, achlorhydria, peptic \nulcer, carcinoma stomach and oeso phagus\n iii. Malabsorption syndrome, protein-losing enter-\nopathy\n iv. Pancreatitis: acute, chronic, and relapsing\nB. Central Nervous System\n i.  Peripheral neuropathy\n ii. Delirium tremens\n iii. Rum ﬁ ts (Alcohol withdrawal seizures)\n iv. Alcoholic hallucinosis\n v. Alcoholic jealousy\n vi. Wernicke-Korsakoff psychosis\n vii. Marchiafava-Bignami disease\n viii. Alcoholic dementia\n ix. Suicide\n x. Cerebellar degeneration\n xi. Central pontine myelinosis\n xii. Head injury and fractures.\nC. Miscellaneous\n i.  Acne rosacea, palmar erythema, rhinophyma, \nspider naevi, ascitis, parotid enlargement",
+      "infections such as tuberculosis\n xii. Sexual dysfunction\nII. Social Complications\n i.  Accidents\n ii. Marital disharmony\n iii. Divorce\n iv. Occupational problems, with loss of pro ductive \nman-hours\n v. Increased incidence of drug dependence\n vi. Criminality\n vii. Financial dif ﬁ culties.\nTable 4.6: Body Fluid   Alcohol Levels \nBAC* (mg%) Behavioural Correlates \n25-100 Excitement \n80 Legal limit for driving (in UK)** \n100-200 Serious intoxication, slurred speech,  \n incoordination, nystagmus \n200-300 Dangerous \n300-350 Hypothermia, dysarthria, cold sweats \n350-400 Coma, respiratory depression \n>400 Death may occur \nUrinary Diagnostic Equivalent BAC\nAlcohol (mg%) Use (mg%)\n>120 Suggestive 80\n>200 Diagnostic 150\n*BAC - Blood Alcohol Concentration\n**30 mg/100 ml in India (Section 185 of the Motor \nVehicle Act, 1988)\nTable 4.5:   CAGE Questionnaire\nThe CAGE questionnaire basically consists of four \nquestions:\ni. Have you ever had to Cut down on alcohol (amount)?"
+    ],
+    "source": "A Short Textbook of Psychiatry, 7th Edition ( PDFDrive ).pdf",
+    "document_id": 21,
+    "pages": [
+      50
+    ],
+    "page_labels": [
+      "39",
+      "39"
+    ],
+    "chunk_ids": [
+      "5f9f92cd-9617-4b99-b98d-7d9909b0c2a8",
+      "8c678ef7-f4e0-4b55-a5d8-1a38d34fa204"
+    ],
+    "context_type": "multi_chunk"
+  },
+  {
+    "id": "q047",
+    "query": "What is the difference between dysthymia and cyclothymia, and what is a mixed affective episode?",
+    "ideal_answer": "If symptoms consist of persistent depression the disorder is called dysthymia, and if symptoms consist of persistent instability of mood between mild depression and mild elation the disorder is called cyclothymia. A mixed affective episode, which is a frequently missed diagnosis clinically, is one in which the full clinical picture of depression and mania is present either at the same time intermixed, or alternates rapidly with each other (rapid cycling), without a normal intervening period of euthymia.",
+    "ideal_context": [
+      "sion, the dis order is called as  dysthymia; and if symp-\ntoms consist of persistent instability of mood between \nmild depression and mild  elation, the disorder is called \nas  cyclothymia.\nOther  Mood Disorders\nThis category includes the diagnosis of  mixed affec-\ntive episode. This is a frequently missed diagnosis \nclinically. In this type, the full clinical picture of \n depression and  mania is present either at the same time \nintermixed (Fig. 6.1), or alter nates rapidly with each \nother (rapid cycling ), without a normal intervening \nperiod of euthymia.\nCOURSE AND PROGNOSIS\nBipolar      mood disorder has an earlier age of onset \n(third decade) than  recurrent depres sive (uni polar) \ndisorder. Unipolar  depression, on the other hand, is \ncommon in two age groups: late third decade and ﬁ fth \nto sixth decades.\n An average  manic episode lasts for 3-4 months \nwhile a  depressive episode lasts from 4-6 months. \nUnipolar depression usually lasts longer than bipolar"
+    ],
+    "source": "A Short Textbook of Psychiatry, 7th Edition ( PDFDrive ).pdf",
+    "document_id": 21,
+    "pages": [
+      84
+    ],
+    "page_labels": [
+      "73"
+    ],
+    "chunk_ids": [
+      "4fe60128-d875-4db1-886c-ca60723acead"
+    ],
+    "context_type": "single_chunk"
+  },
+  {
+    "id": "q048",
+    "query": "What problem does UNREAL address and who introduced it?",
+    "ideal_answer": "UNREAL is an improvement on A3C introduced in 'Reinforcement learning with unsupervised auxiliary tasks' by Jaderberg et al., who are from DeepMind. UNREAL addresses the problem of reward sparsity: reinforcement learning is difficult because the agent just receives rewards and it is hard to determine exactly why rewards increase or decrease, and additionally a good representation of the world must be learned as well as a good policy, which is a tall order with a weak learning signal like sparse rewards.",
+    "ideal_context": [
+      "UNREAL is an improvement on A3C introduced in “Reinforcement learning with\nunsupervised auxiliary tasks\" by Jaderberg et al., 8 who, you guessed it, are from\nDeepMind.\nUNREAL addresses the problem of reward sparsity. Reinforcement learning is so\ndifficult because our agent just receives rewards, and it is hard to determine exactly\nwhy rewards increase or decrease, which makes learning difficult. Additionally, in\nreinforcement learning, we must learn a good representation of the world as well as\na good policy to achieve reward. Doing all of this with a weak learning signal like\nsparse rewards is quite a tall order.\n360 | Chapter 13: Deep Reinforcement Learning"
+    ],
+    "source": "deeplearning.pdf",
+    "document_id": 27,
+    "pages": [
+      375
+    ],
+    "page_labels": [
+      "376"
+    ],
+    "chunk_ids": [
+      "40ae6994-db80-4600-8ece-4cc38ca082f0"
+    ],
+    "context_type": "single_chunk"
+  }
+]
