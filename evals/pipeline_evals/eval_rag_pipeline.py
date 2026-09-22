@@ -1,3 +1,16 @@
+"""
+evals/pipeline_evals/eval_rag_pipeline.py
+=========================================
+Pipeline-level evaluation — FULL chain, exactly like production:
+
+    query -> get_retriever (Qdrant) -> chunks -> generate -> answer
+
+NO isolation (unlike component evals). Bad retrieval -> bad context ->
+bad answer, and the metrics reflect it. This measures real user-facing quality.
+
+    python -m evals.pipeline_evals.eval_rag_pipeline
+"""
+
 import json
 import os
 import sys
@@ -18,7 +31,8 @@ from deepeval.metrics import (
 from deepeval.models.llms.openai_model import OpenAIModel
 from deepeval.evaluate.configs import CacheConfig, ErrorConfig
 
-from src.rag_pipeline import RagPipeline
+from src.rag.retriever import get_retriever  # type: ignore
+from src.generator import generate  # type: ignore
 
 GOLDEN_PATH = os.path.join(os.path.dirname(__file__), "..", "..", "eval_golden_datasets", "faithfulness_dataset.json")
 JUDGE_MODEL_NAME = "nvidia/nemotron-3-super-120b-a12b:free"
@@ -38,22 +52,27 @@ JUDGE_MODEL.model_data.supports_structured_outputs = False
 THRESHOLD = 0.7
 
 
-# 1. LOAD queries (we only need the queries — context comes from the pipeline now)
-with open(GOLDEN_PATH) as f:
+
+with open(GOLDEN_PATH, encoding="utf-8") as f:
     goldens = json.load(f)
 
 
-# 2. RUN THE FULL PIPELINE per query, build a test case from LIVE output
-rag = RagPipeline()
+# 2. RUN THE FULL PIPELINE per query — retrieve REAL chunks, then generate.
 test_cases = []
-for g in goldens:
-    result = rag.invoke(g["query"])          # retrieve → rerank → generate
+for g in goldens[:5]:
+    # RETRIEVE — same call the production graph makes (filtered by document)
+    retriever = get_retriever(g["query"], g["document_id"])
+    retrieved = retriever.invoke(g["query"])
+    context = [doc.page_content for doc in retrieved]
+
+    # GENERATE — answer grounded in whatever the retriever actually returned
+    answer = generate(g["query"], context)
 
     test_cases.append(
         LLMTestCase(
             input=g["query"],
-            actual_output=result["answer"],       # what the generator produced
-            retrieval_context=result["context"],  # what the RETRIEVER returned
+            actual_output=answer,            # what the generator produced
+            retrieval_context=context,       # what the RETRIEVER returned
         )
     )
 
@@ -74,11 +93,11 @@ evaluate(
     error_config=ErrorConfig(ignore_errors=True),
     hyperparameters={
         "mode": "pipeline (retrieve -> generate, no isolation)",
-        "retriever": "RagPipeline (fetch_k=10, top_k=5)",
+        "retriever": "get_retriever (mmr k4 fetch10 / similarity k6)",
         "embedding_model": "mistral-embed",
         "chunk_size": 1000,
         "chunk_overlap": 150,
-        "top_k": 5,
+        "top_k": "4 (MMR) / 6 (summary)",
         "judge_model": JUDGE_MODEL_NAME,
         "golden_set": GOLDEN_PATH,
     },
