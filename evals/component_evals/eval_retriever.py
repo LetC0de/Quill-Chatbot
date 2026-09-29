@@ -20,7 +20,7 @@ from deepeval.evaluate.configs import CacheConfig, ErrorConfig
 
 from src.rag.retriever import get_retriever # type: ignore
 
-GOLDEN_PATH = os.path.join(os.path.dirname(__file__), "..", "..", "eval_golden_datasets", "golden_dataset.json")
+GOLDEN_PATH = os.path.join(os.path.dirname(__file__), "..", "..", "eval_golden_datasets", "retriever_dataset.json")
 JUDGE_MODEL_NAME = "nvidia/nemotron-3-super-120b-a12b:free"
 JUDGE_MODEL = OpenAIModel(
     model=JUDGE_MODEL_NAME,
