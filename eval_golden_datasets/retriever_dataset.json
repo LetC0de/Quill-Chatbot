@@ -1,0 +1,424 @@
+[
+  {
+    "id": "q001",
+    "query": "How does A Short Textbook of Psychiatry define a psychiatric disorder, modifying the DSM-IV-TR definition?",
+    "ideal_answer": "A psychiatric disorder is defined as a clinically significant psychological or behavioural syndrome that causes significant (subjective) distress, (objective) disability, or loss of freedom, and which is not merely a socially deviant behaviour or an expected response to a stressful life event (e.g. loss of a loved one). Conflicts between society and the individual are not considered psychiatric disorders; the disorder must be a manifestation of behavioural, psychological, and/or biological dysfunction in that person.",
+    "source": "A_Short_Textbook_of_Psychiatry__7th_Edition___PDFDrive__.pdf",
+    "document_id": 21,
+    "pages": [
+      12
+    ],
+    "relevant_excerpt": "Another way to define a psychiatric disorder or mental disorder is as a clinically significant psychological or behavioural syndrome that causes significant (subjective) distress, (objective) disability, or loss of freedom; and which is not merely a socially deviant behaviour or an expected response to a stressful life event (e.g. loss of a loved one). Conflicts between the society and the individual are not considered psychiatric disorders. A psychiatric disorder should be a manifestation of behavioural, psychological, and/or biological dysfunction in that person (Definition modified after DSM-IV-TR, APA)."
+  },
+  {
+    "id": "q002",
+    "query": "What are the five axes used in the DSM-IV-TR multi-axial classification system?",
+    "ideal_answer": "The five axes of DSM-IV-TR are: Axis I - Clinical Psychiatric Diagnosis; Axis II - Personality Disorders and Mental Retardation; Axis III - General Medical Conditions; Axis IV - Psychosocial and Environmental Problems; and Axis V - Global Assessment of Functioning (rated for current functioning and for the past one year, on a scale).",
+    "source": "A_Short_Textbook_of_Psychiatry__7th_Edition___PDFDrive__.pdf",
+    "document_id": 21,
+    "pages": [
+      15
+    ],
+    "relevant_excerpt": "Table 1.4: The Five Axes of DSM-IV-TR — AXIS I: Clinical Psychiatric Diagnosis; AXIS II: Personality Disorders and Mental Retardation; AXIS III: General Medical Conditions; AXIS IV: Psychosocial and Environmental Problems; AXIS V: Global Assessment of Functioning: Current and in past one year (Rated on a scale)."
+  },
+  {
+    "id": "q003",
+    "query": "According to ICD-10, what three clinical presentations qualify as organic catatonic disorder?",
+    "ideal_answer": "According to ICD-10, organic catatonic disorder requires (in addition to the general guidelines for other organic mental disorders) one of the following: (1) Stupor - diminution or complete absence of spontaneous movement with partial or complete mutism, negativism, and rigid posturing; (2) Excitement - gross hypermotility with or without a tendency to assaultiveness; or (3) Mixed - shifting rapidly and unpredictably between hypo- and hyperactivity.",
+    "source": "A_Short_Textbook_of_Psychiatry__7th_Edition___PDFDrive__.pdf",
+    "document_id": 21,
+    "pages": [
+      40
+    ],
+    "relevant_excerpt": "According to the ICD-10, the following features are required for the diagnosis of organic catatonic disorder... 1. Stupor (diminution or complete absence of spontaneous movement with partial or complete mutism, negativism, and rigid posturing); 2. Excitement (gross hypermotility with or without a tendency to assaultiveness); 3. Mixed (shifting rapidly and unpredictably from hypo- to hyperactivity)."
+  },
+  {
+    "id": "q004",
+    "query": "What four questions make up the CAGE questionnaire and what score suggests a problem drinker?",
+    "ideal_answer": "The CAGE questionnaire asks: (1) Have you ever had to Cut down on alcohol? (2) Have you ever been Annoyed by people's criticism of your drinking? (3) Have you ever felt Guilty about drinking? (4) Have you ever needed an Eye opener drink (an early morning drink)? A score of 2 or more identifies problem drinkers.",
+    "source": "A_Short_Textbook_of_Psychiatry__7th_Edition___PDFDrive__.pdf",
+    "document_id": 21,
+    "pages": [
+      50
+    ],
+    "relevant_excerpt": "The CAGE questionnaire basically consists of four questions: i. Have you ever had to Cut down on alcohol (amount)? ii. Have you ever been Annoyed by people's criticism of alcoholism? iii. Have you ever felt Guilty about drinking? iv. Have you ever needed an Eye opener drink (early morning drink)? A score of 2 or more identifies problem drinkers."
+  },
+  {
+    "id": "q005",
+    "query": "How is severe hyperpyrexia managed in a patient with acute amphetamine intoxication?",
+    "ideal_answer": "Acute amphetamine intoxication is treated symptomatically; hyperpyrexia specifically is managed with cold sponging and parenteral antipyretics, alongside other symptomatic measures such as parenteral diazepam for seizures, antipsychotics for psychotic symptoms, and antihypertensives for hypertension.",
+    "source": "A_Short_Textbook_of_Psychiatry__7th_Edition___PDFDrive__.pdf",
+    "document_id": 21,
+    "pages": [
+      60
+    ],
+    "relevant_excerpt": "Acute intoxication is treated by symptomatic measures, e.g. hyperpyrexia (cold sponging, parenteral antipyretics), seizures (parenteral diazepam), psychotic symptoms (antipsychotics), and hypertension (antihypertensives)."
+  },
+  {
+    "id": "q006",
+    "query": "What does the term 'catatonic' mean etymologically, and what are the three clinical forms in which catatonic schizophrenia can present?",
+    "ideal_answer": "The term catatonic derives from 'cata' meaning disturbed and 'tonic' meaning tone. Catatonic schizophrenia can present in three clinical forms: excited catatonia, stuporous (retarded) catatonia, and catatonia alternating between excitement and stupor.",
+    "source": "A_Short_Textbook_of_Psychiatry__7th_Edition___PDFDrive__.pdf",
+    "document_id": 21,
+    "pages": [
+      70
+    ],
+    "relevant_excerpt": "Catatonic Schizophrenia (Cata: disturbed, tonic: tone) is characterised by a marked disturbance of motor behaviour... It can present in three clinical forms: excited catatonia, stuporous catatonia, and catatonia alternating between excitement and stupor."
+  },
+  {
+    "id": "q007",
+    "query": "What did the World Health Report 2001 say about the global burden of depression, and what recommendations did it make for mental health action?",
+    "ideal_answer": "The World Health Report 2001 estimated that 121 million people worldwide suffer from depression, and identified unipolar depression as the 4th leading cause of Disability-Adjusted Life Years (DALYs) across all ages (2nd in the 15-44 age group) and the 1st cause of Years of Life Lived with Disability (YLD). It made ten recommendations for action: (1) provide treatment in primary care, (2) make psychotropic drugs available, (3) give care in the community, (4) educate the public, (5) involve communities, families and consumers, (6) establish national policies, programmes and legislation, (7) develop human resources, (8) link with other sectors, (9) monitor community mental health, and (10) support more research.",
+    "source": "A_Short_Textbook_of_Psychiatry__7th_Edition___PDFDrive__.pdf",
+    "document_id": 21,
+    "pages": [
+      80,
+      250
+    ],
+    "relevant_excerpt": "The World Health Report 2001 estimates that there are 121 million people worldwide suffering from depression... [and] the WHR-2001 makes ten recommendations for action: 1. Provide treatment in primary care... 10. Support more research."
+  },
+  {
+    "id": "q008",
+    "query": "For which type of bipolar episode is lamotrigine specifically noted as particularly effective, and what is the usual dose range of sodium valproate for acute mania?",
+    "ideal_answer": "Lamotrigine is particularly effective for bipolar depression and is recommended by several guidelines. Sodium valproate, used for acute treatment of mania and prevention of bipolar mood disorder, is usually dosed at 1000-3000 mg/day, with therapeutic blood levels of 50-125 mg/ml.",
+    "source": "A_Short_Textbook_of_Psychiatry__7th_Edition___PDFDrive__.pdf",
+    "document_id": 21,
+    "pages": [
+      90
+    ],
+    "relevant_excerpt": "Lamotrigine is particularly effective for bipolar depression and is recommended by several guidelines... Sodium valproate... The dose range is usually 1000-3000 mg/day (the therapeutic blood levels are 50-125 mg/ml)."
+  },
+  {
+    "id": "q009",
+    "query": "What criteria have been used to variously define the term 'neurosis'?",
+    "ideal_answer": "Neurosis has been variously defined as meeting one or more of these criteria: (1) presence of a symptom or group of symptoms causing subjective distress; (2) the symptom is recognised as undesirable (insight is present); (3) personality and behaviour are relatively preserved and not grossly disturbed; (4) contact with reality is preserved; (5) absence of organic causative factors; and additionally the category has included reaction to severe stress and adjustment disorders, dissociative (conversion) disorders, somatoform disorders, and other neurotic disorders.",
+    "source": "A_Short_Textbook_of_Psychiatry__7th_Edition___PDFDrive__.pdf",
+    "document_id": 21,
+    "pages": [
+      100
+    ],
+    "relevant_excerpt": "The term neurosis has been variously defined as meeting one or more of the following criteria: 1. The presence of a symptom or group of symptoms which cause subjective distress to the patient. 2. The symptom is recognised as undesirable (i.e. insight is present). 3. The personality and behaviour are relatively preserved and not usually grossly disturbed. 4. The contact with reality is preserved. 5. There is an absence of organic causative factors."
+  },
+  {
+    "id": "q010",
+    "query": "What clinical features characterise conversion disorder according to the textbook?",
+    "ideal_answer": "Conversion disorder is characterised by: symptoms or deficits affecting motor or sensory function suggesting a medical or neurological disorder; sudden onset; development of symptoms in the presence of a significant psychosocial stressor; a clear temporal relationship between the stressor and symptom onset/exacerbation; the patient not intentionally producing the symptoms; usually a 'secondary gain' (though not required by ICD-10); no abnormality found on detailed examination/investigation that explains the symptoms; and the symptom may have a 'symbolic' relationship with the underlying stressor or conflict.",
+    "source": "A_Short_Textbook_of_Psychiatry__7th_Edition___PDFDrive__.pdf",
+    "document_id": 21,
+    "pages": [
+      110
+    ],
+    "relevant_excerpt": "Conversion disorder is characterised by the following clinical features: 1. Presence of symptoms or deficits affecting motor or sensory function... 2. Sudden onset. 3. Development of symptoms usually in the presence of a significant psychosocial stressor(s)... 6. There is usually a 'secondary gain'... 8. The symptom may have a 'symbolic' relationship with the stressor/conflict."
+  },
+  {
+    "id": "q011",
+    "query": "What was persistent somatoform pain disorder previously called, and what is a common behavioural feature of affected patients?",
+    "ideal_answer": "Persistent somatoform pain disorder was previously called psychogenic pain disorder. A common behavioural feature is repeated change of physicians, known as doctor-shopping, along with assumption of a 'sick-role' or 'invalid-role'.",
+    "source": "A_Short_Textbook_of_Psychiatry__7th_Edition___PDFDrive__.pdf",
+    "document_id": 21,
+    "pages": [
+      120
+    ],
+    "relevant_excerpt": "Persistent Somatoform Pain Disorder — It was previously called as psychogenic pain disorder... Repeated change of physicians (doctor-shopping) is common. The affected person often assumes a 'sick-role' or an 'invalid-role'."
+  },
+  {
+    "id": "q012",
+    "query": "What is trichotillomania, and which drug is mentioned as pharmacotherapy for it?",
+    "ideal_answer": "Trichotillomania is compulsive hair-pulling characterised by noticeable hair loss caused by a person's persistent and recurrent failure to resist impulses to pull out hair, with an intense urge and mounting tension before the act and a sense of relief afterward; there is no pre-existing skin lesion and the behaviour is not secondary to a delusion or hallucination. Fluoxetine is mentioned as pharmacotherapy for trichotillomania.",
+    "source": "A_Short_Textbook_of_Psychiatry__7th_Edition___PDFDrive__.pdf",
+    "document_id": 21,
+    "pages": [
+      130
+    ],
+    "relevant_excerpt": "Trichotillomania (compulsive hair-pulling) is characterised by noticeable hair loss caused by person's persistent and recurrent failure to resist impulses to pullout hair... occasionally pharmacotherapy (e.g. carbamazepine for intermittent explosive disorder; fluoxetine for trichotillomania)."
+  },
+  {
+    "id": "q013",
+    "query": "Among SSRIs and thioridazine, what specific effect on ejaculation is reported for each in the drug-induced sexual dysfunction table?",
+    "ideal_answer": "SSRI antidepressants (such as paroxetine and fluoxetine) are associated with delayed ejaculation, while thioridazine is associated with both retrograde and delayed ejaculation.",
+    "source": "A_Short_Textbook_of_Psychiatry__7th_Edition___PDFDrive__.pdf",
+    "document_id": 21,
+    "pages": [
+      140
+    ],
+    "relevant_excerpt": "SSRI antidepressants (e.g. paroxetine, fluoxetine) ... Delayed ejaculation. Thioridazine ... Retrograde and Delayed ejaculation."
+  },
+  {
+    "id": "q014",
+    "query": "What triad of symptoms characterises Kleine-Levin syndrome, and which age group and sex is it typically seen in?",
+    "ideal_answer": "Kleine-Levin syndrome is characterised by hypersomnia (always present, recurring for long periods), hyperphagia (usually present, with voracious appetite), and hypersexuality (at times, with sexual disinhibition, masturbatory activity, exhibitionism, and inappropriate sexual advances). The common age of onset is the second decade of life, and it is almost always seen in males.",
+    "source": "A_Short_Textbook_of_Psychiatry__7th_Edition___PDFDrive__.pdf",
+    "document_id": 21,
+    "pages": [
+      150
+    ],
+    "relevant_excerpt": "Kleine-Levin Syndrome... 1. Hypersomnia (always present)... 2. Hyperphagia (usually present)... 3. Hypersexuality (associated at times)... The common age of onset is the second decade of life... The disorder is almost always seen in males."
+  },
+  {
+    "id": "q015",
+    "query": "Why should anticholinergic medication not be routinely added to antipsychotics in a patient with delirium?",
+    "ideal_answer": "Anticholinergic medication should not routinely be added to antipsychotics in delirium because it may actually worsen the delirium; it may only be needed if significant extrapyramidal adverse effects are present.",
+    "source": "A_Short_Textbook_of_Psychiatry__7th_Edition___PDFDrive__.pdf",
+    "document_id": 21,
+    "pages": [
+      160
+    ],
+    "relevant_excerpt": "Anticholinergic medication should not routinely be added to antipsychotics, as it may actually worsen the delirium. However, it may be needed if there are any significant extrapyramidal adverse effects present."
+  },
+  {
+    "id": "q016",
+    "query": "What is Vogt's triad in tuberous sclerosis?",
+    "ideal_answer": "Vogt's triad, characteristic of tuberous sclerosis, consists of: (i) mental retardation, ranging from mild to severe; (ii) convulsions; and (iii) adenoma sebaceum on the face (usually red, in a butterfly distribution) and on the rest of the body (usually brownish white).",
+    "source": "A_Short_Textbook_of_Psychiatry__7th_Edition___PDFDrive__.pdf",
+    "document_id": 21,
+    "pages": [
+      170
+    ],
+    "relevant_excerpt": "The characteristic clinical features are known as Vogt's triad, which consist of: i. Mental retardation, ranging from mild to severe. ii. Convulsions. iii. Adenoma sebaceum, present on the face (usually red)... The distribution on the face is usually of butterfly type."
+  },
+  {
+    "id": "q017",
+    "query": "In secondary non-organic enuresis, at what age does onset usually occur, and what is the traditional first-line drug of choice with its dose range?",
+    "ideal_answer": "In secondary enuresis, the age of onset is usually 5-8 years. The traditional drug of choice for pharmacotherapy of enuresis is a tricyclic antidepressant, usually imipramine, at a dose of 25-75 mg/day; it should never be used in children under 6 years of age due to a risk of sudden death.",
+    "source": "A_Short_Textbook_of_Psychiatry__7th_Edition___PDFDrive__.pdf",
+    "document_id": 21,
+    "pages": [
+      180
+    ],
+    "relevant_excerpt": "In secondary enuresis, the age of onset is usually 5-8 years... The drug of choice in those who need pharmacotherapy has traditionally been a tricyclic antidepressant, usually imipramine (25-75 mg/day)... It should never be used for children under the age of 6 years."
+  },
+  {
+    "id": "q018",
+    "query": "Who introduced electroconvulsive therapy and in what year, and how did it differ from the earlier convulsive therapy method used by Von Meduna?",
+    "ideal_answer": "Cerletti and Bini introduced a much safer form of convulsive therapy in 1938, which they called EST (electroshock therapy), later known as ECT (electroconvulsive therapy). This followed the earlier method of Von Meduna, who in 1934 used 25% camphor in oil intramuscularly (and later pentylenetetrazol/metrazol) to produce convulsions for therapeutic purposes.",
+    "source": "A_Short_Textbook_of_Psychiatry__7th_Edition___PDFDrive__.pdf",
+    "document_id": 21,
+    "pages": [
+      210
+    ],
+    "relevant_excerpt": "Von Meduna, in 1934, used 25% camphor in oil intramuscularly to produce convulsions for the first time for therapeutic purposes. Later, he used pentylenetetrazol (metrazol) for the same purpose. A much safer form of convulsive therapy was used by Cerletti and Bini in 1938... They called it EST or electroshock therapy. Later, this method of treatment came to be known as ECT or electroconvulsive therapy."
+  },
+  {
+    "id": "q019",
+    "query": "What is the defense mechanism of rationalisation, and how is it typically used in clinical situations according to the textbook's table?",
+    "ideal_answer": "Rationalisation is the defense mechanism of providing 'logical' explanations for irrational behaviour that is actually motivated by unacceptable unconscious wishes. It is described as a universal phenomenon in normal life, and in clinical situations it is usually used to explain behaviours that result from other defense mechanisms.",
+    "source": "A_Short_Textbook_of_Psychiatry__7th_Edition___PDFDrive__.pdf",
+    "document_id": 21,
+    "pages": [
+      220
+    ],
+    "relevant_excerpt": "Rationalisation — Providing 'logical' explanations for irrational behaviour motivated by unacceptable unconscious wishes. A universal phenomenon [in normal life]. Usually used to explain behaviours resulting from other defense mechanisms [in clinical situations]."
+  },
+  {
+    "id": "q020",
+    "query": "Which psychiatrist was the first to receive a Nobel Prize in Physiology or Medicine, in what year, and for what contribution?",
+    "ideal_answer": "Julius Wagner von Jauregg, from Austria, was the first psychiatrist to receive a Nobel Prize in Physiology or Medicine, awarded in 1927 for his malarial treatment of general paralysis of the insane (GPI), which was the first successful treatment of a major psychosis.",
+    "source": "A_Short_Textbook_of_Psychiatry__7th_Edition___PDFDrive__.pdf",
+    "document_id": 21,
+    "pages": [
+      252
+    ],
+    "relevant_excerpt": "Julius Wagner von Jauregg (1857-1940; Austria) (First psychiatrist to receive a Nobel Prize in Physiology or Medicine) — Malarial treatment for GPI (First successful treatment of a major psychosis) — 1927."
+  },
+  {
+    "id": "q021",
+    "query": "How is depersonalization described both in the chapter on neurotic and dissociative disorders and in the glossary, and what related phenomenon commonly accompanies it?",
+    "ideal_answer": "In the main text, depersonalisation is described as an alteration in the perception or experience of self, so that the feeling of one's own reality is temporarily changed or lost, an 'as if' phenomenon in which the person is not delusionally convinced of the change. The glossary gives a similar, shorter definition: an alteration in the perception of self so that the feeling of one's reality is (as if) temporarily changed or lost. It is commonly accompanied by derealisation, an alteration in the perception of the external world with a similarly temporary loss of the feeling of its reality; together they are often called the depersonalisation-derealisation syndrome.",
+    "source": "A_Short_Textbook_of_Psychiatry__7th_Edition___PDFDrive__.pdf",
+    "document_id": 21,
+    "pages": [
+      120,
+      257
+    ],
+    "relevant_excerpt": "Depersonalisation is characterised by an alteration in the perception or experience of self, so that the feeling of one's own reality is temporarily changed or lost... often accompanied by derealisation... [Glossary] Depersonalization: An alteration in the perception of self, so that the feeling of one's reality is (as if) temporarily changed or lost. Derealization: An alteration in the perception of external world..."
+  },
+  {
+    "id": "q022",
+    "query": "Which basic arithmetic operations can be performed on matrices, and what concept substitutes for division?",
+    "ideal_answer": "Matrices can be added, subtracted, and multiplied, but there is no division of matrices; instead there exists a similar concept called inversion.",
+    "source": "deeplearning.pdf",
+    "document_id": 27,
+    "pages": [
+      18
+    ],
+    "relevant_excerpt": "Matrices can be added, subtracted, and multiplied—there is no division of matrices, but there exists a similar concept called inversion."
+  },
+  {
+    "id": "q023",
+    "query": "How is matrix-vector multiplication formulated as a sum of scaled columns, and what fundamental concept does this lead into?",
+    "ideal_answer": "Matrix-vector multiplication of A and v can be formulated as Av = the sum over j of v_j times the j-th column of A, where each v_j is a constant multiplied with its corresponding column of A. This formulation leads into the concept of the column space, an example of a vector space defined by a list of vectors and all their possible linear combinations.",
+    "source": "deeplearning.pdf",
+    "document_id": 27,
+    "pages": [
+      22,
+      23
+    ],
+    "relevant_excerpt": "Av = ∑ j vjA · , j where each vj is a constant to be multiplied with its corresponding column of A... The column space is an example of a vector space, which is the space defined by a list of vectors and all possible linear combinations of this collection."
+  },
+  {
+    "id": "q024",
+    "query": "In the information-theory discussion of encoding dice outcomes, what is a prefix code and why does it guarantee unique decoding?",
+    "ideal_answer": "A prefix code is an encoding scheme that disallows the binary string representation of one outcome from being a prefix of the binary string representing a different outcome. This guarantees unique decoding because when decoding a string, the shortest matching prefix found must be the correct outcome, since no smaller valid prefix could correspond to a different outcome; the process can then continue recursively on the remaining suffix.",
+    "source": "deeplearning.pdf",
+    "document_id": 27,
+    "pages": [
+      45
+    ],
+    "relevant_excerpt": "We use what is called a prefix code, which disallows binary string representations of different outcomes from being prefixes of each other... When we find a prefix of this suffix that translates to an outcome, we already know that, by definition, there is no smaller prefix that translates to a valid outcome."
+  },
+  {
+    "id": "q025",
+    "query": "According to the book, what are the two things traditional computer programs are designed to be very good at, and what handwriting-related example is used to illustrate their limitation?",
+    "ideal_answer": "Traditional computer programs are designed to be very good at (1) performing arithmetic really fast and (2) explicitly following a list of instructions. The book illustrates their limitation using the example of writing a program to automatically read someone's handwriting, using the MNIST handwritten digit dataset, where every digit is written slightly differently yet humans can easily recognize them.",
+    "source": "deeplearning.pdf",
+    "document_id": 27,
+    "pages": [
+      55
+    ],
+    "relevant_excerpt": "Traditional computer programs are designed to be very good at two things: (1) performing arithmetic really fast and (2) explicitly following a list of instructions... let's say we want to do something slightly more interesting, like write a program to automatically read someone's handwriting."
+  },
+  {
+    "id": "q026",
+    "query": "What are hidden layers in a feed-forward neural network, and why are they often given fewer neurons than the input layer?",
+    "ideal_answer": "Hidden layers are the layers of neurons sandwiched between the input layer and the output layer, where most of the network's problem-solving 'magic' happens; they automate the process of identifying useful features that would otherwise have to be hand-engineered. Hidden layers are often given fewer neurons than the input layer to force the network to learn compressed representations of the original input, similar to how the brain represents raw visual input in terms of edges and contours rather than raw pixel values.",
+    "source": "deeplearning.pdf",
+    "document_id": 27,
+    "pages": [
+      65
+    ],
+    "relevant_excerpt": "the layers of neurons that lie sandwiched between the first layer of neurons (input layer) and the last layer of neurons (output layer) are called the hidden layers. This is where most of the magic is happening... More often than not, hidden layers have fewer neurons than the input layer to force the network to learn compressed representations of the original input."
+  },
+  {
+    "id": "q027",
+    "query": "In the general workflow for building and training a deep learning model described in the book, what is the first step, using the cancer-identification example?",
+    "ideal_answer": "The first step is to define the problem rigorously by determining the inputs, the potential outputs, and the vectorized representations of both. In the cancer-identification example, the input would be an RGB image represented as a vector of pixel values, and the output would be a probability distribution over mutually exclusive outcome categories such as normal, and other diagnostic classes.",
+    "source": "deeplearning.pdf",
+    "document_id": 27,
+    "pages": [
+      85
+    ],
+    "relevant_excerpt": "First, we define our problem rigorously. This involves determining our inputs, the potential outputs, and the vectorized representations of both. For instance, let's say our goal was to train a deep learning model to identify cancer. Our input would be an RGB image, which can be represented as a vector of pixel values. Our output would be a probability distribution over three mutually exclusive possibilities: (1) normal..."
+  },
+  {
+    "id": "q028",
+    "query": "What are the default hyperparameter settings for the Adam optimizer as shown in the PyTorch constructor example in the book?",
+    "ideal_answer": "The default hyperparameters shown for PyTorch's Adam optimizer are a learning rate (lr) of 0.001, betas of (0.9, 0.999), eps of 1e-08, weight_decay of 0, and amsgrad set to False.",
+    "source": "deeplearning.pdf",
+    "document_id": 27,
+    "pages": [
+      130
+    ],
+    "relevant_excerpt": "optimizer = optim.Adam(model.parameters(), lr = 0.001, betas = (0.9, 0.999), eps = 1e-08, weight_decay = 0, amsgrad = False) The default hyperparameter settings for Adam for PyTorch generally perform quite well."
+  },
+  {
+    "id": "q029",
+    "query": "How is a feature map in a convolutional layer mathematically expressed in terms of its filter weights and bias?",
+    "ideal_answer": "The k-th feature map m_k in layer m is expressed as m_k(ij) = f(W_k * x_ij + b_k), where f is the activation function, W_k represents the filter's weights, x_ij is the input at position ij, and b_k is the bias, which is kept identical for all neurons within that feature map.",
+    "source": "deeplearning.pdf",
+    "document_id": 27,
+    "pages": [
+      140
+    ],
+    "relevant_excerpt": "assuming the neurons in the feature map have bias b (note that the bias is kept identical for all of the neurons in a feature map), we can mathematically express the feature map as follows: mij = f(W * xij + b)."
+  },
+  {
+    "id": "q030",
+    "query": "What fundamental problem with using a convolutional layer's output as a low-dimensional representation motivates the introduction of the autoencoder architecture?",
+    "ideal_answer": "Although a selected convolutional layer's output does contain information from the input, the network has been trained to focus on aspects of the input critical to the specific task at hand, causing significant loss of information about other elements of the input that might be important for different tasks. This motivates the autoencoder architecture, which uses an encoder to compress input into a low-dimensional embedding in an unsupervised fashion.",
+    "source": "deeplearning.pdf",
+    "document_id": 27,
+    "pages": [
+      175
+    ],
+    "relevant_excerpt": "while the selected layer does contain information from the input, the network has been trained to pay attention to the aspects of the input that are critical to solving the task at hand. As a result, there's a significant amount of information loss with respect to elements of the input that may be important for other classification tasks... We define a new network architecture that we call the autoencoder."
+  },
+  {
+    "id": "q031",
+    "query": "Who proposed denoising autoencoders, in what year, and what was the original corruption scheme used?",
+    "ideal_answer": "Denoising autoencoders were proposed by Vincent in 2008 as a method to make learned representations more robust to noise. The original paper used a corruption scheme that randomly zeroed out some portion of the input, though it acknowledged that other corruption schemes could also be used.",
+    "source": "deeplearning.pdf",
+    "document_id": 27,
+    "pages": [
+      285
+    ],
+    "relevant_excerpt": "In 2008, Vincent proposed denoising autoencoders as a method for combating the issues we see with standard autoencoders... The original paper used a corruption scheme that randomly zeroed out some portion of the input, but acknowledged that a variety of corruption schemes could be used instead."
+  },
+  {
+    "id": "q032",
+    "query": "What did Kilian and Siegelmann demonstrate about RNNs in 1996, and what practical limitation does this theoretical result not address?",
+    "ideal_answer": "Kilian and Siegelmann demonstrated in 1996 that an RNN is a universal functional representation, meaning that with enough neurons and the right parameter settings, an RNN can represent any functional mapping between input and output sequences. This theoretical result does not address whether it is practical to actually teach the RNN such a mapping from scratch using gradient descent algorithms.",
+    "source": "deeplearning.pdf",
+    "document_id": 27,
+    "pages": [
+      225
+    ],
+    "relevant_excerpt": "Kilian and Siegelmann demonstrated in 1996 that the RNN is a universal functional representation... The theory is promising, but it doesn't necessarily translate to practice... it is more useful to know whether it is practical to teach the RNN a realistic functional mapping from scratch by applying gradient descent algorithms."
+  },
+  {
+    "id": "q033",
+    "query": "In a Generative Adversarial Network, what condition would make it impossible for the discriminator to distinguish generated images from real ones?",
+    "ideal_answer": "If the generator parametrizes exactly the same probability distribution as the dataset's true distribution, and it is equally likely that a query image is sampled from the generator or from the dataset, then no discriminator would be able to tell where the query originated from, since both sources would be equally likely for any given sample.",
+    "source": "deeplearning.pdf",
+    "document_id": 27,
+    "pages": [
+      260
+    ],
+    "relevant_excerpt": "An optimal generator for a given dataset would also parametrize pdata(x), as this would perfectly confuse even the best discriminator... if the generator parametrizes the exact same distribution as that of the dataset and it is equally likely to sample from either the generator or the dataset, then no discriminator would be able to tell where the query originated from."
+  },
+  {
+    "id": "q034",
+    "query": "Why does the method of steepest descent tend to zigzag on highly elliptical error contours, and what remedy does the book describe?",
+    "ideal_answer": "On highly elliptical contours, moving repeatedly in the direction of steepest descent causes zigzagging because each step in the direction of steepest descent partially undoes progress made in another direction. The remedy described is to move in a conjugate direction relative to the previous choice instead of the direction of steepest descent, where the conjugate direction is chosen using an indirect approximation of the Hessian to linearly combine the gradient with the previous search direction.",
+    "source": "deeplearning.pdf",
+    "document_id": 27,
+    "pages": [
+      125
+    ],
+    "relevant_excerpt": "It turns out that this method ends up zigzagging a significant amount... because each time we move in the direction of steepest descent, we undo a little bit of progress in another direction. A remedy to this problem is moving in a conjugate direction relative to the previous choice instead of the direction of steepest descent."
+  },
+  {
+    "id": "q035",
+    "query": "What is OpenAI Gym, and how many open-source reinforcement learning environment implementations does it provide, according to the book?",
+    "ideal_answer": "OpenAI Gym is a Python toolkit for developing reinforcement learning agents, providing an easy-to-use interface for interacting with a variety of environments. It contains over one hundred open source implementations of common reinforcement learning environments, and speeds up development by handling the environment simulation side so researchers can focus on their agent and learning algorithms.",
+    "source": "deeplearning.pdf",
+    "document_id": 27,
+    "pages": [
+      350
+    ],
+    "relevant_excerpt": "The OpenAI Gym is a Python toolkit for developing reinforcement agents. OpenAI Gym provides an easy-to-use interface for interacting with a variety of environments. It contains over one hundred open source implementations of common reinforcement learning environments."
+  },
+  {
+    "id": "q036",
+    "query": "How does the A3C algorithm combine value learning and policy learning, and what does it use instead of pure discounted future return?",
+    "ideal_answer": "A3C is an actor-critic method that learns both a value function (the critic) and a policy (the actor), using the critic's value function to improve the actor's policy. Instead of using a pure discounted future return, A3C uses an advantage function, which represents the difference between the model's predicted quality of the action taken and the action's actual quality, to penalize the agent for choosing actions that lead to bad rewards.",
+    "source": "deeplearning.pdf",
+    "document_id": 27,
+    "pages": [
+      375
+    ],
+    "relevant_excerpt": "A3C uses an actor-critic method. Actor-critic methods involve learning both a value function V(st) (the critic) and also a policy π(st) (the actor)... A3C uses an advantage function instead of a pure discounted future return... Advantage represents the difference between the model's prediction of the quality of the action taken versus the actual quality of the action taken."
+  },
+  {
+    "id": "q037",
+    "query": "What LSD-related event happened in 1938 according to the psychiatry textbook, and how does it differ from the other major psychiatric treatment milestone dated to the same year?",
+    "ideal_answer": "In 1938, Albert Hoffman first synthesised lysergic acid diethylamide (LSD), a powerful hallucinogen popularly known as 'acid'. This is a distinct 1938 event from the introduction of a safer form of convulsive therapy (EST/ECT) by Cerletti and Bini in the same year; one concerns the discovery of a hallucinogenic drug, while the other concerns a therapeutic technique for treating psychiatric illness.",
+    "source": "A_Short_Textbook_of_Psychiatry__7th_Edition___PDFDrive__.pdf",
+    "document_id": 21,
+    "pages": [
+      60,
+      210
+    ],
+    "relevant_excerpt": "Lysergic acid diethylamide, first synthesised by Albert Hoffman in 1938 and popularly known as 'acid', is a powerful hallucinogen. [Elsewhere:] A much safer form of convulsive therapy was used by Cerletti and Bini in 1938... They called it EST or electroshock therapy."
+  },
+  {
+    "id": "q038",
+    "query": "What does the book identify as the ideal outcome for an interpretable autoencoder representation, in terms of the correspondence between features and code components?",
+    "ideal_answer": "The ideal outcome is a representation with a 1-to-1 correspondence, or close to it, between high-level features and individual components in the code, so that the representation is essentially the sum of individual interpretable elements (such as strokes in an image), making the representation more interpretable when combined with the right degree of space and sparsity.",
+    "source": "deeplearning.pdf",
+    "document_id": 27,
+    "pages": [
+      190
+    ],
+    "relevant_excerpt": "The ideal outcome for us is if we can build a representation where there is a 1-to-1 correspondence, or close to a 1-to-1 correspondence, between high-level features and individual components in the code... The representation is the sum of the individual strokes in the image. With the right combination of space and sparsity, a representation is more interpretable."
+  }
+]
