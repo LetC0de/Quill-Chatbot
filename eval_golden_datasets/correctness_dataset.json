@@ -1,0 +1,507 @@
+[
+  {
+    "id": "g001",
+    "question": "How do Type I and Type II alcoholism differ from each other?",
+    "ideal_answer": "Cloninger classified alcoholism into two types based on the relative importance of genetic and environmental factors. Type I (milieu-limited) affects both sexes, has an onset after 25 years, has important genetic factors with strong environmental influences contributing, may have a positive family history, shows loss of control, psychological dependence and guilt, and is associated with pre-morbid harm avoidance and high reward dependence. Type II (male-limited) is mostly seen in males, has an onset before 25 years, is heritable with limited environmental influence, usually has parental alcoholism and antisocial behaviour in the family, shows no loss of control, has drinking followed by aggressive behaviour and spontaneous alcohol seeking, and is associated with novelty-seeking personality traits.",
+    "document_id": 21,
+    "source": {
+      "filename": "A Short Textbook of Psychiatry, 7th Edition ( PDFDrive ).pdf",
+      "pages": [
+        47,
+        48
+      ],
+      "page_labels": [
+        "36",
+        "37"
+      ]
+    },
+    "reference_context": "ii. Spree-drinking.\n Earlier, it was believed that γ-alcoholism was more \ncommon in America, while δ-alcoholism was com-\nmoner in the wine-drinking countries such as France. \nAt present the existence of this pattern of distribution \nis doubted and its inclusion in this book is mainly for \nhistorical reasons.\n Cloninger has classiﬁ  ed alcoholism into two types, \non the basis of the relative importance of genetic and \nenviron mental factors (Table 4.3).\n  Alcohol dependence is more common in males, \nand has an onset in late second or early third decade. \nThe course is usually insidious. There is often an \nassociated abuse or dependence of other drugs. If the \nonset occurs late in life, especially after 40 years of \nage, an underlying mood disorder should be looked for.\nTable 4.2: Aetiological Factors in Substance Use \nDisorders\n1. Biological Factors\n i. Genetic vulnerability (family history of substance \nuse disorder; for example in type II alcoholism)\n\n[...]\n\nTable 4.3: Classiﬁ cation of Alcoholism\nFactors Type I Type II\nSynonym Milieu-limited Male-limited\nGender Both sexes Mostly in males\nAge of onset > 25 years < 25 years\nAetiological factors Genetic factors important; strong Heritable; environmental\n environmental in ﬂ uences are inﬂ  uences are limited\n contributory \nFamily history\n May be positive Parental alcoholism and antisocial \n  behaviour usually present\nLoss of control Present No loss of control\nOther features Psychological dependence; Drinking followed by aggressive\n and guilt present behaviour; spontaneous alcohol\n  seeking\nPre-morbid\n Harm avoidance; Novelty-seeking\npersonality traits high reward dependence",
+    "question_type": "comparison",
+    "answerable": true,
+    "multi_chunk": true,
+    "chunk_ids": [
+      "51b088bc-9980-4897-9a27-b86c888b8639",
+      "49a2f7a0-5e72-4595-a382-3b427ce950b2"
+    ],
+    "notes": "Table 4.3 is flattened by PDF extraction; column assignment inferred from row order."
+  },
+  {
+    "id": "g002",
+    "question": "What is the difference between the CBOW and Skip-Gram versions of Word2Vec?",
+    "ideal_answer": "Word2Vec was pioneered by Mikolov et al. and has two flavors. The Continuous Bag of Words (CBOW) model uses the encoder to create an embedding from the full context, treated as one input, and predicts the target word; this strategy works best for smaller datasets. The Skip-Gram model does the inverse: it takes the target word as input and attempts to predict one of the words in the context.",
+    "document_id": 27,
+    "source": {
+      "filename": "deeplearning.pdf",
+      "pages": [
+        194
+      ],
+      "page_labels": [
+        "195",
+        "195"
+      ]
+    },
+    "reference_context": "modifications for performance) to produce word embeddings in practice.\nThe Word2Vec Framework\nWord2Vec, a framework for generating word embeddings, was pioneered by Mikolov\net al. The original paper detailed two strategies for generating embeddings, similar to\nthe two strategies for encoding context we discussed in the previous section.\nThe first flavor of Word2Vec that Mikolov et al. introduced was the Continuous Bag\nof Words (CBOW) model. 7 This model is much like strategy B from Figure 8-19. The\nCBOW model used the encoder to create an embedding from the full context (treated\nas one input) and predict the target word. It turns out this strategy works best for\nsmaller datasets, an attribute that is further discussed in the original paper.\nThe second flavor of Word2Vec is the Skip-Gram model, introduced by Mikolov et al.8\nThe Skip-Gram model does the inverse of CBOW , taking the target word as an input,\n\n[...]\n\nThe second flavor of Word2Vec is the Skip-Gram model, introduced by Mikolov et al.8\nThe Skip-Gram model does the inverse of CBOW , taking the target word as an input,\nand then attempting to predict one of the words in the context. Let’s walk through a\ntoy example to explore what the dataset for a Skip-Gram model looks like.\nConsider the sentence “the boy went to the bank. ” If we broke this sentence down into\na sequence of (context, target) pairs, we would obtain [([the, went], boy), ([boy, to],\nwent), ([went, the], to), ([to, bank], the)]. Taking this a step further, we have to split\neach (context, target) pair into (input, output) pairs where the input is the target and\nThe Word2Vec Framework | 179",
+    "question_type": "comparison",
+    "answerable": true,
+    "multi_chunk": true,
+    "chunk_ids": [
+      "3b74c7d1-39e3-449e-ae7b-35fc909c090f",
+      "d17a74e0-209a-4342-a5d2-41d552c2a2b7"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "g003",
+    "question": "How does disulfiram work in alcohol dependence, and what happens if the patient drinks alcohol while on it?",
+    "ideal_answer": "When alcohol is ingested by a person on disulfiram, alcohol-derived acetaldehyde cannot be oxidised to acetate, so acetaldehyde accumulates in the blood. This causes the disulfiram-ethanol reaction (DER): flushing, tachycardia, hypotension, tachypnoea, palpitations, headache, sweating, nausea, vomiting, giddiness and a sense of impending doom with severe anxiety. The reaction begins within 30 minutes, is full blown within 1 hour, and usually subsides within 2 hours. In sensitive patients or after a large amount of alcohol it can be severe and life threatening (shock, myocardial infarction, convulsions, hypoxia, confusion and coma), so treatment is usually begun in an inpatient setting, after an alcohol challenge test. The usual dose is 250-500 mg/day (at bedtime) in the first week and 250 mg/day for maintenance; the effect begins within 12 hours of the first dose and lasts 7-10 days after the last dose.",
+    "document_id": 21,
+    "source": {
+      "filename": "A Short Textbook of Psychiatry, 7th Edition ( PDFDrive ).pdf",
+      "pages": [
+        52
+      ],
+      "page_labels": [
+        "41",
+        "41"
+      ]
+    },
+    "reference_context": "to alcohol intake, due to accidental absorption of \nantioxidant disul ﬁ ram. The mechanism of action of \ndisulﬁ ram is summarised in Figure 4.1.\n When alcohol is ingested by a person who is on \ndisulﬁ ram, alcohol-derived acetal de hyde cannot be \noxidised to acetate and this leads to an accumulation \nof acetaldehyde in blood. This causes the important \n disulfiram-ethanol reaction  (DER) characterised \nby ﬂ ush ing, tachycardia, hypotension, tachypnoea, \npalpitations, headache, sweating, nausea, vomi ting, \ngiddiness and a sense of impending doom associated \nwith severe anxiety.\n The onset of the reaction occurs within 30 minutes, \nbecomes full blown within 1 hour, and subsides usu-\nally within 2 hours of ingestion of alcohol. In sensitive \npatients or in those who have ingested a large amount \nof alcohol, DER can be very severe and life threatening \ndue to one or more of the following: shock, myo cardial \ninfarction, convulsions, hypoxia, confusion and coma.\n\n[...]\n\nof alcohol, DER can be very severe and life threatening \ndue to one or more of the following: shock, myo cardial \ninfarction, convulsions, hypoxia, confusion and coma.\n Therefore, treatment with disul ﬁ ram is usually \nbegun in an inpatient hospital setting, usually after \na  challenge test with alcohol to demonstrate that \nunpleasant and dangerous side-effects occur, if either \nalcohol or alcohol-containing eatable/drink is con-\nsumed whilst treatment is continued with disulﬁ ram.\n The usual dose of disul ﬁ ram is 250-500 mg/day \n(taken before bedtime to avoid drowsi ness in daytime) \nin the ﬁ rst week and 250 mg/day subsequently for \nthe maintenance treatment. The effect begins within \n12 hours of ﬁ rst dose and remains for 7-10 days after \nthe last dose. The patient should carry a warning card \ndetailing the forbidden alcohol-containing articles, the \npossible effects and their emergency treatment, along \nwith patient identiﬁ cation details.",
+    "question_type": "cause_effect",
+    "answerable": true,
+    "multi_chunk": true,
+    "chunk_ids": [
+      "fd3a6d93-a183-4ddf-8a69-948bd8d2780d",
+      "77d21b3c-71a6-4f16-84fc-bb31cd44e97d"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "g004",
+    "question": "Why can training a Deep Q-Network become unstable, and what techniques are used to fix it?",
+    "ideal_answer": "The DQN loss is doubly dependent on the model parameters because it uses the difference between the predicted Q-value of the current step and the predicted Q-value of the next step. With each parameter update the Q-values shift, and using shifting Q-values for further updates creates highly correlated updates, feedback loops, oscillating parameters and a diverging loss. Two fixes are used. A target Q-network, a copy of the prediction network that lags in its updates and is set equal to the prediction network only every few batches, stabilises the Q-values. Experience replay stores the agent's experiences as (s_i, a_i, r_i, s_i+1) tuples and builds batches by randomly sampling from them, which breaks the correlation among recent experiences that would otherwise make batch gradients unrepresentative; it behaves like a queue, discarding old experiences that may no longer be representative.",
+    "document_id": 27,
+    "source": {
+      "filename": "deeplearning.pdf",
+      "pages": [
+        364,
+        365
+      ],
+      "page_labels": [
+        "365",
+        "366",
+        "366",
+        "366"
+      ]
+    },
+    "reference_context": "minθ ∑e ∈ E ∑t = 0T Q st, at θ − rt + γ maxa′ Q st + 1, a′ θ\nThis objective is fully differentiable as a function of our model parameters, and we\ncan find gradients to use in stochastic gradient descent to minimize this loss.\nLearning Stability\nOne issue you may have noticed is that we are defining our loss function based on\nthe difference of our model’s predicted Q-value of this step and the predicted Q-value\nof the next step. In this way, our loss is doubly dependent on our model parameters.\nWith each parameter update, the Q-values are constantly shifting, and we are using\nshifting Q-values to do further updates. This high correlation of updates can lead to\nfeedback loops and instability in our learning, where our parameters may oscillate\nand make the loss diverge.\nWe can employ a couple of simple engineering hacks to remedy this correlation\nproblem: namely, target Q-network and experience replay.\nQ-Learning and Deep Q-Networks | 349\n\n[...]\n\nTarget Q-Network\nInstead of updating a single network frequently with respect to itself, we can reduce\nthis codependence by introducing a second network, called the target network. Our\nloss function features to instances of the Q-function, Q st, at θ  and  Q st + 1, a′ θ .\nWe are going to have the first Q be represented as our prediction network, and\nour second Q will be produced by the target Q-network. The target Q-network is\na copy of our prediction network that lags in its parameter updates. We update\nthe target Q-network to equal the prediction network only every few batches. This\nprovides much needed stability to our Q-values, and we can now properly learn a\ngood Q-function.\nExperience Replay\nThere is yet another source of irksome instability to our learning: the high correla‐\ntions of recent experiences. If we train our DQN with batches drawn from recent\nexperience, these action, state pairs are all going to be related to one another. This\n\n[...]\n\ntions of recent experiences. If we train our DQN with batches drawn from recent\nexperience, these action, state pairs are all going to be related to one another. This\nis harmful because we want our batch gradients to be representative of the entire\ngradient, and if our data is not representative of the data distribution, our batch\ngradient will not be an accurate estimate of the true gradient.\nSo, we have to break up this correlation of data in our batches. We can do this\nusing something called experience replay. In experience replay, we store all of the\nagent’s experiences as a table, and to construct a batch, we randomly sample from\nthese experiences. We store these experiences in a table as si, ai, ri, si + 1  tuples.\nFrom these four values, we can compute our loss function, and thus our gradient to\noptimize our network.\nThis experience replay table is more of a queue than a table. The experiences an agent\n\n[...]\n\nFrom these four values, we can compute our loss function, and thus our gradient to\noptimize our network.\nThis experience replay table is more of a queue than a table. The experiences an agent\nsees early in training may not be representative of the experiences a trained agent\nfinds itself in later, so it is useful to remove old experiences from our table.\nFrom Q-Function to Policy\nQ-learning is a value learning paradigm, not a policy learning algorithm. This means\nwe are not directly learning a policy for acting in our environment. But can’t we\nconstruct a policy from what our Q-function tells us? If we have learned a good\nQ-function approximation, this means we know the value of every action for every\nstate. We could then trivially construct an optimal policy in the following way: look\nat our Q-function for all actions in our current state, choose the action with the\nmax Q-value, enter a new state, and repeat. If our Q-function is optimal, our policy",
+    "question_type": "cause_effect",
+    "answerable": true,
+    "multi_chunk": true,
+    "chunk_ids": [
+      "17e34021-2889-431d-b9bd-7fdf285697fa",
+      "52de32b7-cba2-40be-a8da-27043a599c50",
+      "2ca9e063-7674-4465-8174-1dadfbda10f6",
+      "907d3eac-cad4-4211-ad5e-57d03afa9f8e"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "g005",
+    "question": "How does anorexia nervosa differ from bulimia nervosa, and can they occur together?",
+    "ideal_answer": "Anorexia nervosa occurs much more often in females, typically starting in adolescence (13-19 years), with an intense fear of becoming obese, frequent body-image disturbance, refusal to maintain a minimum normal body weight, and significant weight loss (usually more than 25% of original weight). Bulimic episodes (binge eating followed by vomiting) are common in anorexia nervosa, and up to 50% of anorexia patients also have them. However, patients with bulimia nervosa usually maintain a near normal body weight or are overweight, in sharp contrast to anorexia nervosa patients.",
+    "document_id": 21,
+    "source": {
+      "filename": "A Short Textbook of Psychiatry, 7th Edition ( PDFDrive ).pdf",
+      "pages": [
+        153,
+        154
+      ],
+      "page_labels": [
+        "142",
+        "143",
+        "143"
+      ]
+    },
+    "reference_context": "5. Psychogenic vomiting\nAnorexia Nervosa\n Anorexia nervosa is an eating disorder characterised \nby the following prominent clinical features:\n1. It occurs much more often in females as compared \nto the males. The common age of onset is adoles-\ncence (13-19 years of age).\n2. There is an intense fear of becoming obese. This \nfear does not decrease even if body becomes very \nthin and underweight.\n3. There is often a body-image disturbance. The per-\nson is unable to perceive own body size accurately. \nHowever, body image disturbance may sometimes \nnot be seen in patients from non-Western cultural \nsettings and several such cases have been de-\nscribed from India.\n4. There is a refusal to maintain the body weight \nabove a minimum normal weight for that age, sex \nand height.\n5. Signiﬁ  cant weight loss occurs, usually more than \n25% of the original weight. The ﬁ nal weight is usu-\nally 15% less than the minimum limit of normal \nweight (for that age, sex and height) or a  Quetelet’s\n\n[...]\n\nBehavioural Syndromes Associated with Psychological Disturbances and Physiological Factors 143\nexercises. ‘Anorexia’ is actually a misnomer as there \nis never really a decrease in appetite, initially; in fact \npatient is often preoccupied with food. A lot of time \nmay be spent in collecting recipes and cooking food \nfor signiﬁ cant others.\n Depressive symptoms are common and so are \nobsessive-compulsive  personality traits. Psychomo-\ntor activity is usually increased. In severe cases, ﬁ ne \n lanugo hair may develop all over the body. Women \nwith anorexia nervosa can present with poor sexual \nadjustment, with conﬂ icts about being a woman and \nfear of pregnancy. Many patients are unconsciously \nunable to accept a ‘ female role’.\n A large number (up to 50%) of patients with ano-\nrexia nervosa also have bulimic episodes. These are \ncharacterised by rapid consumption of large amounts \nof food in a relatively short period of time, occurring\n\n[...]\n\ntuitarism, lateral hypo thalamic lesion and debilitating \nsystemic illnesses, e.g. disse mi nated tuberculosis) and \npsychia tric disorders (such as depressive disorder and \nschizophrenia).\n Another important differential diagnosis is  bulimia \nnervosa. Although bulimic episodes are common in \nanorexia nervosa (binge eating followed by vomit-\ning), patients of  bulimia nervosa usually maintain a \nnear normal body weight (or are overweight), in sharp \ncontrast to the patients with  anorexia nervosa.\nTreatment\nThe treatment of anorexia nervosa can be considered \nin two phases, which often merge into each other.\n• Short-term treatment, to encourage weight gain \nand correct nutritional deﬁ ciencies, if any.\n• Long-term treatment, aimed at maintaining the \nnear normal weight achieved in short-term treat-\nment and preventing relapses.\n The various treatment modalities used can include:\n1.  Behaviour therapy (BT): Behavioural treatments \nare based on providing positive reinforcements",
+    "question_type": "comparison",
+    "answerable": true,
+    "multi_chunk": true,
+    "chunk_ids": [
+      "ba47d227-b4d9-4e7c-8368-ad90e3d7f581",
+      "1b5d55c3-c07d-406a-a1e7-1d04346da8ee",
+      "38b19137-55b3-4a8a-af93-b01a5f87e722"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "g006",
+    "question": "What is an LSTM unit and what does its memory cell do?",
+    "ideal_answer": "The long short-term memory (LSTM) architecture was introduced by Sepp Hochreiter and Jürgen Schmidhuber to combat the problem of vanishing gradients; it is designed to reliably transmit important information many time steps into the future. Its memory cell is a tensor that holds critical information learned over time, and the network is designed to maintain useful information in it over many time steps. At every time step the unit modifies the memory cell in three phases, the first of which is deciding how much of the previous memory to keep, which is determined by the keep gate.",
+    "document_id": 27,
+    "source": {
+      "filename": "deeplearning.pdf",
+      "pages": [
+        228
+      ],
+      "page_labels": [
+        "229",
+        "229"
+      ]
+    },
+    "reference_context": "Long Short-Term Memory Units\nTo combat the problem of vanishing gradients, Sepp Hochreiter and Jürgen Schmid‐\nhuber introduced the long short-term memory (LSTM) architecture. The basic princi‐\nple behind the architecture was that the network would be designed for the purpose\nof reliably transmitting important information many time steps into the future. The\ndesign considerations resulted in the architecture shown in Figure 9-17.\nFigure 9-17. The architecture of an LSTM unit, illustrated at a tensor (designated by\narrows) and operation (designated by the inner blocks) level\nFor the purposes of this discussion, we’ll take a step back from the individual neuron\nlevel and start talking about the network as collection tensors and operations on ten‐\nsors. As the figure indicates, the LSTM unit is composed of several key components.\nOne of the core components of the LSTM architecture is the memory cell, a tensor\nrepresented by the bolded loop in the center of the figure. The memory cell holds\n\n[...]\n\nOne of the core components of the LSTM architecture is the memory cell, a tensor\nrepresented by the bolded loop in the center of the figure. The memory cell holds\ncritical information that it has learned over time, and the network is designed to\neffectively maintain useful information in the memory cell over many time steps.\nAt every time step, the LSTM unit modifies the memory cell with new information\nwith three different phases. First, the unit must determine how much of the previous\nmemory to keep. This is determined by the keep gate, shown in detail in Figure 9-18.\nLong Short-Term Memory Units | 213",
+    "question_type": "definition",
+    "answerable": true,
+    "multi_chunk": true,
+    "chunk_ids": [
+      "822da96a-3455-488a-897e-f2e1d8093906",
+      "b29ef4bb-bdbf-4973-a09d-1f3e9b6455cc"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "g007",
+    "question": "What blood levels are considered therapeutic for haloperidol and clozapine?",
+    "ideal_answer": "Haloperidol has a therapeutic blood level of 8-18 ng/ml and clozapine 350-500 μg/L. Drug levels are checked to test for therapeutic levels, toxic levels and drug compliance.",
+    "document_id": 21,
+    "source": {
+      "filename": "A Short Textbook of Psychiatry, 7th Edition ( PDFDrive ).pdf",
+      "pages": [
+        27
+      ],
+      "page_labels": [
+        "16"
+      ]
+    },
+    "reference_context": "Drug Levels\nDrug levels are indicated to test for therapeutic blood \nlevels, for toxic blood levels, and for testing drug \ncompliance. Examples are lithium (0.6-1.0 meq/L), \ncarbamazepine (4-12 mg/ml), valproate (50-100 mg/\nml), haloperidol (8-18 ng/ml), tricyclic antidepres sants \n(nortriptyline 50-150 ng/ml; imipramine 200-250 ng/\nml), benzodiazepines, barbiturates and clozapine (350-\n500 μg/L).\nElectrophysiological Tests\nEEG (Electroencephalogram): Seizures, dementia, pseu-\ndoseizures vs. seizures, episodic abnormal behaviour.\nBEAM (Brain electrical activity mapping): Provides \ntopographic imaging of EEG data.\nVideo-Telemetry EEG: Pseudoseizures vs. seizures.\nEvoked potentials (e.g. p300): Research tool.\nPolysomnography/Sleep studies: Sleep disorders, sei-\nzures (occurring in sleep). The various compo nents in \nsleep studies include EEG, ECG, EOG, EMG, air ﬂ ow \nmeasurement, penile tumescence, oxygen saturation, \nbody temperature, GSR (Galvanic skin response), and \nbody movement.",
+    "question_type": "numerical",
+    "answerable": true,
+    "multi_chunk": false,
+    "chunk_ids": [
+      "7d6a1a56-1437-48b6-92b3-02f2443a2304"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "g008",
+    "question": "Why do vanilla RNNs struggle to learn long-term dependencies?",
+    "ideal_answer": "Although Kilian and Siegelmann showed in 1996 that an RNN is a universal functional representation, this does not necessarily translate to practice. The derivative of the hidden state at time t with respect to the input at time t-k has a strong upper bound that depends on powers of the recurrent weights, and because model weights are initialised to small values, this derivative approaches zero as k increases. The gradient therefore quickly diminishes when computed with respect to inputs several time steps in the past, severely limiting the ability to learn long-term dependencies. This is the problem of vanishing gradients, which severely impacts vanilla RNNs and motivates long short-term memory units.",
+    "document_id": 27,
+    "source": {
+      "filename": "deeplearning.pdf",
+      "pages": [
+        225,
+        227
+      ],
+      "page_labels": [
+        "226",
+        "228",
+        "228"
+      ]
+    },
+    "reference_context": "4 Kilian, Joe, and Hava T. Siegelmann. “The dynamic universality of sigmoidal neural networks. ” Information\nand computation 128.1 (1996): 48-56.\nThe Challenges with Vanishing Gradients\nOur motivation for using a stateful network model hinges on this idea of capturing\nlong-term dependencies in the input sequence. It seems reasonable that an RNN\nwith a large memory bank (i.e., a significantly sized recurrent layer) would be able\nto summarize these dependencies. In fact, from a theoretical perspective, Kilian and\nSiegelmann demonstrated in 1996 that the RNN is a universal functional represen‐\ntation.4 In other words, with enough neurons and the right parameter settings, an\nRNN can be used to represent any functional mapping between input and output\nsequences.\nThe theory is promising, but it doesn’t necessarily translate to practice. While it is\nnice to know that it is possible for an RNN to represent any arbitrary function, it is\n\n[...]\n\n∂ℎ t − k\n∂i t − k = f′ win\nt − k i t − k + wrec\nt − k − 1 ℎ t − k − 1 ∂\n∂i t − k win\nt − k i t − k\n+ wrec\nt − k − 1 ℎ t − k − 1\nIn this expression, the hidden activation at time t − k − 1 is independent of the value\nof the input at t − k . Thus we can rewrite this expression as:\n∂ℎ t − k\n∂i t − k = f′ win\nt − k i t − k + wrec\nt − k − 1 ℎ t − k − 1 win\nt − k\nFinally, taking the absolute value on both sides and again applying the observation\nabout the maximum value of f′ , we can write:\n∂ℎ t − k\n∂i t − k ≤ win\nt − k\nThis results in the final inequality (which we can simplify because we constrain the\nconnections at different time steps to have equal value):\n∂ℎ t\n∂i t − k ≤ wrec\nt − 1 · ... · wrec\nt − k · win\nt − k = wrec\nk · win\nThis relationship places a strong upper bound on how much a change in the input\nat time t − k  can impact the hidden state at time t. Because the weights of our model\nare initialized to small values at the beginning of training, the value of this derivative\n\n[...]\n\nat time t − k  can impact the hidden state at time t. Because the weights of our model\nare initialized to small values at the beginning of training, the value of this derivative\napproaches zero as k increases. In other words, the gradient quickly diminishes\nwhen it’s computed with respect to inputs several time steps into the past, severely\nlimiting our model’s ability to learn long-term dependencies. This issue is commonly\nreferred to as the problem of vanishing gradients, and it severely impacts the learning\ncapabilities of vanilla RNNs. In order to address this limitation, we will spend the\nnext section exploring an extraordinarily influential twist on recurrent layers known\nas long short-term memory.\n212 | Chapter 9: Models for Sequence Analysis",
+    "question_type": "cause_effect",
+    "answerable": true,
+    "multi_chunk": true,
+    "chunk_ids": [
+      "a95182e2-a81b-4d5f-b752-df04457e638c",
+      "80ae1f2d-fdd3-4210-87d2-f4bcfaecb2ff",
+      "4bd4794e-fa7d-4264-b2af-e2d65ebd6604"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "g009",
+    "question": "How do the psychodynamic and behavioural theories explain obsessive compulsive disorder?",
+    "ideal_answer": "The psychodynamic theory explains OCD by a defensive regression to the anal-sadistic phase of development, with the use of isolation, undoing and displacement to produce obsessive-compulsive symptoms; the text stresses that this is only a theory and whether it is true is a matter of conjecture. The behavioural theory explains obsessions as conditioned stimuli to anxiety (similar to phobias), and compulsions as learned behaviour that decreases the anxiety associated with obsessions; this decrease in anxiety positively reinforces the compulsive acts so they become stable, learned behaviours. Behavioural or learning theory cannot adequately explain the causation of OCD but is very useful in its treatment.",
+    "document_id": 21,
+    "source": {
+      "filename": "A Short Textbook of Psychiatry, 7th Edition ( PDFDrive ).pdf",
+      "pages": [
+        108
+      ],
+      "page_labels": [
+        "97",
+        "97"
+      ]
+    },
+    "reference_context": "Neurotic, Stress-related and Somatoform Disorders 97\ncontributing to obsessive compulsive symptoms, \nwhile displacement leads to forma tion of phobic \nsymptoms. These defense mechanisms are discussed \nin Table 17.1.\n This mechanism has been explained in slight \ndetail as this theory attempts to describe the probable \ncausation of OCD in a remarkably syste matic man-\nner. However, it must be remembered that this is only \na theory and whether it is true or not, is a matter of \nconjecture.\n Thus, the psychodynamic theory explains OCD \nby a defensive regression to anal-sadistic phase of \ndevelopment with the use of iso lation, undoing and \ndisplacement to produce obsessive-compulsive symp-\ntoms.\nBehavioural Theory\nThe behavioural theory explains obsessions as condi-\ntioned stimuli to anxiety (similar to phobias). Compul-\nsions have been described as learned behaviour which \ndecrease the anxiety associated with obsessions. \nThis decrease in anxiety  positively reinforces the\n\n[...]\n\nsions have been described as learned behaviour which \ndecrease the anxiety associated with obsessions. \nThis decrease in anxiety  positively reinforces the \ncompulsive acts and they become ‘stable’, learned \nbehaviours.\n Behavioural or  learning theory is not able to \nexplain the causation of OCD adequately but is very \nuseful in its    treatment.\nBiological Theories\n 1. Obsessive compulsive symptoms can occur \nsecondary to many illnesses such as von Econ-\nomo’s  encephalitis, basal ganglia lesions, Gilles \nde la Tourette syndrome, and hypo thalamic and \nthird ventricle lesions.\n 2.   Obsessive compulsive disorder is found in 5-7% \nof ﬁ rst degree relatives of the patients with \nOCD.\n 3.  Psychosurgery has been successfully used for \ntreat ment of OCD.\n 4. Biochemically, the central  5-HT system seems \nto be involved in OCD, as SSRIs are useful in \nthe treatment of OCD.\n Some authors pointed at  cingulum (gyrus) as the \nprobable site of lesion, while others have found EEG",
+    "question_type": "comparison",
+    "answerable": true,
+    "multi_chunk": true,
+    "chunk_ids": [
+      "e36e2453-9834-48a9-90e0-9e2ce3dbcafc",
+      "16bced40-2502-43eb-b9aa-9cb23677abda"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "g010",
+    "question": "How do skip connections work in very deep image networks?",
+    "ideal_answer": "Skip connections were introduced by He et al., whose network of over 30 trainable layers surpassed its peers in major image classification competitions. A skip connection adds the feature vector obtained from a layer to the feature vector obtained one or two layers after it. If x' is an intermediate representation, the skip connection adds x' to the result of the next layer F(x') before passing it on, so the following layer G sees F(x') + x' instead of F(x'). The addition can also be made after G, so that the next layer H sees G(F(x')) + x' instead of just G(F(x')).",
+    "document_id": 27,
+    "source": {
+      "filename": "deeplearning.pdf",
+      "pages": [
+        162
+      ],
+      "page_labels": [
+        "163"
+      ]
+    },
+    "reference_context": "surpassed all of its peers in major image classification competitions. With a version\nthat consisted of over 30 trainable layers, He et al. redefined how we train deep\ncomputer vision architectures. In particular, their contribution was the introduction\nof what we now call skip connections, which add the feature vector obtained from a\nlayer to the feature vector obtained one or two layers after the current layer. More\nprecisely, let’s say we are midway through the network so far and our original input\nx has been converted to some intermediate representation x’. The skip connection\nwould take x’ and add it to the result of the next layer, F(x'), before passing the\nrepresentation on to the following layer G. So instead of seeing F(x'), G sees F(x') + x’.\nNote that the skip connection does not need to add the current representation to the\nresult of F. As represented in Figure 7-21, we could also add x’ to the result of G, so\nthe next layer H sees G(F(x')) + x’ instead of just G(F(x')).",
+    "question_type": "explanation",
+    "answerable": true,
+    "multi_chunk": false,
+    "chunk_ids": [
+      "34b75279-2b12-4dbf-b79f-03cd58f5565f"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "g011",
+    "question": "How are anxiety, depression and psychotic symptoms managed in a patient with dementia?",
+    "ideal_answer": "Anxiety can be treated with a low dose of a short-acting benzodiazepine such as lorazepam or oxazepam, taking care to prevent dependence or misuse. Depression can be treated with low doses of SSRIs such as citalopram or sertraline, which have low anticholinergic activity and a safer cardiac profile; agents with high anticholinergic activity can cause confusion or even delirium. Psychotic symptoms and disruptive behaviours can be treated with low doses of antipsychotics, with haloperidol and risperidone usually preferred because they are less sedating and have low cardiac toxicity (though risperidone can cause postural hypotension); antipsychotic use has decreased markedly because of a possible association with increased mortality, and antipsychotics should be avoided if Lewy body dementia is suspected.",
+    "document_id": 21,
+    "source": {
+      "filename": "A Short Textbook of Psychiatry, 7th Edition ( PDFDrive ).pdf",
+      "pages": [
+        37
+      ],
+      "page_labels": [
+        "26",
+        "26"
+      ]
+    },
+    "reference_context": "5. Anxiety symptoms can be treated with low dose of \na short-acting  benzodiazepine (such as  Lorazepam \nand  Oxaze pam), though care should be taken to \nprevent benzodiazepine dependence/misuse.\n6.  Depression can be treated with low doses of \nSSRIs such as Citalopram or Sertraline as these \nantidepressants have low anti cholinergic activity \nand have a safer cardiac proﬁ le. Agents with high \nanti cholinergic acti vity can cause confusion or \neven frank delirium.\n7. Psychotic symptoms and disruptive behaviours \ncan be treated with low doses of antipsychotics. \n Haloperidol and Rispe ri done have usually been \npreferred as they are less sedating and have low \ncardiac toxicity, though Risperidone can cause \npostural hypotension. Recently, the use of anti-\npsychotics in treatment of behavioural symptoms \nin dementia has decreased markedly due to \npossible association of antipsychotic use with \nincreased mortality. Antipsychotics should \nalso be avoided if Lewy body dementia is\n\n[...]\n\nin dementia has decreased markedly due to \npossible association of antipsychotic use with \nincreased mortality. Antipsychotics should \nalso be avoided if Lewy body dementia is \nsuspected.\n8. Short-term hospitalisation may be needed for \nemergent symptoms whilst a longer term hospi-\ntalisation or respite placement may be necessary \nin later stages.\n9. Speci ﬁ c drug treatment such as cholinesterase \ninhibitors (e.g. donepezil, rivastigmine, galan-\ntamine) in moderate  Alzheimer’s disease, or \nmemantine (NMDA antagonist) in moderate to \nsevere  Alzheimer’s disease, can be helpful.",
+    "question_type": "several_pieces",
+    "answerable": true,
+    "multi_chunk": true,
+    "chunk_ids": [
+      "6a02cbe8-3f5d-4645-8be9-8a08949d0967",
+      "b1f4d94c-272f-4f41-b03e-544fec0edead"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "g012",
+    "question": "Are the huge number of local minima in deep networks actually a problem for training?",
+    "ideal_answer": "Deep network error surfaces are guaranteed to have a large, sometimes infinite, number of local minima because of model identifiability: rearranging neurons within a layer gives the same output (n! arrangements per layer of n neurons, n!^l for l layers), and an individual ReLU neuron has infinitely many equivalent configurations (multiply incoming weights by any nonzero k and scale outgoing weights by 1/k). These minima are not inherently problematic because all nonidentifiable configurations behave indistinguishably and reach the same error on training, validation and test data. Local minima are only problematic when spurious, meaning they have higher error than the global minimum. Whether spurious high-error minima are common in practical networks remains an open question, but many recent studies suggest most local minima have error rates and generalization similar to the global minimum.",
+    "document_id": 27,
+    "source": {
+      "filename": "deeplearning.pdf",
+      "pages": [
+        112,
+        113
+      ],
+      "page_labels": [
+        "113",
+        "113",
+        "114",
+        "114"
+      ]
+    },
+    "reference_context": "Model Identifiability\nThe first source of local minima is tied to a concept commonly referred to as model\nidentifiability. One observation about deep neural networks is that their error surfaces\nare guaranteed to have a large—and in some cases, an infinite—number of local\nminima. There are two major reasons this observation is true.\nThe first is that within a layer of a fully connected feed-forward neural network,\nany rearrangement of neurons will still give you the same final output at the end of\nthe network. We illustrate this using a simple three-neuron layer in Figure 6-2. As a\nresult, within a layer with n  neurons, there are n! ways to rearrange parameters. And\nfor a deep network with l  layers, each with n  neurons, we have a total of n!l  equiva‐\nlent configurations.\nFigure 6-2. Rearranging neurons in a layer of a neural network results in equivalent\nconfigurations due to symmetry\nIn addition to the symmetries of neuron rearrangements, nonidentifiability is present\n\n[...]\n\nconfigurations due to symmetry\nIn addition to the symmetries of neuron rearrangements, nonidentifiability is present\nin other forms in certain kinds of neural networks. For example, there is an infinite\nnumber of equivalent configurations that for an individual ReLU neuron result in\nequivalent networks. Because an ReLU uses a piecewise linear function, we are free to\nmultiply all of the incoming weights by any nonzero constant k  while scaling all of\nModel Identifiability | 97\n\n[...]\n\n2 Goodfellow, Ian J., Oriol Vinyals, and Andrew M. Saxe. “Qualitatively characterizing neural network optimi‐\nzation problems. ” arXiv preprint arXiv:1412.6544 (2014).\nthe outgoing weights by 1\nk  without changing the behavior of the network. We leave\nthe justification for this statement as an exercise for you.\nUltimately, however, local minima that arise because of the nonidentifiability of deep\nneural networks are not inherently problematic. This is because all nonidentifiable\nconfigurations behave in an indistinguishable fashion no matter what input values\nthey are fed. This means they will achieve the same error on the training, validation,\nand testing datasets. In other words, all of these models will have learned equally\nfrom the training data and will have identical behavior during generalization to\nunseen examples.\nInstead, local minima are only problematic when they are spurious. A spurious\nlocal minimum corresponds to a configuration of weights in a neural network that\n\n[...]\n\nunseen examples.\nInstead, local minima are only problematic when they are spurious. A spurious\nlocal minimum corresponds to a configuration of weights in a neural network that\nincurs a higher error than the configuration at the global minimum. If these kinds\nof local minima are common, we quickly run into significant problems while using\ngradient-based optimization methods because we can take only local structure into\naccount.\nHow Pesky Are Spurious Local Minima in Deep Networks?\nFor many years, deep learning practitioners blamed all of their troubles in training\ndeep networks on spurious local minima, albeit with little evidence. Today, it remains\nan open question whether spurious local minima with a high error rate relative to\nthe global minimum are common in practical deep networks. However, many recent\nstudies seem to indicate that most local minima have error rates and generalization\ncharacteristics that are very similar to global minima.",
+    "question_type": "summary",
+    "answerable": true,
+    "multi_chunk": true,
+    "chunk_ids": [
+      "d58aa65c-e19d-4012-b2c8-31dd6d845216",
+      "991c8854-881d-42f9-afb0-8e92b610dde8",
+      "2ea68a58-b628-49a2-8947-3abe23f34104",
+      "d21f5ceb-710a-4f3f-9856-089cd5e9b864"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "g013",
+    "question": "What blood lithium levels are considered therapeutic, prophylactic and toxic?",
+    "ideal_answer": "The book gives two slightly different sets of figures. In the lithium treatment discussion: therapeutic blood lithium is 0.8-1.2 mEq/L and prophylactic 0.6-1.2 mEq/L, with a level above 2.0 mEq/L often associated with toxicity and above 2.5-3.0 mEq/L possibly lethal. In Table 15.8 (bipolar disorder): therapeutic levels are 0.6-1.2 mEq/L (acute mania), prophylactic levels 0.6-1.0 mEq/L (relapse prevention), and toxic levels above 2.0 mEq/L.",
+    "document_id": 21,
+    "source": {
+      "filename": "A Short Textbook of Psychiatry, 7th Edition ( PDFDrive ).pdf",
+      "pages": [
+        89,
+        201
+      ],
+      "page_labels": [
+        "78",
+        "190"
+      ]
+    },
+    "reference_context": "administered along with lithium, in order to provide \ncover for the ﬁ rst few weeks.\n The usual therapeutic dose range is 900-1500 mg \nof lithium carbonate per day. Lithium treatment needs \nto be closely monitored by repeated blood levels, as \nthe difference between the therapeutic and lethal blood \nlevels is not very wide (narrow therapeutic index).\n Therapeutic blood lithium = 0.8-1.2 mEq/L\n Prophylactic blood lithium = 0.6-1.2 mEq/L\n A blood lithium level of >2.0 mEq/L is often \nassociated with toxicity, while a level of more than \n2.5-3.0 mEq/L may be lethal.\n Although lithium is indicated for thera peutic use \nin all  manic episodes, the preventive use is best in \nusually those patients with bipolar disorder, in whom \nthe frequency of episodes is 1-3 per year or 2-5 per \ntwo years.\n The common acute toxic symptoms of lithium are \nneurological while the common chronic side-effects \nare nephrological and endocrinal (usually hypothy-\nroidism).\n\n[...]\n\nTable 15.8: Blood Lithium Levels\n(in treatment of bipolar disorder)\n• Therapeutic levels = 0.6-1.2 mEq/L (For the treat-\nment of acute mania)\n• Prophylactic levels = 0.6-1.0 mEq/L (For relapse \nprevention in bipolar disorder)\n• Toxic lithium levels > 2.0 mEq/L",
+    "question_type": "numerical",
+    "answerable": true,
+    "multi_chunk": true,
+    "chunk_ids": [
+      "391c847d-0935-4931-b98d-0455e23bf68c",
+      "30dd8f8c-9ccb-40b8-b3c2-002c49083ee0"
+    ],
+    "notes": "Source is internally inconsistent (therapeutic 0.8-1.2 vs 0.6-1.2; prophylactic 0.6-1.2 vs 0.6-1.0; a third figure of 0.6-1.0 mEq/L appears in the drug-levels list on p27). Reference answer reports both."
+  },
+  {
+    "id": "g014",
+    "question": "How does dropout prevent overfitting, and what is inverted dropout?",
+    "ideal_answer": "During training, dropout keeps each neuron active with some probability p (a hyperparameter) and sets it to zero otherwise. This forces the network to be accurate even without certain information and stops it depending too much on any one neuron or small combination of neurons; more mathematically, it prevents overfitting by efficiently approximating a combination of exponentially many different network architectures. Naively, neuron outputs must be scaled at test time (e.g. halved for p = 0.5) because the expected output during training is px. Since test-time performance is critical, inverted dropout is preferred: scaling happens at training time, where any neuron that is not silenced has its output divided by p, so the expected output equals x and no test-time scaling is needed.",
+    "document_id": 27,
+    "source": {
+      "filename": "deeplearning.pdf",
+      "pages": [
+        88
+      ],
+      "page_labels": [
+        "89",
+        "89",
+        "89"
+      ]
+    },
+    "reference_context": "descent step moves the incoming weight vector such that w 2 > c, we project the\nvector back onto the ball (centered at the origin) with radius c . Typical values of c  are\n3 and 4. One of the nice properties is that the parameter vector cannot grow out of\ncontrol (even if the learning rates are too high) because the updates to the weights are\nalways bounded.\nDropout is a different kind of method for preventing overfitting that has become\none of the most favored methods of preventing overfitting in deep neural networks. 6\nWhile training, dropout is implemented by only keeping a neuron active with some\nprobability p (a hyperparameter), or setting it to zero otherwise. Intuitively, this\nforces the network to be accurate even in the absence of certain information. It\nprevents the network from becoming too dependent on any one neuron (or any small\ncombination of neurons). Expressed more mathematically, it prevents overfitting by\n\n[...]\n\nprevents the network from becoming too dependent on any one neuron (or any small\ncombination of neurons). Expressed more mathematically, it prevents overfitting by\nproviding a way of approximately combining exponentially many different neural\nnetwork architectures efficiently. The process of dropout is expressed in Figure 4-16.\nDropout is pretty intuitive, but there are some important intricacies to consider.\nFirst, we’ d like the outputs of neurons during test time to be equivalent to their\nexpected outputs at training time. We could fix this naively by scaling the output at\ntest time. For example, if p = 0 . 5, neurons must halve their outputs at test time in\norder to have the same (expected) output they would have during training. This is\neasy to see because a neuron’s output is set to 0 with probability 1 − p. This means\nthat if a neuron’s output prior to dropout was x, then after dropout, the expected\noutput would be E output = px + 1 − p · 0 = px. This naive implementation of\n\n[...]\n\nthat if a neuron’s output prior to dropout was x, then after dropout, the expected\noutput would be E output = px + 1 − p · 0 = px. This naive implementation of\ndropout is undesirable, however, because it requires scaling of neuron outputs at test\ntime. Test-time performance is extremely critical to model evaluation, so it’s always\npreferable to use inverted dropout, where the scaling occurs at training time instead\nof at test time. In inverted dropout, any neuron whose activation hasn’t been silenced\nhas its output divided by p before the value is propagated to the next layer. With this\nfix, E output = p · x\np + 1 − p · 0 = x, and we can avoid arbitrarily scaling neuronal\noutput at test time.\nPreventing Overfitting in Deep Neural Networks | 73",
+    "question_type": "explanation",
+    "answerable": true,
+    "multi_chunk": true,
+    "chunk_ids": [
+      "cc382633-4cc1-4f3d-b385-c19daee1f291",
+      "7fed0afe-58de-4972-8e4f-ad29f2ad9b14",
+      "fc4e6c58-3f68-4606-9205-99ea663c1a0a"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "g015",
+    "question": "What treatment options are available for alcohol dependence after detoxification?",
+    "ideal_answer": "After detoxification, the options include: behaviour therapy (formerly aversion therapy using a subthreshold electric shock or an emetic such as apomorphine, along with covert sensitisation, relaxation, assertiveness training, self-control skills and positive reinforcement; aversion therapy is now considered unethical in most settings); psychotherapy (group or individual, including motivational enhancement therapy with or without cognitive behaviour therapy and lifestyle modification); group therapy such as Alcoholics Anonymous; deterrent (alcohol-sensitising) agents such as disulfiram; anti-craving agents such as acamprosate, naltrexone and SSRIs like fluoxetine; and other medications such as benzodiazepines, antidepressants, antipsychotics, lithium, carbamazepine and even narcotics.",
+    "document_id": 21,
+    "source": {
+      "filename": "A Short Textbook of Psychiatry, 7th Edition ( PDFDrive ).pdf",
+      "pages": [
+        52,
+        53
+      ],
+      "page_labels": [
+        "41",
+        "41",
+        "42"
+      ]
+    },
+    "reference_context": "Some of these important methods include:\ni.  Behaviour therapy\nThe most commonly used behaviour therapy in the \npast has been  aversion therapy, using either a sub-\nthreshold electric shock or an emetic such as  apomor-\nphine. Many other methods ( covert sensitisation , \nrelaxation techniques, assertiveness training, self-\ncontrol skills, and positive reinforcement) have been \nused alone or in combination with aversion therapy. \nCurrently, in most settings, it is considered unethical \nto use aversion therapy for the treatment of alcohol \ndependence.\nii.  Psychotherapy\nBoth group and individual psychotherapy have been \nused. The patient should be educated about the risks \nof continuing alcohol use, asked to resume personal \nrespon sibility for change and be given a choice of \noptions for change. Motivational enhancement therapy \nwith or without cognitive behaviour therapy and life-\nstyle modiﬁ cation is often useful, if available.\niii.  Group therapy\n\n[...]\n\noptions for change. Motivational enhancement therapy \nwith or without cognitive behaviour therapy and life-\nstyle modiﬁ cation is often useful, if available.\niii.  Group therapy\nOf particular importance is the voluntary self-help \ngroup known as AA ( Alcoholics Anonymous), with \nbranches all over the world and a membership in hun-\ndreds of thousands. Although the approach is partly \nreligious in nature, many patients derive bene ﬁ ts \nfrom the group meetings which are non-professional \nin nature.\niv. Deterrent agents\nThe deterrent agents are also known as  alcohol sen-\nsitising drugs.\n  Disulﬁ  ram (tetraethyl thiuram disulﬁ de) was dis-\ncovered in 1930s, when it was observed that workers \nin the rubber industry developed unpleasant reactions \nto alcohol intake, due to accidental absorption of \nantioxidant disul ﬁ ram. The mechanism of action of \ndisulﬁ ram is summarised in Figure 4.1.\n When alcohol is ingested by a person who is on\n\n[...]\n\n2.  Metronidazole.\n3. Animal charcoal, a fungus (Coprinus atra men -\ntarius), sulfonylureas and certain cephalos porins \nalso cause a disulﬁ ram like action.\nv. Anti-craving agents\nAcamprosate, naltrexone and SSRIs (such as ﬂ uoxet-\nine) are among the medications tried as anti-craving \nagents in alcohol dependence.\nAcamprosate (the Ca++ salt of N-acetyl-homo taurinate) \ninteracts with NMDA recep tor-mediated glutamater-\ngic neurotransmission in the various brain regions \nand reduces Ca\n++ ﬂ uxes through voltage-operated \nchannels.\n Naltrexone  (oral opioid receptor antagonist) prob-\nably interferes with alcohol-induced reinfor cement \nby blocking opioid receptors. Fluoxetine (and other \nSSRIs) have been occasionally used as anti-craving \nagents in their usual antidepressant doses.\nvi. Other medications\nA variety of other medicines such as benzodia-\nzepines,  antidepressants, antipsychotics,  lithium, \n carbamazepine, and even narcotics have been tried.",
+    "question_type": "summary",
+    "answerable": true,
+    "multi_chunk": true,
+    "chunk_ids": [
+      "b7366a08-5146-4a5e-96fc-f9409aa8fda5",
+      "f9beeedd-cb8f-4e1e-b8af-cf89fe0fa7aa",
+      "32b225be-bc3d-43c6-a5fb-0e7f7a4cbb39"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "g016",
+    "question": "How much faster does A3C learn Atari Breakout than DQN, and why is A3C faster?",
+    "ideal_answer": "A3C agents can learn to play Atari Breakout in less than 12 hours, whereas DQN agents may take 3 to 4 days. A3C is asynchronous, so the agent can be parallelised across many threads, giving orders of magnitude faster training by speeding up environment simulation because many environments run at once to gather experiences. This also further decorrelates the experiences in each batch, since the batch is filled with experiences of numerous agents in different scenarios simultaneously.",
+    "document_id": 27,
+    "source": {
+      "filename": "deeplearning.pdf",
+      "pages": [
+        374,
+        375
+      ],
+      "page_labels": [
+        "375",
+        "376"
+      ]
+    },
+    "reference_context": "DRQN has shown to be better than DQN at playing first-person shooter (FPS) games\nlike DOOM, as well as improving performance on certain Atari games with long time\ndependencies, like Seaquest.\nAsynchronous Advantage Actor-Critic Agent\nAsynchronous advantage actor-critic (A3C) is a new approach to deep reinforcement\nlearning introduced in the 2016 DeepMind paper, “ Asynchronous Methods for Deep\nReinforcement Learning. ”6 Let’s discuss what it is and why it improves upon DQN.\nA3C is asynchronous, which means we can parallelize our agent across many threads,\nwhich means orders of magnitude faster training by speeding up our environment\nsimulation. A3C runs many environments at once to gather experiences. Beyond the\nspeed increase, this approach presents another significant advantage in that it further\ndecorrelates the experiences in our batches, because the batch is being filled with the\nexperiences of numerous agents in different scenarios simultaneously.\n\n[...]\n\nleads to a bad reward. A3C aims to achieve this same goal, but uses advantage instead\nof reward as its criterion. Advantage represents the difference between the model’s\nprediction of the quality of the action taken versus the actual quality of the action\ntaken. We can express advantage as:\nAt = Q* st, at − V st .\nA3C has a value function, V(t), but it does not express a Q-function. Instead, A3C\nestimates the advantage by using the discounted future reward as an approximation\nfor the Q-function:\nAt = Rt − V st\nThese three techniques proved key to A3C’s takeover of most deep reinforcement\nlearning benchmarks. A3C agents can learn to play Atari Breakout in less than 12\nhours, whereas DQN agents may take 3 to 4 days.\nUNsupervised REinforcement and Auxiliary Learning\nUNREAL is an improvement on A3C introduced in “Reinforcement learning with\nunsupervised auxiliary tasks\" by Jaderberg et al., 8 who, you guessed it, are from\nDeepMind.",
+    "question_type": "numerical",
+    "answerable": true,
+    "multi_chunk": true,
+    "chunk_ids": [
+      "c6402013-382a-44b1-bf6b-353ef64f2ac0",
+      "fc432025-9d5e-490f-96ef-80d4d22442da"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "g017",
+    "question": "What is pathological intoxication with alcohol?",
+    "ideal_answer": "Pathological intoxication is when a small dose of alcohol occasionally produces acute intoxication in some persons. Another feature sometimes seen in acute intoxication is amnesia or blackouts.",
+    "document_id": 21,
+    "source": {
+      "filename": "A Short Textbook of Psychiatry, 7th Edition ( PDFDrive ).pdf",
+      "pages": [
+        48
+      ],
+      "page_labels": [
+        "37"
+      ]
+    },
+    "reference_context": "tion can occur. There is progressive loss of self-control \nwith frank disinhibited behaviour.\n The duration of intoxication depends on the \namount and the rapidity of ingestion of alcohol. Usu-\nally the signs of intoxication are obvious with blood \nlevels of 150-200 mg%. With blood alcohol levels \nof 300-450 mg%, increasing drowsiness followed \nby coma and respiratory depression develop. Death \noccurs with blood alcohol levels between 400 to 800 \nmg% (Table 4.6).\n Occasionally a small dose of alcohol may produce \nacute intoxication in some persons. This is known as \n pathological intoxication. Another feature, sometimes \nseen in acute intoxication, is the development of  \namnesia or  blackouts.\n  Withdrawal Syndrome\nThe most common withdrawal syndrome is a hangover \non the next morning. Mild tremors, nausea, vomiting, \nTable 4.3: Classiﬁ cation of Alcoholism\nFactors Type I Type II\nSynonym Milieu-limited Male-limited\nGender Both sexes Mostly in males\nAge of onset > 25 years < 25 years",
+    "question_type": "definition",
+    "answerable": true,
+    "multi_chunk": false,
+    "chunk_ids": [
+      "63fc2fbe-4417-4ace-bbda-4f278b613537"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "g018",
+    "question": "How does momentum help gradient descent deal with an ill-conditioned Hessian?",
+    "ideal_answer": "An ill-conditioned Hessian shows up as gradients that fluctuate wildly. Momentum bypasses computing the Hessian and instead cancels out these fluctuations by combining the update from the last iteration with the current gradient: v_i = m v_(i-1) - epsilon g_i and theta_i = theta_(i-1) + v_i, where the momentum hyperparameter m sets what fraction of the previous velocity is retained, adding a memory of past gradients. Because momentum increases the step size, a reduced learning rate may be needed compared with vanilla stochastic gradient descent. In a random-walk toy experiment momentum significantly reduced the volatility of updates, and larger momentum made the walk less responsive to new updates.",
+    "document_id": 27,
+    "source": {
+      "filename": "deeplearning.pdf",
+      "pages": [
+        121,
+        122
+      ],
+      "page_labels": [
+        "122",
+        "123",
+        "123"
+      ]
+    },
+    "reference_context": "sian matrix exactly is a difficult task. In the next several sections, we’ll describe\noptimization breakthroughs that tackle ill-conditioning without directly computing\nthe Hessian matrix.\nMomentum-Based Optimization\nFundamentally, the problem of an ill-conditioned Hessian matrix manifests itself in\nthe form of gradients that fluctuate wildly. As a result, one popular mechanism for\ndealing with ill-conditioning bypasses the computation of the Hessian, and instead,\nfocuses on how to cancel out these fluctuations over the duration of training.\nOne way to think about how we might tackle this problem is by investigating how\na ball rolls down a hilly surface. Driven by gravity, the ball eventually settles into\na minimum on the surface, but for some reason, it doesn’t suffer from the wild\nfluctuations and divergences that happen during gradient descent. Why is this the\ncase? Unlike in stochastic gradient descent (which uses only the gradient), there\n\n[...]\n\n4 Polyak, Boris T. “Some methods of speeding up the convergence of iteration methods. ” USSR Computational\nMathematics and Mathematical Physics 4.5 (1964): 1-17.\ncombining the update in the last iteration with the current gradient. Concretely, we\ncompute the change in the parameter vector as follows:\n   vi = mvi − 1 − ϵgi\n   θi = θi − 1 + vi\nWe use the momentum hyperparameter m  to determine what fraction of the previous\nvelocity to retain in the new update, and add this “memory” of past gradients to our\ncurrent gradient. This approach is commonly referred to as momentum.4 Because the\nmomentum term increases the step size we take, using momentum may require a\nreduced learning rate compared to vanilla stochastic gradient descent.\nTo better visualize how momentum works, we’ll explore a toy example. Specifically,\nwe’ll investigate how momentum affects updates during a random walk. A random\nwalk is a succession of randomly chosen steps. In our example, we’ll imagine a\n\n[...]\n\nprev = momentum_rand_walk[i-1]\n  rand_choice = torch.randint(-10, 10, (1,1)).item()\n  new_step = momentum * prev + (1 - momentum) * rand_choice\n  momentum_rand_walk[i] = new_step\nThe results, as we vary the momentum from 0 to 1, are quite staggering. Momentum\nsignificantly reduces the volatility of updates. The larger the momentum, the less\nresponsive we are to new updates (e.g., a large inaccuracy on the first estimation of\ntrajectory propagates for a significant period of time). We summarize the results of\nour toy experiment in Figure 6-8.\nMomentum-Based Optimization | 107",
+    "question_type": "explanation",
+    "answerable": true,
+    "multi_chunk": true,
+    "chunk_ids": [
+      "57dbf0e0-c7dc-4cb4-9388-6bd7e82642df",
+      "2a77bcf5-0a39-44b3-8d3f-af1aefc18ac8",
+      "6757f497-c6f1-4f33-b29b-1981007120c7"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "g019",
+    "question": "What dose of gabapentin is recommended for treating alcohol withdrawal?",
+    "ideal_answer": "The indexed documents do not contain this information; gabapentin is not mentioned, so the question cannot be answered from them.",
+    "document_id": 21,
+    "source": {
+      "filename": "A Short Textbook of Psychiatry, 7th Edition ( PDFDrive ).pdf",
+      "pages": [],
+      "page_labels": []
+    },
+    "reference_context": "",
+    "question_type": "unanswerable",
+    "answerable": false,
+    "multi_chunk": false,
+    "chunk_ids": [],
+    "notes": "Verified: 'gabapentin' occurs in no chunk of document_id 21 or 27. Related (answerable) material on alcohol withdrawal exists, so this tests refusal vs hallucination."
+  },
+  {
+    "id": "g020",
+    "question": "How many parameters does GPT-3 have?",
+    "ideal_answer": "The indexed documents do not contain this information; GPT-3 is not mentioned, so the question cannot be answered from them.",
+    "document_id": 27,
+    "source": {
+      "filename": "deeplearning.pdf",
+      "pages": [],
+      "page_labels": []
+    },
+    "reference_context": "",
+    "question_type": "unanswerable",
+    "answerable": false,
+    "multi_chunk": false,
+    "chunk_ids": [],
+    "notes": "Verified: 'GPT' occurs in no chunk of document_id 21 or 27."
+  }
+]
