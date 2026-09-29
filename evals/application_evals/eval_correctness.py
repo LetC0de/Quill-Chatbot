@@ -1,8 +1,26 @@
+"""
+evals/application_evals/eval_correctness.py
+===========================================
+Application-level evaluation — FULL chain, exactly like production:
+
+    question -> get_retriever (Qdrant, filtered by document_id) -> chunks
+             -> generate -> answer
+
+Then the G-Eval CORRECTNESS metric compares the LIVE answer against the
+golden ideal_answer (partial credit, not pass/fail).
+
+    python -m evals.application_evals.eval_correctness
+"""
+
 import os
 import sys
 import json
-from pathlib import Path
+
+# Add backend to path so we can import src modules
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", "backend"))
+
 from dotenv import load_dotenv
+load_dotenv(os.path.join(os.path.dirname(__file__), "..", "..", "backend", ".env"))
 
 from deepeval import evaluate
 from deepeval.test_case import LLMTestCase, LLMTestCaseParams
@@ -11,16 +29,11 @@ from deepeval.evaluate.configs import CacheConfig, ErrorConfig
 from deepeval.metrics import GEval
 from deepeval.metrics.g_eval import Rubric
 
-# repo root on sys.path so `src` works whether run from root or from evals/
-ROOT_DIR = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT_DIR))
+from src.rag.retriever import get_retriever  # type: ignore
+from src.generator import generate  # type: ignore
 
-from src.rag_pipeline import RagPipeline
-
-load_dotenv()
-
-GOLDEN_PATH = str(ROOT_DIR / "goldens" / "correctness_goldens.json")  # question + ideal_answer
-JUDGE_MODEL_NAME = "nvidia/nemotron-3-super-120b-a12b:free"    # nvidia/nemotron-3-super-120b-a12b:free
+GOLDEN_PATH = os.path.join(os.path.dirname(__file__), "..", "..", "eval_golden_datasets", "correctness_dataset.json")
+JUDGE_MODEL_NAME = "nvidia/nemotron-3-super-120b-a12b:free"
 JUDGE_MODEL = OpenAIModel(
     model=JUDGE_MODEL_NAME,
     api_key=os.getenv("API_KEY"),
@@ -37,23 +50,28 @@ JUDGE_MODEL.model_data.supports_structured_outputs = False
 THRESHOLD = 0.7
 
 
-# 1. LOAD queries + ideal answers (ideal_answer is the CORRECT answer, our reference)
-with open(GOLDEN_PATH) as f:
+# 1. LOAD questions + ideal answers (ideal_answer is the CORRECT answer, our reference)
+with open(GOLDEN_PATH, encoding="utf-8") as f:
     goldens = json.load(f)
 
 
-# 2. RUN THE FULL PIPELINE per query, build a test case from LIVE output
-rag = RagPipeline()
+# 2. RUN THE FULL PIPELINE per query — retrieve REAL chunks, then generate.
 test_cases = []
+for g in goldens[:5]:
+    # RETRIEVE — same call the production graph makes (filtered by document)
+    retriever = get_retriever(g["question"], g["document_id"])
+    retrieved = retriever.invoke(g["question"])
+    context = [doc.page_content for doc in retrieved]
 
-for g in goldens[:1]:
-    result = rag.invoke(g["question"])          # retrieve → rerank → generate
+    # GENERATE — answer grounded in whatever the retriever actually returned
+    answer = generate(g["question"], context)
 
     test_cases.append(
         LLMTestCase(
             input=g["question"],
-            actual_output=result["answer"],      # what the generator produced
-            expected_output=g["ideal_answer"],   # the CORRECT reference answer
+            actual_output=answer,               # what the generator produced
+            expected_output=g["ideal_answer"],  # the CORRECT reference answer
+            retrieval_context=context,          # what the RETRIEVER returned
         )
     )
 
@@ -82,7 +100,7 @@ correctness = GEval(
             score_range=(0, 4),
             expected_outcome="Contains a clear factual error or a claim that contradicts the expected output.",
         ),
-    ], 
+    ],
     evaluation_params=[
         LLMTestCaseParams.INPUT,
         LLMTestCaseParams.ACTUAL_OUTPUT,
@@ -100,11 +118,12 @@ evaluate(
     cache_config=CacheConfig(write_cache=False, use_cache=False),
     error_config=ErrorConfig(ignore_errors=True),
     hyperparameters={
-        "retriever": "rerank_fetch10_k5",
+        "mode": "application (retrieve -> generate, full pipeline)",
+        "retriever": "get_retriever (mmr k4 fetch10 / similarity k6)",
         "embedding_model": "mistral-embed",
         "chunk_size": 1000,
         "chunk_overlap": 150,
-        "top_k": 5,
+        "top_k": "4 (MMR) / 6 (summary)",
         "judge_model": JUDGE_MODEL_NAME,
         "golden_set": GOLDEN_PATH,
     },
