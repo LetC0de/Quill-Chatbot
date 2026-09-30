@@ -112,8 +112,6 @@ completeness = GEval(
     async_mode=False,
 )
 
-# Terminal check: this must print exactly -> async_mode=False
-print(f"async_mode={completeness.async_mode}")
 
 # 4. EVALUATE
 evaluate(
