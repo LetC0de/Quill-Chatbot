@@ -115,9 +115,6 @@ style = GEval(
     async_mode=False,
 )
 
-# Terminal check: this must print exactly -> async_mode=False
-print(f"async_mode={style.async_mode}")
-
 # 4. EVALUATE
 evaluate(
     test_cases=test_cases,
