@@ -25,7 +25,7 @@ load_dotenv(os.path.join(os.path.dirname(__file__), "..", "..", "backend", ".env
 from deepeval import evaluate
 from deepeval.test_case import LLMTestCase, LLMTestCaseParams
 from deepeval.models.llms.openai_model import OpenAIModel
-from deepeval.evaluate.configs import CacheConfig, ErrorConfig
+from deepeval.evaluate.configs import AsyncConfig, CacheConfig, ErrorConfig
 from deepeval.metrics import GEval
 from deepeval.metrics.g_eval import Rubric
 
@@ -57,7 +57,7 @@ with open(GOLDEN_PATH, encoding="utf-8") as f:
 
 # 2. RUN THE FULL PIPELINE per query — retrieve REAL chunks, then generate.
 test_cases = []
-for g in goldens[:5]:
+for g in goldens[:7]:
     # RETRIEVE — same call the production graph makes (filtered by document)
     retriever = get_retriever(g["question"], g["document_id"])
     retrieved = retriever.invoke(g["question"])
@@ -109,12 +109,14 @@ correctness = GEval(
     threshold=THRESHOLD,
     model=JUDGE_MODEL,
     strict_mode=False,  # graded scale; strict_mode=True would collapse it to 0/1
+    async_mode=False
 )
 
 # 4. EVALUATE
 evaluate(
     test_cases=test_cases,
     metrics=[correctness],
+    async_config=AsyncConfig(run_async=False),
     cache_config=CacheConfig(write_cache=False, use_cache=False),
     error_config=ErrorConfig(ignore_errors=True),
     hyperparameters={
