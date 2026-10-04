@@ -50,7 +50,7 @@ JUDGE_MODEL.model_data.supports_structured_outputs = False
 THRESHOLD = 0.7
 
 
-# 1. LOAD questions + ideal answers (ideal_answer is the CORRECT answer, our reference)
+
 with open(GOLDEN_PATH, encoding="utf-8") as f:
     goldens = json.load(f)
 
