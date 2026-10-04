@@ -112,7 +112,7 @@ correctness = GEval(
     async_mode=False
 )
 
-# 4. EVALUATE
+
 evaluate(
     test_cases=test_cases,
     metrics=[correctness],
