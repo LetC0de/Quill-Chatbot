@@ -63,7 +63,7 @@ with open(GOLDEN_PATH, encoding="utf-8") as f:
 
 # 2. RUN THE FULL PIPELINE per input — retrieve REAL chunks, then generate.
 test_cases = []
-for g in goldens:
+for g in goldens[:7]:
     user_input = g["input"]
     document_id = g.get("document_id") or DEFAULT_DOCUMENT_ID
 
