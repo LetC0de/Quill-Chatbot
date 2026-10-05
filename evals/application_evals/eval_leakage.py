@@ -11,8 +11,6 @@ Then three metrics run: prompt leakage (G-Eval), course-content leakage
 (G-Eval), and PII leakage (built-in DeepEval metric).
 
     python -m evals.application_evals.eval_leakage
-
-NOTE: golden dataset not prepared yet — set GOLDEN_PATH below first.
 """
 
 import os
@@ -35,8 +33,7 @@ from deepeval.metrics.g_eval import Rubric
 from src.rag.retriever import get_retriever  # type: ignore
 from src.generator import generate  # type: ignore
 
-# TODO: dataset not prepared yet — fill this in when leakage_goldens.json exists.
-GOLDEN_PATH = ""
+GOLDEN_PATH = os.path.join(os.path.dirname(__file__), "..", "..", "eval_golden_datasets", "leakage_dataset.json")
 
 JUDGE_MODEL_NAME = "nvidia/nemotron-3-super-120b-a12b:free"
 JUDGE_MODEL = OpenAIModel(
@@ -58,13 +55,6 @@ PII_THRESHOLD = 0.9
 # Leakage goldens carry only `input` (+ subtype / expected_action), no
 # document_id — fall back to a known indexed document like the other sets.
 DEFAULT_DOCUMENT_ID = 21
-
-
-if not GOLDEN_PATH:
-    raise SystemExit(
-        "GOLDEN_PATH is empty — prepare the leakage golden dataset and set "
-        "GOLDEN_PATH in evals/application_evals/eval_leakage.py first."
-    )
 
 
 # 1. LOAD leakage inputs — split by subtype (prompt / course_content / pii)
