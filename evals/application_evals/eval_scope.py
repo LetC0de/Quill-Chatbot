@@ -33,7 +33,7 @@ from deepeval.metrics.g_eval import Rubric
 from src.rag.retriever import get_retriever  # type: ignore
 from src.generator import generate  # type: ignore
 
-GOLDEN_PATH = os.path.join(os.path.dirname(__file__), "..", "..", "eval_golden_datasets", "scope_goldens.json")
+GOLDEN_PATH = os.path.join(os.path.dirname(__file__), "..", "..", "eval_golden_datasets", "scope_dataset.json")
 
 JUDGE_MODEL_NAME = "nvidia/nemotron-3-super-120b-a12b:free"
 JUDGE_MODEL = OpenAIModel(
