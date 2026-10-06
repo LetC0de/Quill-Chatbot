@@ -43,11 +43,17 @@ from src.generator import generate  # type: ignore
 # ============================================================
 # 2. CONFIG
 # ============================================================
+# (question, document_id) tuples -- production retrieval is filtered by
+# document_id, so every latency sample needs both. Shapes are mixed on
+# purpose: definition / comparison / mechanism / numerical / summary give
+# short-to-long answers, and total latency scales with output length.
+# Facts verified against chunks_dump (evals/component_evals/.deepeval/).
 QUESTIONS = [
-    "What is the difference between reference-based and reference-free evals?",
-    "Explain what faithfulness measures in a RAG pipeline.",
-    "How does the G-Eval metric assign a score?",
-    "What is MMLU and why is contamination a problem?",
+    ("What is Capgras' syndrome?", 21),
+    ("How do L1 and L2 regularization differ in how they affect a neural network's weights?", 27),
+    ("How does max pooling reduce the size of a feature map in a convolutional network?", 27),
+    ("What is the concordance rate for schizophrenia in monozygotic twins?", 21),
+    ("What biological and psychological theories have been proposed for the aetiology of schizophrenia?", 21),
 ]
 
 REPEATS = 5           # measured runs PER question -> total samples = len(QUESTIONS) * REPEATS
