@@ -19,6 +19,9 @@ Key ideas encoded below:
   - decompose the pipeline            (retrieval + generation, + TTFT)
   - log answer length                 (latency couples to output length)
   - single-user only                  (load testing is a separate exercise)
+
+Run from the project root (same as the other application evals):
+    python -m evals.application_evals.eval_latency
 """
 
 # ============================================================
