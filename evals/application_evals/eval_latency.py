@@ -69,17 +69,26 @@ SLO_TTFT_P95_MS = 1200   # perceived: first visible token p95 under 1.2s
 # ============================================================
 # 3. PIPELINE ADAPTERS  (the ONE place you edit to match your API)
 # ============================================================
-# End-to-end: invoke() returns {"query", "context", "answer"} -- we want the answer.
-def run_end_to_end(pipeline, question):
-    result = pipeline.invoke(question)
-    return result["answer"]
+# Production chain per request (exactly like graph/streaming.py and the other
+# application evals): get_retriever(question, document_id) -> retriever.invoke
+# -> generate. There is no RagPipeline object in this project, so adapters
+# take (question, document_id) directly instead of a pipeline instance.
 
-# Stage-level (non-streaming): reuse the pipeline's retriever + the generator,
-# timing each leg. "retrieval" bundles query-embedding + vector search + the
-# cross-encoder rerank pass (over-fetch fetch_k, rerank to top_k).
-def run_stages(pipeline, question):
+
+def run_end_to_end(question: str, document_id: int) -> str:
+    retriever = get_retriever(question, document_id)
+    docs = retriever.invoke(question)
+    context = [doc.page_content for doc in docs]
+    return generate(question, context)
+
+
+# Stage-level (non-streaming): same retrieval + generation, timing each leg.
+# "retrieval" bundles get_retriever construction + query-embedding + vector
+# search + the MMR/similarity pass (over-fetch fetch_k, rerank to top_k).
+def run_stages(question: str, document_id: int):
     t0 = time.perf_counter()
-    docs = pipeline.retriever.invoke(question)
+    retriever = get_retriever(question, document_id)
+    docs = retriever.invoke(question)
     context = [doc.page_content for doc in docs]
     t1 = time.perf_counter()
     answer = generate(question, context)
@@ -112,9 +121,10 @@ def generate_stream(query: str, context: list[str]):
 #   generation= generation start (t1) -> last token
 # TTFT includes retrieval on purpose: the user waits through retrieval before the
 # first token can stream, so perceived latency = retrieval + generation-prefill.
-def run_stages_streaming(pipeline, question):
+def run_stages_streaming(question: str, document_id: int):
     t0 = time.perf_counter()
-    docs = pipeline.retriever.invoke(question)
+    retriever = get_retriever(question, document_id)
+    docs = retriever.invoke(question)
     context = [doc.page_content for doc in docs]
     t1 = time.perf_counter()
 
@@ -153,31 +163,32 @@ def percentile(values, p):
 # ============================================================
 # 5. BENCHMARK LOOP
 # ============================================================
-def benchmark(pipeline):
+def benchmark():
     # --- 5a. Warmup: run and DISCARD, so cold start does not pollute stats ---
     print(f"Warming up ({WARMUP_RUNS} runs, discarded)...")
     for i in range(WARMUP_RUNS):
-        run_end_to_end(pipeline, QUESTIONS[i % len(QUESTIONS)])
+        question, document_id = QUESTIONS[i % len(QUESTIONS)]
+        run_end_to_end(question, document_id)
 
     total_ms, retrieval_ms, generation_ms, ttft_ms = [], [], [], []
     answer_lengths = []
 
     # --- 5b. Measured runs: each question REPEATS times, pool all samples ---
     print("Measuring...")
-    for question in QUESTIONS:
+    for question, document_id in QUESTIONS:
         for _ in range(REPEATS):
             start = time.perf_counter()
             if MEASURE_TTFT:
-                answer, stage = run_stages_streaming(pipeline, question)
+                answer, stage = run_stages_streaming(question, document_id)
                 retrieval_ms.append(stage["retrieval"])
                 generation_ms.append(stage["generation"])
                 ttft_ms.append(stage["ttft"])
             elif STAGE_LEVEL:
-                answer, stage = run_stages(pipeline, question)
+                answer, stage = run_stages(question, document_id)
                 retrieval_ms.append(stage["retrieval"])
                 generation_ms.append(stage["generation"])
             else:
-                answer = run_end_to_end(pipeline, question)
+                answer = run_end_to_end(question, document_id)
             elapsed_ms = (time.perf_counter() - start) * 1000
 
             total_ms.append(elapsed_ms)
@@ -248,8 +259,7 @@ def report(results):
 # 7. ENTRYPOINT
 # ============================================================
 def main():
-    pipeline = RagPipeline()
-    results = benchmark(pipeline)
+    results = benchmark()
     report(results)
 
 if __name__ == "__main__":
