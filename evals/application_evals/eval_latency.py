@@ -35,6 +35,8 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", "backend"
 from dotenv import load_dotenv
 load_dotenv(os.path.join(os.path.dirname(__file__), "..", "..", "backend", ".env"))
 
+from src.rag.llm import llm  # type: ignore
+from src.rag.prompt import concierge_prompt, prompt  # type: ignore
 from src.rag.retriever import get_retriever  # type: ignore
 from src.generator import generate  # type: ignore
 
@@ -77,6 +79,26 @@ def run_stages(pipeline, question):
     answer = generate(question, context)
     t2 = time.perf_counter()
     return answer, {"retrieval": (t1 - t0) * 1000, "generation": (t2 - t1) * 1000}
+
+# Streaming twin of src.generator.generate (eval-only; generator.py has no
+# stream function). Same prompt/context logic as generate(); yields token
+# deltas via llm.stream -- the sync twin of production's llm.astream in
+# graph/streaming.py. No DB, no history, no SSE, no checkpointing.
+def generate_stream(query: str, context: list[str]):
+    if not context:
+        final_prompt = concierge_prompt.invoke({"question": query})
+    else:
+        context_parts = [f"[Page {i}] {chunk}" for i, chunk in enumerate(context, 1)]
+        context_str = "\n\n".join(context_parts)
+        final_prompt = prompt.invoke({"context": context_str, "question": query})
+
+    for chunk in llm.stream(final_prompt):
+        content = chunk.content
+        if content and isinstance(content, str):
+            yield content
+        elif content:
+            yield str(content)
+
 
 # Stage-level (streaming): same retrieval, but stream generation and record the
 # clock the instant the FIRST content token arrives.
