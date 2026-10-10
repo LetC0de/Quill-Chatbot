@@ -1,39 +1,90 @@
 # eval_application.py
+"""
+Application-level evaluation -- FULL chain, exactly like production:
+
+    question -> get_retriever (Qdrant, filtered by document_id) -> chunks
+             -> generate -> answer
+
+Bundles the three application-level GEval metrics (Correctness, Completeness,
+Style) that evals/ keeps in separate files -- the pipeline runs ONCE per query
+and all three metrics judge the same test case.
+
+    python -m regression_test.eval_application
+"""
+
+import os
+import sys
+
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "backend"))
+
 from dotenv import load_dotenv
+
+load_dotenv(os.path.join(os.path.dirname(__file__), "..", "backend", ".env"))
+load_dotenv()
 
 from deepeval import evaluate
 from deepeval.test_case import LLMTestCase, LLMTestCaseParams
+from deepeval.models.llms.openai_model import OpenAIModel
+from deepeval.evaluate.configs import AsyncConfig, CacheConfig, ErrorConfig
 from deepeval.metrics import GEval
 from deepeval.metrics.g_eval import Rubric
 
-from src.rag_pipeline import RagPipeline
+from src.rag.retriever import get_retriever  # type: ignore
+from src.generator import generate  # type: ignore
 from regression_test.harness import load_goldens, summarize_by_metric, print_summary
 
-load_dotenv()
+GOLDEN_PATH = os.path.join(
+    os.path.dirname(__file__), "..", "eval_golden_datasets", "correctness_dataset.json"
+)
+JUDGE_MODEL_NAME = "nvidia/nemotron-3-super-120b-a12b:free"
+JUDGE_MODEL = OpenAIModel(
+    model=JUDGE_MODEL_NAME,
+    api_key=os.getenv("API_KEY"),
+    base_url="https://openrouter.ai/api/v1",
+    temperature=0,
+    generation_kwargs={
+        "extra_body": {"reasoning": {"enabled": False}},
+    },
+)
+JUDGE_MODEL.model_data.supports_json = True
+JUDGE_MODEL.model_data.supports_structured_outputs = False
 
-GOLDEN_PATH = "goldens/correctness_goldens.json"
-JUDGE_MODEL = "gpt-4o-mini"
 THRESHOLD = 0.7
 
 
-def run(rag):
+def run(_rag=None):
+    # NOTE: `_rag` is kept (positionally compatible) for run_suite's
+    # injected-pipeline contract, but this project has no single pipeline
+    # object -- the chain (get_retriever -> generate) is run inline per query
+    # below, exactly like evals/application_evals/*.py.
+    del _rag
+
     # 1. LOAD queries + ideal answers
     goldens = load_goldens(GOLDEN_PATH)
 
-    # 2. RUN THE INJECTED PIPELINE per query, build a test case from LIVE output
+    # 2. RUN THE FULL PIPELINE per query -- retrieve REAL chunks, then generate.
+    #    ([:7] same slice as evals/application_evals/eval_correctness.py et al.)
     test_cases = []
-    for g in goldens:
-        result = rag.invoke(g["question"])          # retrieve -> rerank -> generate
+    for g in goldens[:7]:
+        # RETRIEVE -- same call the production graph makes (filtered by document)
+        retriever = get_retriever(g["question"], g["document_id"])
+        retrieved = retriever.invoke(g["question"])
+        context = [doc.page_content for doc in retrieved]
+
+        # GENERATE -- answer grounded in whatever the retriever actually returned
+        answer = generate(g["question"], context)
 
         test_cases.append(
             LLMTestCase(
                 input=g["question"],
-                actual_output=result["answer"],
-                expected_output=g["ideal_answer"],
+                actual_output=answer,               # what the generator produced
+                expected_output=g["ideal_answer"],  # the CORRECT reference answer
+                retrieval_context=context,          # what the RETRIEVER returned
             )
         )
 
-    # 3. THREE APPLICATION-LEVEL QUALITY METRICS
+    # 3. THREE APPLICATION-LEVEL QUALITY METRICS (evaluation_steps + rubric
+    #    kept exactly as the original regression file had them)
 
     # 3a. CORRECTNESS --- reference-based, judges TRUTH (not coverage or length)
     correctness = GEval(
@@ -50,10 +101,15 @@ def run(rag):
             Rubric(score_range=(5, 8),  expected_outcome="Mostly correct but one minor inaccuracy."),
             Rubric(score_range=(0, 4),  expected_outcome="Contains a clear factual error or a claim that contradicts the expected output."),
         ],
-        evaluation_params=[LLMTestCaseParams.INPUT, LLMTestCaseParams.ACTUAL_OUTPUT, LLMTestCaseParams.EXPECTED_OUTPUT],
+        evaluation_params=[
+            LLMTestCaseParams.INPUT,
+            LLMTestCaseParams.ACTUAL_OUTPUT,
+            LLMTestCaseParams.EXPECTED_OUTPUT,
+        ],
         threshold=THRESHOLD,
         model=JUDGE_MODEL,
-        strict_mode=False,
+        strict_mode=False,  # graded scale; strict_mode=True would collapse it to 0/1
+        async_mode=False,
     )
 
     # 3b. COMPLETENESS --- reference-based, judges COVERAGE (not correctness)
@@ -71,13 +127,18 @@ def run(rag):
             Rubric(score_range=(5, 8),  expected_outcome="Covers the main key points but misses one or more."),
             Rubric(score_range=(0, 4),  expected_outcome="Misses several key points; only partially covers the expected output."),
         ],
-        evaluation_params=[LLMTestCaseParams.INPUT, LLMTestCaseParams.ACTUAL_OUTPUT, LLMTestCaseParams.EXPECTED_OUTPUT],
+        evaluation_params=[
+            LLMTestCaseParams.INPUT,
+            LLMTestCaseParams.ACTUAL_OUTPUT,
+            LLMTestCaseParams.EXPECTED_OUTPUT,
+        ],
         threshold=THRESHOLD,
         model=JUDGE_MODEL,
-        strict_mode=False,
+        strict_mode=False,  # graded scale; strict_mode=True would collapse it to 0/1
+        async_mode=False,
     )
 
-    # 3c. STYLE --- reference-free, judges TONE only (note: no EXPECTED_OUTPUT)
+    # 3c. STYLE --- reference-free, judges TONE only (no EXPECTED_OUTPUT param)
     style = GEval(
         name="Style",
         evaluation_steps=[
@@ -94,20 +155,40 @@ def run(rag):
             Rubric(score_range=(4, 6),  expected_outcome="Understandable but somewhat flat, formal, or list-heavy in places."),
             Rubric(score_range=(0, 3),  expected_outcome="Dry, stiff, bare-list, jargon-heavy, or robotic; does not read like a teaching explanation."),
         ],
-        evaluation_params=[LLMTestCaseParams.INPUT, LLMTestCaseParams.ACTUAL_OUTPUT],
+        evaluation_params=[
+            LLMTestCaseParams.INPUT,
+            LLMTestCaseParams.ACTUAL_OUTPUT,
+        ],
         threshold=THRESHOLD,
         model=JUDGE_MODEL,
-        strict_mode=False,
+        strict_mode=False,  # graded scale; strict_mode=True would collapse it to 0/1
+        async_mode=False,
     )
 
-    # 4. EVALUATE --- all three together
-    result = evaluate(test_cases=test_cases, metrics=[correctness, completeness, style])
+    # 4. EVALUATE --- all three together (same test_cases, one pipeline pass)
+    result = evaluate(
+        test_cases=test_cases,
+        metrics=[correctness, completeness, style],
+        async_config=AsyncConfig(run_async=False),
+        cache_config=CacheConfig(write_cache=False, use_cache=False),
+        error_config=ErrorConfig(ignore_errors=True),
+        hyperparameters={
+            "mode": "application (retrieve -> generate, full pipeline)",
+            "retriever": "get_retriever (mmr k4 fetch10 / similarity k6)",
+            "embedding_model": "mistral-embed",
+            "chunk_size": 1000,
+            "chunk_overlap": 150,
+            "top_k": "4 (MMR) / 6 (summary)",
+            "judge_model": JUDGE_MODEL_NAME,
+            "golden_set": GOLDEN_PATH,
+        },
+    )
     return summarize_by_metric(result)
 
 
 def run_local():
-    """Standalone convenience: build the pipeline, then run."""
-    return run(RagPipeline())
+    """Standalone convenience: run the full chain."""
+    return run()
 
 
 if __name__ == "__main__":
