@@ -3,9 +3,9 @@ from src.rag.prompt import title_prompt
 from src.utils.settings import settings
 
 llm = ChatOpenAI(
-    model="openrouter/free",
-    api_key=settings.OPENROUTER_API_KEY,
-    base_url="https://openrouter.ai/api/v1"
+    model="glm-4-7-flash",
+    api_key=settings.TERM_API,
+    base_url="https://api.tensormux.com/v1"
 )
 
 

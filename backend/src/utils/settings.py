@@ -4,6 +4,7 @@ class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
     OPENROUTER_API_KEY: str
+    TERM_API: str
     MISTRAL_API_KEY: str
     MISTRAL_MODEL: str
     QDRANT_URL: str
