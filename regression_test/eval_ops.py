@@ -32,37 +32,50 @@ Per-eval notes, preserved:
                rates, with an exponential-backoff retry wrapper. On an ideal
                single-laptop setup this reads ~100% success; the numbers only
                get meaningful under real concurrency and flaky external APIs.
+
+    python -m regression_test.eval_ops
 """
 
 # ============================================================
 # 1. IMPORTS & ENV
 # ============================================================
 import math
+import os
+import sys
 import time
+
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "backend"))
+
 from dotenv import load_dotenv
 
-from src.rag_pipeline import RagPipeline
-from src.generator import generate, generate_stream, prompt, llm
-
+load_dotenv(os.path.join(os.path.dirname(__file__), "..", "backend", ".env"))
 load_dotenv()
+
+from src.rag.llm import llm  # type: ignore
+from src.rag.prompt import concierge_prompt, prompt  # type: ignore
+from src.rag.retriever import get_retriever  # type: ignore
+from src.generator import generate  # type: ignore
 
 # COST reads token usage off the AIMessage, so it composes prompt | llm directly
 # and stops BEFORE the StrOutputParser() that generate() uses (which discards
 # usage and returns a bare string). Same prompt, same model, real context.
 measured_chain = prompt | llm
+concierge_chain = concierge_prompt | llm   # no-context fallback, like generate()
 
 
 # ============================================================
 # 2. SHARED CONFIG
 # ============================================================
-# One representative question set, reused by all three evals. In a real suite
-# these should be segmented (simple / medium / complex) so the numbers reflect
-# the traffic you actually get, not just easy questions.
+# (question, document_id) tuples -- production retrieval is filtered by
+# document_id, so every sample needs both (same set as evals/application_evals/
+# eval_latency.py). Shapes are mixed on purpose: definition / comparison /
+# mechanism / numerical / summary give short-to-long answers.
 QUESTIONS = [
-    "What is the difference between reference-based and reference-free evals?",
-    "Explain what faithfulness measures in a RAG pipeline.",
-    "How does the G-Eval metric assign a score?",
-    "What is MMLU and why is contamination a problem?",
+    ("What is Capgras' syndrome?", 21),
+    ("How do L1 and L2 regularization differ in how they affect a neural network's weights?", 27),
+    ("How does max pooling reduce the size of a feature map in a convolutional network?", 27),
+    ("What is the concordance rate for schizophrenia in monozygotic twins?", 21),
+    ("What biological and psychological theories have been proposed for the aetiology of schizophrenia?", 21),
 ]
 
 
@@ -87,6 +100,36 @@ def col_avg(rows, key):
     return sum(r[key] for r in rows) / len(rows) if rows else 0.0
 
 
+# One production request (exactly like graph/streaming.py): get_retriever
+# -> retriever.invoke -> generate. There is no RagPipeline object in this
+# project, so the adapters take (question, document_id) directly.
+def run_once(question: str, document_id: int) -> str:
+    retriever = get_retriever(question, document_id)
+    docs = retriever.invoke(question)
+    context = [doc.page_content for doc in docs]
+    return generate(question, context)
+
+
+# Streaming twin of src.generator.generate (eval-only; generator.py has no
+# stream function). Same prompt/context logic as generate(); yields token
+# deltas via llm.stream -- the sync twin of production's llm.astream in
+# graph/streaming.py.
+def generate_stream(query: str, context: list[str]):
+    if not context:
+        final_prompt = concierge_prompt.invoke({"question": query})
+    else:
+        context_parts = [f"[Page {i}] {chunk}" for i, chunk in enumerate(context, 1)]
+        context_str = "\n\n".join(context_parts)
+        final_prompt = prompt.invoke({"context": context_str, "question": query})
+
+    for chunk in llm.stream(final_prompt):
+        content = chunk.content
+        if content and isinstance(content, str):
+            yield content
+        elif content:
+            yield str(content)
+
+
 # ============================================================================
 # ============================  LATENCY  =====================================
 # ============================================================================
@@ -102,16 +145,18 @@ SLO_TTFT_P95_MS = 1200    # perceived: first visible token p95 under 1.2s
 
 
 # --- 5. LATENCY: PIPELINE ADAPTERS (the ONE place you edit to match your API) ---
-# End-to-end: invoke() returns {"query", "context", "answer"} -- we want answer.
-def lat_end_to_end(pipeline, question):
-    return pipeline.invoke(question)["answer"]
+# End-to-end: full production chain per request.
+def lat_end_to_end(question: str, document_id: int) -> str:
+    return run_once(question, document_id)
 
 
 # Stage-level (non-streaming): time retrieval vs generation. "retrieval" bundles
-# query-embedding + vector search + the cross-encoder rerank pass.
-def lat_stages(pipeline, question):
+# get_retriever construction + query-embedding + vector search + the
+# MMR/similarity pass.
+def lat_stages(question: str, document_id: int):
     t0 = time.perf_counter()
-    docs = pipeline.retriever.invoke(question)
+    retriever = get_retriever(question, document_id)
+    docs = retriever.invoke(question)
     context = [doc.page_content for doc in docs]
     t1 = time.perf_counter()
     answer = generate(question, context)
@@ -125,9 +170,10 @@ def lat_stages(pipeline, question):
 #   generation = generation start (t1) -> last token
 # TTFT includes retrieval on purpose: the user waits through retrieval before the
 # first token can stream, so perceived latency = retrieval + generation-prefill.
-def lat_stages_streaming(pipeline, question):
+def lat_stages_streaming(question: str, document_id: int):
     t0 = time.perf_counter()
-    docs = pipeline.retriever.invoke(question)
+    retriever = get_retriever(question, document_id)
+    docs = retriever.invoke(question)
     context = [doc.page_content for doc in docs]
     t1 = time.perf_counter()
 
@@ -149,30 +195,31 @@ def lat_stages_streaming(pipeline, question):
 
 
 # --- 6. LATENCY: BENCHMARK + AGGREGATE + REPORT ---
-def lat_benchmark(pipeline):
+def lat_benchmark():
     # Warmup: run and DISCARD, so cold start does not pollute the stats.
     print(f"[latency] warming up ({LAT_WARMUP_RUNS} runs, discarded)...")
     for i in range(LAT_WARMUP_RUNS):
-        lat_end_to_end(pipeline, QUESTIONS[i % len(QUESTIONS)])
+        question, document_id = QUESTIONS[i % len(QUESTIONS)]
+        lat_end_to_end(question, document_id)
 
     total_ms, retrieval_ms, generation_ms, ttft_ms = [], [], [], []
     answer_lengths = []
 
     print("[latency] measuring...")
-    for question in QUESTIONS:
+    for question, document_id in QUESTIONS:
         for _ in range(LAT_REPEATS):
             start = time.perf_counter()
             if LAT_MEASURE_TTFT:
-                answer, stage = lat_stages_streaming(pipeline, question)
+                answer, stage = lat_stages_streaming(question, document_id)
                 retrieval_ms.append(stage["retrieval"])
                 generation_ms.append(stage["generation"])
                 ttft_ms.append(stage["ttft"])
             elif LAT_STAGE_LEVEL:
-                answer, stage = lat_stages(pipeline, question)
+                answer, stage = lat_stages(question, document_id)
                 retrieval_ms.append(stage["retrieval"])
                 generation_ms.append(stage["generation"])
             else:
-                answer = lat_end_to_end(pipeline, question)
+                answer = lat_end_to_end(question, document_id)
             elapsed_ms = (time.perf_counter() - start) * 1000
 
             total_ms.append(elapsed_ms)
@@ -240,9 +287,9 @@ def lat_report(results):
     print("=" * 78)
 
 
-def run_latency(pipeline, verbose=True):
+def run_latency(verbose=True):
     """Measure latency; print the report and return a flat metrics dict."""
-    results = lat_benchmark(pipeline)
+    results = lat_benchmark()
     if verbose:
         lat_report(results)
 
@@ -272,30 +319,48 @@ def run_latency(pipeline, verbose=True):
 # --- 7. COST: CONFIG ---
 COST_REPEATS = 3          # cost is stable, so fewer repeats needed than latency
 
-# Pricing: gpt-4o-mini, USD per 1M tokens (verified Aug 2026). Prices change --
-# keep them here as constants, never buried in code, and re-check the provider's
-# pricing page before trusting a budget.
+# Pricing: reference rates for gpt-4o-mini, USD per 1M tokens (verified Aug 2026).
+# Prices change -- keep them here as constants, never buried in code, and
+# re-check the provider's pricing page for the model configured in
+# src/rag/llm.py before trusting a budget.
 PRICE_INPUT_PER_1M        = 0.15    # cache-miss input
 PRICE_CACHED_INPUT_PER_1M = 0.075   # cached (repeated prefix) input -- half price
 PRICE_OUTPUT_PER_1M       = 0.60    # output (4x input -- long answers dominate)
 
 # Business projection knobs (set these to YOUR reality).
 QUERIES_PER_DAY = 2000              # expected doubt-solver traffic
-USD_TO_INR      = 88.0              # approximate; set to the current rate
+USD_TO_INR      = 96.0              # approximate; set to the current rate
 
 # Budget (the "SLO" for cost): the offline pass/fail line.
 COST_BUDGET_PER_QUERY_USD = 0.0015  # e.g. must stay under ~0.13 INR / query
 
 
 # --- 8. COST: TOKEN MEASUREMENT + COST MATH ---
-# Retrieve real context (so input tokens reflect your actual retriever load),
-# run one generation, and read the token usage off the message.
-def cost_measure_tokens(pipeline, question):
-    docs = pipeline.retriever.invoke(question)
-    context_text = "\n\n".join(doc.page_content for doc in docs)
+# Retrieve real context (so input tokens reflect your actual retriever load,
+# filtered by document_id exactly like production), then run one generation and
+# read the token usage off the message.
+def cost_measure_tokens(question: str, document_id: int):
+    retriever = get_retriever(question, document_id)
+    docs = retriever.invoke(question)
+    context = [doc.page_content for doc in docs]
 
-    msg = measured_chain.invoke({"question": question, "context": context_text})
+    # Same context formatting as src/generator.py: "[Page N]" labels, and the
+    # concierge prompt when the retriever returned nothing.
+    if not context:
+        chain, inputs = concierge_chain, {"question": question}
+    else:
+        context_str = "\n\n".join(f"[Page {i}] {chunk}" for i, chunk in enumerate(context, 1))
+        chain, inputs = measured_chain, {"question": question, "context": context_str}
+
+    msg = chain.invoke(inputs)
     usage = msg.usage_metadata or {}
+    if not usage:
+        # Fallback for providers that only fill response_metadata
+        rt = (msg.response_metadata or {}).get("token_usage", {})
+        usage = {
+            "input_tokens": rt.get("prompt_tokens", 0),
+            "output_tokens": rt.get("completion_tokens", 0),
+        }
 
     input_tokens = usage.get("input_tokens", 0)
     output_tokens = usage.get("output_tokens", 0)
@@ -317,12 +382,12 @@ def cost_usd(input_tokens, output_tokens, cached_tokens):
 
 
 # --- 9. COST: BENCHMARK + REPORT ---
-def cost_benchmark(pipeline):
+def cost_benchmark():
     rows = []
     print("[cost] measuring token usage...")
-    for question in QUESTIONS:
+    for question, document_id in QUESTIONS:
         for _ in range(COST_REPEATS):
-            tok = cost_measure_tokens(pipeline, question)
+            tok = cost_measure_tokens(question, document_id)
             cost = cost_usd(tok["input"], tok["output"], tok["cached"])
             rows.append({**tok, **{f"cost_{k}": v for k, v in cost.items()}})
     return rows
@@ -337,12 +402,12 @@ def cost_report(rows):
     min_cost   = min(r["cost_total"] for r in rows)
     max_cost   = max(r["cost_total"] for r in rows)
 
-    avg_cost_in  = col_avg(rows, "cost_input") + col_avg(rows, "cost_cached")
     avg_cost_out = col_avg(rows, "cost_output")
     out_share = 100 * avg_cost_out / avg_cost if avg_cost else 0
 
+    model = getattr(llm, "model_name", None) or "llm"
     print("\n" + "=" * 70)
-    print(f"COST  (gpt-4o-mini @ ${PRICE_INPUT_PER_1M}/${PRICE_OUTPUT_PER_1M} per 1M in/out)")
+    print(f"COST  ({model} @ ${PRICE_INPUT_PER_1M}/${PRICE_OUTPUT_PER_1M} per 1M in/out)")
     print("=" * 70)
     print(f"samples                : {n}")
     print(f"avg input tokens       : {avg_in:8.0f}   ({avg_cached:.0f} cached)")
@@ -370,9 +435,9 @@ def cost_report(rows):
     print("real bill BELOW this estimate -- watch the 'cached' count grow online.")
 
 
-def run_cost(pipeline, verbose=True):
+def run_cost(verbose=True):
     """Measure cost; print the report and return a flat metrics dict."""
-    rows = cost_benchmark(pipeline)
+    rows = cost_benchmark()
     if verbose:
         cost_report(rows)
 
@@ -412,13 +477,13 @@ class Reliability:
                                 # the run_reliability note if you want per-request.
 
 
-def call_with_retries(fn, reliability):
+def call_with_retries(question, document_id, reliability):
     reliability.calls += 1
     for attempt in range(MAX_RETRIES + 1):
         try:
-            result = fn()
+            run_once(question, document_id)
             reliability.successes += 1
-            return result
+            return True
         except Exception as e:
             if attempt < MAX_RETRIES:
                 reliability.retries += 1
@@ -426,16 +491,16 @@ def call_with_retries(fn, reliability):
             else:
                 reliability.failures += 1
                 print(f"[reliability] FAILED after {MAX_RETRIES} retries: {e}")
-                return None
+                return False
 
 
 # --- 12. RELIABILITY: BENCHMARK + REPORT ---
-def rel_benchmark(pipeline):
+def rel_benchmark():
     reliability = Reliability()
     print("[reliability] measuring...")
-    for question in QUESTIONS:
+    for question, document_id in QUESTIONS:
         for _ in range(REL_REPEATS):
-            call_with_retries(lambda q=question: pipeline.invoke(q), reliability)
+            call_with_retries(question, document_id, reliability)
     return reliability
 
 
@@ -458,9 +523,9 @@ def rel_report(rel):
     print("=" * 60)
 
 
-def run_reliability(pipeline, verbose=True):
+def run_reliability(verbose=True):
     """Measure reliability; print the report and return a flat metrics dict."""
-    rel = rel_benchmark(pipeline)
+    rel = rel_benchmark()
     if verbose:
         rel_report(rel)
 
@@ -480,11 +545,14 @@ def run_reliability(pipeline, verbose=True):
 # ids -- this dict is the operational slice of what regression testing diffs
 # against a baseline.
 def run_ops(pipeline=None, verbose=True):
-    pipeline = pipeline or RagPipeline()
+    # NOTE: `pipeline` is kept (positionally compatible) for run_suite's
+    # injected-pipeline contract, but this project has no pipeline object --
+    # the chain (get_retriever -> generate) runs inline via run_once() above.
+    del pipeline
 
-    latency     = run_latency(pipeline, verbose=verbose)
-    cost        = run_cost(pipeline, verbose=verbose)
-    reliability = run_reliability(pipeline, verbose=verbose)
+    latency     = run_latency(verbose=verbose)
+    cost        = run_cost(verbose=verbose)
+    reliability = run_reliability(verbose=verbose)
 
     snapshot = {}
     snapshot.update({f"latency.{k}": v for k, v in latency.items()})
