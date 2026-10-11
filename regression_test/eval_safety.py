@@ -83,7 +83,7 @@ DEFAULT_DOCUMENT_ID = 21
 # 3. SHARED HELPERS
 # ============================================================
 def load_goldens(path):
-    with open(path) as f:
+    with open(path, encoding="utf-8") as f:
         return json.load(f)
 
 

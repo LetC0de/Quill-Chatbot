@@ -25,7 +25,9 @@ import json
 
 
 def load_goldens(path):
-    with open(path) as f:
+    # encoding="utf-8": Windows defaults to cp1252, which chokes on the
+    # non-ASCII characters (e.g. Hindi text) in the golden JSON files.
+    with open(path, encoding="utf-8") as f:
         return json.load(f)
 
 
