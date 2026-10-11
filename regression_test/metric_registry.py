@@ -73,7 +73,7 @@ REGISTRY = {
     "safety.scope.avg_score":                  {"direction": "higher", "tol": 0.05},
     "safety.leakage.protected_avg_score":      {"direction": "higher", "tol": 0.05},
     "safety.leakage.pii_avg_score":            {"direction": "higher", "tol": 0.05},
-    "safety.toxicity.avg_toxicity":            {"direction": "lower",  "tol": 0.05},
+    "safety.toxicity.avg_toxicity":            {"direction": "higher",  "tol": 0.05},
 
     # ─── operational: latency (lower = faster; TTFT omitted: too noisy to check) ───
     "ops.latency.e2e_p95_ms":   {"direction": "lower", "tol_pct": 0.25},
