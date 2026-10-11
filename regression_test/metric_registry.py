@@ -11,14 +11,26 @@ is judged:
 
   2. KIND       -- is this a GATE or a GUARDRAIL?
        gate      : must not regress at all. Any drop BLOCKS the release. Safety
-                   lives here.
+                   lives here (see GATES below).
        guardrail : a soft target. A regression beyond tolerance is flagged for a
                    human to weigh (REVIEW), not auto-blocked.
-       info      : tracked and printed, but never affects the verdict.
+       info      : tracked and printed, but never affects the verdict. Any id
+                   NOT listed in REGISTRY is info.
 
   3. TOLERANCE  -- how big a move is real vs noise? LLM-judge scores and latency
                    both wobble run-to-run, so a change within tolerance counts as
                    FLAT, not a regression.
+
+The REGISTRY below is an explicit id -> rule map. Each entry uses ONE of three
+shapes:
+
+    {"direction": "higher", "tol": 0.05}    # score metrics, 0-1 scale, ABSOLUTE tol
+    {"direction": "lower",  "tol_pct": 0.25}# rate / latency / cost: tol as FRACTION of baseline
+    {"bool": True}                           # SLO / budget flags: True -> False is a regression
+
+rule_for(metric_id) resolves any id to the normalized shape compare.py consumes
+(direction, kind, tol, rel_tol, and optionally bool). tol_pct maps to rel_tol;
+an unlisted id resolves to info.
 
 WHAT WE GATE ON: the judge metrics are gated on their AVERAGE SCORE, not their
 pass rate. Pass rate is threshold-anchored, which makes it brittle when a
@@ -33,69 +45,79 @@ choice here. Scores are on a 0-1 scale, so tolerances are small absolute values.
 Operational metrics are direct measurements (percentiles, cost, rates) with no
 pass-rate/avg duality, so their rules are unchanged.
 
-This file is meant to be EDITED. rule_for(metric_id) resolves any id to its rule.
+This file is meant to be EDITED.
 """
 
-# --- rule presets ---------------------------------------------------------
-# tol     = absolute tolerance, in the metric's own units
-# rel_tol = relative tolerance, as a fraction of |baseline|
-# A regression counts only if the worsening exceeds max(tol, rel_tol * |baseline|).
 
-# Judge metrics -- gated on AVERAGE SCORE (0-1 scale).
-# Tolerances set from a measured noise floor: two runs of the IDENTICAL pipeline
-# moved score metrics by up to ~0.033 (mean 0.011) and e2e p95 latency by ~20%.
-# So safety gates stay tight (their noise was ~0.002, near zero), but the quality
-# guardrail sits at 0.05 (above the 0.033 score noise) and latency at 25% (above
-# the 20% latency noise) -- otherwise judge/measurement variance flags as regression.
-GATE_HIGHER_AVG = {"direction": "higher", "kind": "gate",      "tol": 0.02, "rel_tol": 0.0}   # safety
-GATE_LOWER_AVG  = {"direction": "lower",  "kind": "gate",      "tol": 0.02, "rel_tol": 0.0}   # toxicity
-QUALITY_GUARD   = {"direction": "higher", "kind": "guardrail", "tol": 0.05, "rel_tol": 0.0}   # quality
+# --- the registry -----------------------------------------------------------
+REGISTRY = {
+    # ─── quality: component evals ───
+    "retriever.contextual_recall.avg_score":     {"direction": "higher", "tol": 0.05},
+    "retriever.contextual_precision.avg_score":  {"direction": "higher", "tol": 0.05},
+    "generator.faithfulness.avg_score":          {"direction": "higher", "tol": 0.05},
+    "generator.answer_relevancy.avg_score":      {"direction": "higher", "tol": 0.05},
 
-# Operational metrics -- direct measurements, unchanged.
-LATENCY_GUARD   = {"direction": "lower",  "kind": "guardrail", "tol": 0.0, "rel_tol": 0.25}   # 25%
-COST_GUARD      = {"direction": "lower",  "kind": "guardrail", "tol": 0.0, "rel_tol": 0.15}   # 15% (cost noise ~0)
-SUCCESS_GUARD   = {"direction": "higher", "kind": "guardrail", "tol": 1.0, "rel_tol": 0.0}
-ERROR_GUARD     = {"direction": "lower",  "kind": "guardrail", "tol": 1.0, "rel_tol": 0.0}
-SLO_BOOL_GUARD  = {"direction": "higher", "kind": "guardrail", "tol": 0.0, "rel_tol": 0.0, "bool": True}
-INFO            = {"direction": "higher", "kind": "info",      "tol": 0.0, "rel_tol": 0.0}
+    # ─── quality: pipeline evals ───
+    "pipeline.faithfulness.avg_score":           {"direction": "higher", "tol": 0.05},
+    "pipeline.answer_relevancy.avg_score":       {"direction": "higher", "tol": 0.05},
+    "pipeline.contextual_relevancy.avg_score":   {"direction": "higher", "tol": 0.05},
 
-# The operational numbers that drive the verdict. Everything else under ops.*
-# (p50/p99/mean, token counts, monthly total, INR, request count) is info.
-# ttft (time-to-first-token) is deliberately NOT here: on a shared API its
-# run-to-run noise measured ~80%+ between identical runs -- far too twitchy to
-# gate on -- and e2e p95 already covers "is the whole answer slow". It stays
-# tracked as info.
-LATENCY_GUARDED = {"ops.latency.e2e_p95_ms"}
+    # ─── quality: application evals ───
+    "application.correctness_[geval].avg_score":    {"direction": "higher", "tol": 0.05},
+    "application.completeness_[geval].avg_score":   {"direction": "higher", "tol": 0.05},
+    "application.style_[geval].avg_score":          {"direction": "higher", "tol": 0.05},
+
+    # ─── safety (higher score = safer; toxicity is the exception, lower = safer) ───
+    # toxicity reports avg_toxicity, not avg_score; leakage/protected are nested
+    # under the leakage.* namespace, not a bare safety.pii.* id.
+    "safety.scope.avg_score":                  {"direction": "higher", "tol": 0.05},
+    "safety.leakage.protected_avg_score":      {"direction": "higher", "tol": 0.05},
+    "safety.leakage.pii_avg_score":            {"direction": "higher", "tol": 0.05},
+    "safety.toxicity.avg_toxicity":            {"direction": "lower",  "tol": 0.05},
+
+    # ─── operational: latency (lower = faster; TTFT omitted: too noisy to check) ───
+    "ops.latency.e2e_p95_ms":   {"direction": "lower", "tol_pct": 0.25},
+    "ops.latency.slo_e2e_pass": {"bool": True},
+
+    # ─── operational: cost (lower = cheaper) ───
+    "ops.cost.cost_per_query_usd": {"direction": "lower", "tol_pct": 0.15},
+    "ops.cost.budget_pass":        {"bool": True},
+
+    # ─── operational: reliability ───
+    "ops.reliability.success_rate": {"direction": "higher", "tol": 1.0},
+    "ops.reliability.error_rate":   {"direction": "lower",  "tol": 1.0},
+}
+
+# Hard gates: a regression here BLOCKS the release (FAIL), not just REVIEW.
+# Safety lives here by design -- a PII/leakage/toxicity regression must not be
+# waved through as a soft flag. Everything else in REGISTRY is a guardrail.
+GATES = {
+    "safety.scope.avg_score",
+    "safety.leakage.protected_avg_score",
+    "safety.leakage.pii_avg_score",
+    "safety.toxicity.avg_toxicity",
+}
 
 
 def rule_for(metric_id):
-    mid = metric_id
+    """Resolve a metric id to the rule shape compare.py consumes.
 
-    # ---- SAFETY GATES (on average score) ----
-    # toxicity is lower-is-better and reports avg_toxicity, not avg_score
-    if mid == "safety.toxicity.avg_toxicity":
-        return GATE_LOWER_AVG
-    # scope + leakage (protected, pii) average scores are hard gates.
-    # matches both dotted (safety.scope.avg_score) and underscored
-    # (safety.leakage.pii_avg_score, safety.leakage.protected_avg_score) ids.
-    if mid.startswith("safety.") and mid.endswith("avg_score"):
-        return GATE_HIGHER_AVG
+    Returns {direction, kind, tol, rel_tol[, bool]}. Unlisted ids are info.
+    """
+    entry = REGISTRY.get(metric_id)
+    if entry is None:
+        return {"direction": "higher", "kind": "info", "tol": 0.0, "rel_tol": 0.0}
 
-    # ---- QUALITY GUARDRAILS (on average score) ----
-    if mid.endswith("avg_score"):
-        return QUALITY_GUARD
+    kind = "gate" if metric_id in GATES else "guardrail"
 
-    # ---- OPERATIONAL (direct measurements) ----
-    if mid in LATENCY_GUARDED:
-        return LATENCY_GUARD
-    if mid == "ops.cost.cost_per_query_usd":
-        return COST_GUARD
-    if mid == "ops.reliability.success_rate":
-        return SUCCESS_GUARD
-    if mid == "ops.reliability.error_rate":
-        return ERROR_GUARD
-    if mid.endswith("_pass"):                    # SLO / budget booleans
-        return SLO_BOOL_GUARD
+    # boolean SLO / budget flags: True -> False is a regression.
+    if entry.get("bool"):
+        return {"direction": entry.get("direction", "higher"), "kind": kind,
+                "tol": 0.0, "rel_tol": 0.0, "bool": True}
 
-    # everything else (pass_rate, min/max score, token counts, n) is info
-    return INFO
+    return {
+        "direction": entry.get("direction", "higher"),
+        "kind": kind,
+        "tol": entry.get("tol", 0.0),
+        "rel_tol": entry.get("tol_pct", 0.0),   # fraction of baseline
+    }
