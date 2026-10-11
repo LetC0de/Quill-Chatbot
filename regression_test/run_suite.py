@@ -6,10 +6,11 @@ Runs the FULL eval suite (quality + safety + operational) against ONE pipeline,
 flattens every metric into a dotted id, stamps run metadata, and writes a
 snapshot JSON. That snapshot is the atomic unit regression testing compares.
 
-THE key design point: build the pipeline ONCE and inject it into every eval, so
-the whole snapshot is provably the measurement of a single pipeline -- not six
-independently-constructed ones that might quietly differ. This is what later lets
-us say "baseline and candidate differ by exactly one change, nothing else."
+THE key design point: this project has no single pipeline object -- the chain
+(get_retriever -> generate) runs inline in every eval, all sharing the same
+backend functions and config. The whole snapshot is therefore the measurement of
+ONE chain, which is what later lets us say "baseline and candidate differ by
+exactly one change, nothing else."
 
     python -m regression_test.run_suite                          -> baselines/candidate.json
     python -m regression_test.run_suite --baseline               -> baselines/baseline.json
@@ -23,13 +24,16 @@ import hashlib
 import json
 import os
 import subprocess
+import sys
 import time
 from datetime import datetime, timezone
 
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "backend"))
+
 from dotenv import load_dotenv
 
-from src.rag_pipeline import RagPipeline
-from src.reranker import RerankingRetriever
+load_dotenv(os.path.join(os.path.dirname(__file__), "..", "backend", ".env"))
+load_dotenv()
 
 from regression_test import (
     eval_retriever,
@@ -40,8 +44,6 @@ from regression_test import (
     eval_ops,
 )
 from regression_test.metric_registry import rule_for
-
-load_dotenv()
 
 
 # ============================================================
@@ -96,7 +98,7 @@ def _git_sha():
 def _prompt_hash():
     # Hash the generator prompt so a silent prompt edit shows up as a new hash.
     try:
-        from src.generator import prompt
+        from src.rag.prompt import prompt  # type: ignore
         return hashlib.sha256(str(prompt).encode()).hexdigest()[:12]
     except Exception:
         return "unknown"
@@ -117,7 +119,7 @@ def build_metadata(label):
 # 4. THE SUITE
 # ============================================================
 def run_suite(label="", quiet=False, full=False):
-    """Build one pipeline, run every eval against it, return a snapshot dict.
+    """Run every eval against the shared chain, return a snapshot dict.
 
     By default the snapshot keeps only what drives a decision -- gates and
     guardrails (pass rates + headline operational numbers). The distribution
@@ -129,36 +131,31 @@ def run_suite(label="", quiet=False, full=False):
     verbose = not quiet
     t_start = time.perf_counter()
 
-    # --- build ONCE, inject everywhere ---
-    print("Building pipeline (once)...")
-    rag = RagPipeline()
-    # The retriever eval should measure the SAME retriever the pipeline uses, not
-    # a fresh copy. Fall back to constructing one only if the pipeline doesn't
-    # expose it.
-    retriever = getattr(rag, "retriever", None) or RerankingRetriever()
+    # No pipeline object to build in this project: every eval runs the same
+    # inline chain (get_retriever -> generate) via the shared backend modules.
 
     metrics = {}
 
     # --- QUALITY (component -> pipeline -> application) ---
     print("\n[1/6] retriever eval...")
-    metrics.update(flatten_nested("retriever", eval_retriever.run(retriever)))
+    metrics.update(flatten_nested("retriever", eval_retriever.run()))
 
     print("\n[2/6] generator eval...")            # no pipeline: tests generate() on golden context
     metrics.update(flatten_nested("generator", eval_generator.run()))
 
     print("\n[3/6] pipeline (triad) eval...")
-    metrics.update(flatten_nested("pipeline", eval_rag_pipeline.run(rag)))
+    metrics.update(flatten_nested("pipeline", eval_rag_pipeline.run()))
 
     print("\n[4/6] application quality eval...")
-    metrics.update(flatten_nested("application", eval_application.run(rag)))
+    metrics.update(flatten_nested("application", eval_application.run()))
 
     # --- SAFETY (hard gates) ---
     print("\n[5/6] safety evals...")
-    metrics.update(prefix_flat("safety", eval_safety.run_safety(rag, verbose=verbose)))
+    metrics.update(prefix_flat("safety", eval_safety.run_safety(verbose=verbose)))
 
     # --- OPERATIONAL ---
     print("\n[6/6] operational evals...")
-    metrics.update(prefix_flat("ops", eval_ops.run_ops(rag, verbose=verbose)))
+    metrics.update(prefix_flat("ops", eval_ops.run_ops(verbose=verbose)))
 
     elapsed = time.perf_counter() - t_start
 
@@ -185,7 +182,7 @@ def run_suite(label="", quiet=False, full=False):
 # ============================================================
 def write_snapshot(snapshot, path):
     os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
-    with open(path, "w") as f:
+    with open(path, "w", encoding="utf-8") as f:
         json.dump(snapshot, f, indent=2, sort_keys=True)
     return path
 
