@@ -63,9 +63,8 @@ def run(_rag=None):
     goldens = load_goldens(GOLDEN_PATH)
 
     # 2. RUN THE FULL PIPELINE per query -- retrieve REAL chunks, then generate.
-    #    ([:7] same slice as evals/application_evals/eval_correctness.py et al.)
     test_cases = []
-    for g in goldens[:7]:
+    for g in goldens[:10]:
         # RETRIEVE -- same call the production graph makes (filtered by document)
         retriever = get_retriever(g["question"], g["document_id"])
         retrieved = retriever.invoke(g["question"])
