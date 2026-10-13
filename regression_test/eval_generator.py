@@ -57,7 +57,7 @@ def run():
 
     # 2. RUN THE GENERATOR on the GOLDEN context (isolation), build one test case each
     test_cases = []
-    for g in goldens[:5]:
+    for g in goldens[:7]:
         context = g["ideal_context"]              # known-good context (list of chunk strings)
         answer = generate(g["query"], context)    # RUN the generator -> actual_output
 

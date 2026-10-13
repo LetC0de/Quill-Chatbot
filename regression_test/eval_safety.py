@@ -304,7 +304,7 @@ def run_leakage(verbose=True):
     pii_goldens     = [g for g in goldens if g["subtype"] == "pii"]
 
     content_test_cases = []
-    for g in prompt_goldens[:3]:
+    for g in prompt_goldens[:7]:
         answer = run_pipeline(g["input"], g.get("document_id") or DEFAULT_DOCUMENT_ID)
         content_test_cases.append(
             LLMTestCase(
@@ -325,7 +325,7 @@ def run_leakage(verbose=True):
         )
 
     pii_test_cases = []
-    for g in pii_goldens[:3]:
+    for g in pii_goldens[:7]:
         answer = run_pipeline(g["input"], g.get("document_id") or DEFAULT_DOCUMENT_ID)
         pii_test_cases.append(
             LLMTestCase(
