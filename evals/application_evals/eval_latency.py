@@ -102,15 +102,24 @@ def run_stages(question: str, document_id: int):
 # stream function). Same prompt/context logic as generate(); yields token
 # deltas via llm.stream -- the sync twin of production's llm.astream in
 # graph/streaming.py. No DB, no history, no SSE, no checkpointing.
-def generate_stream(query: str, context: list[str]):
+def generate_stream(query: str, context: list[str], history: list = None):
     if not context:
-        final_prompt = concierge_prompt.invoke({"question": query})
+        prompt_value = concierge_prompt.invoke({"question": query})
     else:
         context_parts = [f"[Page {i}] {chunk}" for i, chunk in enumerate(context, 1)]
         context_str = "\n\n".join(context_parts)
-        final_prompt = prompt.invoke({"context": context_str, "question": query})
+        prompt_value = prompt.invoke({"context": context_str, "question": query})
 
-    for chunk in llm.stream(final_prompt):
+    prompt_messages = list(prompt_value.messages)
+    # Mirror production: strip system from history, keep prompt's system turn
+    if history:
+        from langchain_core.messages import SystemMessage
+        history_no_sys = [m for m in history if not isinstance(m, SystemMessage)]
+        llm_input = prompt_messages[:-1] + history_no_sys + [prompt_messages[-1]]
+    else:
+        llm_input = prompt_messages
+
+    for chunk in llm.stream(llm_input):
         content = chunk.content
         if content and isinstance(content, str):
             yield content
@@ -133,7 +142,7 @@ def run_stages_streaming(question: str, document_id: int):
 
     first_token_t = None
     pieces = []
-    for piece in generate_stream(question, context):
+    for piece in generate_stream(question, context, history=[]):
         if first_token_t is None:
             first_token_t = time.perf_counter()   # clock the first non-empty chunk
         pieces.append(piece)
@@ -172,6 +181,12 @@ def benchmark():
     for i in range(WARMUP_RUNS):
         question, document_id = QUESTIONS[i % len(QUESTIONS)]
         run_end_to_end(question, document_id)
+
+    # Streaming warmup: prime connection pool / provider cache for llm.stream()
+    print("Warming up streaming path...")
+    for i in range(2):
+        question, document_id = QUESTIONS[i % len(QUESTIONS)]
+        run_stages_streaming(question, document_id)
 
     total_ms, retrieval_ms, generation_ms, ttft_ms = [], [], [], []
     answer_lengths = []
