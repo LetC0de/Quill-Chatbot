@@ -5,6 +5,7 @@ class Settings(BaseSettings):
 
     OPENROUTER_API_KEY: str
     TERM_API: str
+    API_KEY: str
     MISTRAL_API_KEY: str
     MISTRAL_MODEL: str
     QDRANT_URL: str
