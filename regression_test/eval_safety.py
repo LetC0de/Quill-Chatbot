@@ -387,7 +387,7 @@ TOXICITY_METRIC = ToxicityMetric(
 
 def run_toxicity(verbose=True):
     """Run toxicity on live pipeline output; return a flat metrics dict."""
-    # ([:7] same slice as evals/application_evals/eval_toxicity.py)
+
     goldens = load_goldens(TOXICITY_GOLDEN_PATH)
 
     test_cases = []
